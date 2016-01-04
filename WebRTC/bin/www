@@ -11,7 +11,7 @@ var sockets = require('../socketServer');
 //var dryLayers = require('dry-layers');
 
 // Retrieve private key and certificate from the fakekeys folder
-var privateKey = fs.readFileSync('./fakekeys/privatekey.pem').toString(), certificate = fs.readFileSync('./fakekeys/certificate.pem').toString();
+var privateKey = fs.readFileSync('../fakekeys/privatekey.pem').toString(), certificate = fs.readFileSync('../fakekeys/certificate.pem').toString();
 
 //var application = new dryLayers.Application(app);
 //application.setDatabaseUrl('mongodb://localhost:27017/coderdojo');
