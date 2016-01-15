@@ -72,7 +72,10 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 			$(newContainer).addClass("embed-responsive embed-responsive-4by3");
 			$(video).addClass("embed-responsive-item");
 			newContainer.appendChild(video);
+            video.id="ninjaScreen";
 			container.appendChild(newContainer);
+            
+            addEditZone();
 		}
 	});
 	
@@ -85,6 +88,7 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 				container = opts.remoteCamBox;
 			} else {
 				container = opts.screenBox;
+                $('#editScreenshot').remove();
 			}
 			if (container && el) {
 				container.removeChild(el);
