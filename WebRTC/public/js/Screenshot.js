@@ -5,7 +5,9 @@
         var title = document.createElement('p');
         title.innerHTML="Hightlight the screenshot";
         var newCanvas = document.createElement('canvas');
-        newCanvas.id="myCanvas";        
+        newCanvas.id="myCanvas";
+        newCanvas.width=jQuery(window).width()*0.5;
+        newCanvas.height=jQuery(window).height()*0.45;       
         
         $('#screenBox').append(editZone);
         console.log("Add editzone");

@@ -39,7 +39,7 @@ input[type='file']	{border-radius: 0}
         width:20%;
         float:left;
     }
-	#screenBox {position:absolute; top:0; width:600px; height:450px;right:120%;}
+	#screenBox {position:absolute; top:0; width:200%; height:100%;right:120%;}
     #takescreenShot{
         position: absolute;
         right: 220%;
