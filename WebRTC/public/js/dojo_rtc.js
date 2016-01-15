@@ -71,11 +71,13 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 			//$(newContainer).addClass("video-box embed-responsive embed-responsive-4by3");
 			$(newContainer).addClass("embed-responsive embed-responsive-4by3");
 			$(video).addClass("embed-responsive-item");
-			newContainer.appendChild(video);
+			container.appendChild(newContainer);      
+            newContainer.appendChild(video);
+            if (inType != 'video') {
             video.id="ninjaScreen";
-			container.appendChild(newContainer);
-            
             addEditZone();
+            }     
+            
 		}
 	});
 	

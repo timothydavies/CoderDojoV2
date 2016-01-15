@@ -5,12 +5,16 @@
         var title = document.createElement('p');
         title.innerHTML="Hightlight the screenshot";
         var newCanvas = document.createElement('canvas');
-        newCanvas.id="myCanvas";
-        
+        newCanvas.id="myCanvas";        
         
         $('#screenBox').append(editZone);
+        console.log("Add editzone");
         $('#editScreenshot').append(title);
+        console.log("Add title");
         $('#editScreenshot').append(newCanvas);
+        console.log("Add canvas");
+        
+        //alert("You can use static feedback now!");
     }
         
         
@@ -20,7 +24,7 @@
 		var ctx = canvas.getContext("2d");
         var video = document.getElementById("ninjaScreen");
         canvas.width=jQuery(window).width()*0.5;
-        canvas.height=jQuery(window).height()*0.39;
+        canvas.height=jQuery(window).height()*0.45;
         //var container= document.getElementById("screenBox");
 		//var video = document.getElementById('source');
 	    console.log(' video width: '+canvas.width+" height: "+canvas.height);
@@ -29,8 +33,10 @@
         //var image = canvas.toDataURL();
         //window.open('');
        
-        
-		$('#title').toggle();
+        if ($('#title').css('display')!='none'){
+            $('#title').toggle();
+        }
+		
 		//document.body.appendChild(canvas);
         //$('#ninjaScreen').toggle();
         //$('#box').append(canvas);
