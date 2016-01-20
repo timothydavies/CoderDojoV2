@@ -27,10 +27,32 @@ input[type='file']	{border-radius: 0}
 #chats{z-index:-1} /* In firefox the chats panel will overlap with the signout button, blocking it; hence the z-index must be set. */
 
 /*NEW CODE ADDED*/
-@media (min-width: 992px) { 
-	#chats{position:absolute;top:50px;right:10px;}
-	#screenBox2 {position:absolute;top:0px; width:190%;right:105%;}
-	#screenBox {position:absolute;top:10%; width:190%;height:auto;right:105%;}
+@media (min-width: 769px) { 
+	#chats{position:absolute;top:50px;right:10px;z-index: 1;}
+    #chat_content{
+            width: 35%;
+            margin-right: 0;
+            margin-left:0;
+            float: right;
+    }
+    .col-md-3{
+        width:20%;
+        float:left;
+    }
+	#screenBox {position:absolute; top:0; width:200%; height:100%;right:120%;}
+    #takescreenShot{
+        position: absolute;
+        right: 330%;
+        top: 60px;
+    }
+    #sendScreenshot{
+        position:absolute;
+        right:330%;
+        top:100px;;
+    }
+    #chatWindow{
+        margin-top:70px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px){

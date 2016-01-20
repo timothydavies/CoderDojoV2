@@ -7,6 +7,7 @@ router.all('*', dryLayers.SecurityService.authorize(null, function(req){
 	return -1 != req.user.roles.indexOf('Mentor');
 }));
 
+
 router.get('/', function(req, res, next) {
   res.render('mentor');
 });
