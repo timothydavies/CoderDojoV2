@@ -20,5 +20,6 @@
         canvas.width=0;
         canvas.height=0;
         $('#screenBox').css("width","200%");
-        $('#screenBox').css("height","100%");		
+        $('#screenBox').css("height","100%");
+        //send out screenshot		
       }
