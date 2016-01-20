@@ -42,13 +42,13 @@ input[type='file']	{border-radius: 0}
 	#screenBox {position:absolute; top:0; width:200%; height:100%;right:120%;}
     #takescreenShot{
         position: absolute;
-        right: 220%;
-        bottom: -50px;
+        right: 330%;
+        top: 60px;
     }
     #sendScreenshot{
         position:absolute;
-        right:150%;
-        bottom:-50px;;
+        right:330%;
+        top:100px;;
     }
     #chatWindow{
         margin-top:70px;

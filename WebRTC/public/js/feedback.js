@@ -13,6 +13,39 @@
         if (gallery)
             $('a.fancybox').attr('rel', 'fancyboxgallery');
         $('a.fancybox').fancybox({
-            titlePosition: titlePosition
+            titlePosition: titlePosition,
+            type: 'image'
         });
  }
+ 
+ 
+ $("#fancybox-img").load(function() {
+  // Handler for .load() called.
+    var ratio=$('img.fancybox').width()/$('img.fancybox').height();
+    var ZoomInHeight=500;
+    var ZoomInWidth=ZoomInHeight*ratio;
+     $("#fancybox-img").css({
+                             'width':ZoomInWidth,
+                             'height':ZoomInHeight,
+                             'speedIn':'300',
+                             'speedOut':'300'});
+     alert("fancybox loaded!");
+ });
+ 
+ 
+ $(document).bind('DOMNodeInserted', function(e) {
+      
+    if (e.target.id == 'fancybox-img') {
+        alert("fancybox loaded!");
+       //element with #someID was inserted.
+       var ratio=$('img.fancybox').width()/$('img.fancybox').height();
+    var ZoomInHeight=500;
+    var ZoomInWidth=ZoomInHeight*ratio;
+     $("#fancybox-img").css({
+                             'width':ZoomInWidth,
+                             'height':ZoomInHeight,
+                             'speedIn':'300',
+                             'speedOut':'300'});
+    
+    }
+});

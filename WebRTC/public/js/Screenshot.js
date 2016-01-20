@@ -26,12 +26,13 @@
 		var ctx = canvas.getContext("2d");
         var video = document.getElementById("ninjaScreen");
         canvas.width=jQuery(window).width()*0.5;
-        canvas.height=jQuery(window).height()*0.45;
+        canvas.height=jQuery(window).height()*0.48;
         //var container= document.getElementById("screenBox");
 		//var video = document.getElementById('source');
+  
 	    console.log(' video width: '+canvas.width+" height: "+canvas.height);
         //console.log(' screenbox width: '+$("#screenBox").width()+" height: "+$("#screenBox").height());
-		ctx.drawImage(video,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width,canvas.height);
+		ctx.drawImage(video,0,0,video.videoWidth,video.videoHeight,0,0,parseInt(canvas.width)+0.5,parseInt(canvas.height)+0.5);
         //var image = canvas.toDataURL();
         //window.open('');
        
