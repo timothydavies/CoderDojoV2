@@ -33,10 +33,9 @@
  });
  
  
- $(document).bind('DOMNodeInserted', function(e) {
-      
+ $(document).bind('DOMNodeInserted', function(e) {     
     if (e.target.id == 'fancybox-img') {
-        alert("fancybox loaded!");
+/*        alert("fancybox loaded!");
        //element with #someID was inserted.
        var ratio=$('img.fancybox').width()/$('img.fancybox').height();
     var ZoomInHeight=500;
@@ -45,7 +44,7 @@
                              'width':ZoomInWidth,
                              'height':ZoomInHeight,
                              'speedIn':'300',
-                             'speedOut':'300'});
+                             'speedOut':'300'});*/
     
     }
 });
