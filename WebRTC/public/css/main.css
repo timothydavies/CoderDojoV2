@@ -30,13 +30,13 @@ input[type='file']	{border-radius: 0}
 @media (min-width: 769px) { 
 	#chats{position:absolute;top:50px;right:10px;z-index: 1;}
     #chat_content{
-            width: 35%;
+            max-width: 25%;
             margin-right: 0;
             margin-left:0;
             float: right;
     }
     .col-md-3{
-        width:20%;
+        max-width:20%;
         float:left;
     }
 	#screenBox {position:absolute; top:0; width:200%; height:100%;right:120%;}
@@ -67,6 +67,6 @@ input[type='file']	{border-radius: 0}
 }
 
 video {
-	height: 100%;
-	width: 100%;
+
+	max-width: 100%;
 }
