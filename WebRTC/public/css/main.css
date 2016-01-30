@@ -30,7 +30,7 @@ input[type='file']	{border-radius: 0}
 @media (min-width: 769px) { 
 	#chats{position:absolute;top:50px;right:10px;z-index: 1;}
     #chat_content{
-            max-width: 25%;
+            max-width: 45%;
             margin-right: 0;
             margin-left:0;
             float: right;

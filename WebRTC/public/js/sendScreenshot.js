@@ -16,11 +16,7 @@
 		$(message).val('');
 		chatWindow.scrollTop = chatWindow.scrollHeight;
         add_ZoomIn();
-        $('#title').toggle();
-        /*canvas.width=0;
-        canvas.height=0;*/
-        canvas.getContext("2d").getCt.clearRect(0, 0, canvas.width, canvas.height);
-/*        $('#screenBox').css("width","200%");
-        $('#screenBox').css("height","100%");*/
-        //send out screenshot		
+        //$('#title').toggle();
+        canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+		
       }

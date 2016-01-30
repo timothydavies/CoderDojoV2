@@ -2,8 +2,10 @@ var mousePressed = false;
 var lastX, lastY;
 var ctx;
 
-function InitThis() {
+function InitThis(ratio) {
     ctx = document.getElementById('myCanvas').getContext("2d");
+    
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
 
     $(myCanvas).mousedown(function (e) {
         mousePressed = true;
@@ -28,7 +30,7 @@ function Draw(x, y, isDown) {
     if (isDown) {
         ctx.beginPath();
         ctx.strokeStyle = "red";
-        ctx.lineWidth = 4;
+        ctx.lineWidth = 2;
         ctx.lineJoin = "round";
         ctx.moveTo(lastX, lastY);
         ctx.lineTo(x, y);

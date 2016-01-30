@@ -2,8 +2,8 @@
         /*canvas.id="myCanvas";
         canvas.width=jQuery(window).width()*0.5;
         canvas.height=jQuery(window).height()*0.45; */
-        var w=jQuery(window).width()*0.5;
-        var h=jQuery(window).height()*0.45;
+        var w=jQuery(window).width()*0.25;
+        var h=jQuery(window).height()*0.225;
         createHiDPICanvas(canvas, w, h);
         canvas.id="myCanvas";
         //Create canvas with the device resolution.
@@ -43,9 +43,9 @@ function PIXEL_RATIO() {
     return dpr / bsr;
 }
 
-
+var ratio;
 function createHiDPICanvas(can, w, h) {
-    var ratio = PIXEL_RATIO(); 
+    ratio = PIXEL_RATIO(); 
     can.width = w * ratio;
     can.height = h * ratio;
 /*    can.style.width = w + "px";
@@ -57,12 +57,15 @@ function createHiDPICanvas(can, w, h) {
 
 
 
-function Screenshot(){
+        
+        
+	 function Screenshot(){
 
         var video = document.getElementById("ninjaScreen");
 
         ctx.drawImage(video ,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width,canvas.height);
-	    console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);
+	    //ctx.drawImage(video ,0,0,canvas.width,canvas.height);
+        console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);
        
         if ($('#title').css('display')!='none'){
             $('#title').toggle();
@@ -73,7 +76,7 @@ function Screenshot(){
         //$('#box').append(canvas);
         
         
-		InitThis();
+		InitThis(ratio);
 		
 		console.log('done');
       }
