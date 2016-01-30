@@ -17,6 +17,7 @@
 		chatWindow.scrollTop = chatWindow.scrollHeight;
         add_ZoomIn();
         //$('#title').toggle();
-        canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-		
+        var canvasZone= document.getElementById("canvasZone");
+        //canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+		canvasZone.remove();
       }

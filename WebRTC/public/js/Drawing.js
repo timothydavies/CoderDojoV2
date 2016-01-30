@@ -2,9 +2,9 @@ var mousePressed = false;
 var lastX, lastY;
 var ctx;
 
-function InitThis(ratio) {
-    ctx = document.getElementById('myCanvas').getContext("2d");
-    
+function InitThis(ratio,ctx1) {
+    //ctx = document.getElementById('myCanvas').getContext("2d");
+    ctx=ctx1;
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
 
     $(myCanvas).mousedown(function (e) {
@@ -26,8 +26,10 @@ function InitThis(ratio) {
     });
 }
 
-function Draw(x, y, isDown) {
+function Draw(x1, y1, isDown) {
     if (isDown) {
+        x=x1/2;
+        y=y1/2;
         ctx.beginPath();
         ctx.strokeStyle = "red";
         ctx.lineWidth = 2;
@@ -40,7 +42,7 @@ function Draw(x, y, isDown) {
     lastX = x; lastY = y;
 }
 	
-function clearArea() {
+function clearArea(ctx) {
     // Use the identity matrix while clearing the canvas
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
