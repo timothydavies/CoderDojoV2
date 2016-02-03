@@ -1,5 +1,3 @@
-
-	 function sendScreenshot(){
 	    var canvas= document.getElementById("myCanvas");
 	    if (!canvas){
 		 console.log(' Canvas Null!');
@@ -16,9 +14,8 @@
 		$(message).val('');
 		chatWindow.scrollTop = chatWindow.scrollHeight;
         add_ZoomIn();
-        $('#title').toggle();
-        canvas.width=0;
-        canvas.height=0;
-        $('#screenBox').css("width","200%");
-        $('#screenBox').css("height","100%");		
+        //$('#title').toggle();
+        var canvasZone= document.getElementById("canvasZone");
+        
+        canvasZone.remove();		
       }
