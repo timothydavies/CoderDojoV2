@@ -18,6 +18,6 @@
         add_ZoomIn();
         //$('#title').toggle();
         var canvasZone= document.getElementById("canvasZone");
-        //canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+        
 		canvasZone.remove();
       }
