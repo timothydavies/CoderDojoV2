@@ -33,6 +33,7 @@ $(chatForm).submit(submit.onclick);
 socket.on('pm', function(data) {
 	renderMessage(data.url, data.message);
 });
+<<<<<<< HEAD
 
 socket.on('screenshot', function(data) {
 	var img = "<img style='width:25px;' src='"+data.url+"'>";
@@ -42,3 +43,5 @@ socket.on('screenshot', function(data) {
 	chatWindow.scrollTop = chatWindow.scrollHeight;
     add_ZoomIn();
 });
+=======
+>>>>>>> origin/master
