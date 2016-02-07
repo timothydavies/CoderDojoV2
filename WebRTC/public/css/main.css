@@ -137,3 +137,19 @@ div.text-center .glyphicon{
 #clearCanvas, #closeCanvas{
     display:inline-block;
 }
+
+#handler{
+    width:100px;
+    position:absolute;
+    top:20px;
+    left:100px;
+    z-index: 100;
+}
+
+#follower{
+    width:100px;
+    position:absolute;
+    top:20px;
+    left:100px;
+    z-index: 100;
+}

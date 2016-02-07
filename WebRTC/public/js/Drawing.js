@@ -27,6 +27,8 @@ function InitThis(ratio,ctx1) {
 }
 
 function Draw(x1, y1, isDown) {
+    var x;
+    var y;
     if (isDown) {
         x=x1/2;
         y=y1/2;

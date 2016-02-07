@@ -7,7 +7,6 @@ function addEditZone(){
 /*        var title = document.createElement('p');
         title.innerHTML="Hightlight the screenshot";*/
       
-        
         $('#screenBox').append(editZone);
         console.log("Add editzone");
  /*       $('#editScreenshot').append(title);

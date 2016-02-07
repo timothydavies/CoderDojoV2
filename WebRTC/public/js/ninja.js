@@ -57,6 +57,10 @@ function handleRoomChange (data) {
 function shareButtonClick() {
 	$(shareButton).text('Change Shared Window')
 	webrtc.stopScreenShare();
+    var follower =document.createElement('img');
+    follower.id = "follower";
+    follower.src = "/img/Follower.svg";
+    $('body').append(follower);
 	webrtc.shareScreen(function (err) {
 		if (err) {
 			console.log('Share Screen Error: ',err);
@@ -107,6 +111,28 @@ window.onbeforeunload = function(){
 		webrtc = null;
 	}
 }
+
+var oldWidth=$(window).width();
+var oldHeight=$(window).height();
+
+$('#chatWindow').on('click','img.fancybox',function(){
+    var newWidth=window.screen.width*0.5;
+    var newHeight=window.screen.height;
+    window.resizeTo(newWidth,newHeight);
+});
+
+$('body').on('click','#fancybox-close',function(){
+    window.resizeTo(oldWidth,oldHeight);
+});
+
+$('#enlargeButton').on('click',function(){
+    var newWidth=window.screen.width*0.5;
+    var newHeight=window.screen.height;
+    window.resizeTo(newWidth,newHeight);
+});
+$('#shrinkButton').on('click',function(){
+    window.resizeTo(oldWidth,oldHeight);
+});
 
 socket.on('iceServers',handleIceServers);
 firstPhaseButton.onclick = firstPhaseClick;
