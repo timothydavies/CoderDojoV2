@@ -76,7 +76,9 @@ function webrtcInit(peerConnectionConfig, opts, video) {
             newContainer.appendChild(video);
             if (inType != 'video') {
             video.id="ninjaScreen";
+            addScreenShotButton();
             addEditZone();
+            addHandler();
             }     
             
 =======

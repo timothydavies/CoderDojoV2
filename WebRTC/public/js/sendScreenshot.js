@@ -17,5 +17,9 @@
         //$('#title').toggle();
         var canvasZone= document.getElementById("canvasZone");
         
+<<<<<<< HEAD
         canvasZone.remove();		
+=======
+		canvasZone.remove();
+>>>>>>> Jasmine
       }

@@ -91,10 +91,10 @@ function handleRoomChange(data) {
 	This the data packet should be exactly what is returned by xirsys concerning ICE connection details. Hence, all the data will be in the data.d field.
 */
 function handleIceServers(data) {
-	console.log(data);
-	console.log(data.d);
+	//console.log(data);
+	//console.log(data.d);
 	webrtc = webrtcInit(data.d, opts, true);
-	console.log(webrtc);
+	//console.log(webrtc);
 }
 
 /*
@@ -142,5 +142,5 @@ $.ajax({
 
 $(firstPhase).show();
 $(secondPhase).hide();
-$('#collapseTwo').collapse("hide");
+$('#collapseTwo').collapse('hide');
 //socket.emit('iceRequest', {mentor : getParameterByName('user')});

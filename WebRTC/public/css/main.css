@@ -28,32 +28,60 @@ input[type='file']	{border-radius: 0}
 
 /*NEW CODE ADDED*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media (min-width: 769px) { 
 	#chats{position:absolute;top:50px;right:10px;z-index: 1;}
+=======
+@media screen and (min-width: 769px) { 
+	#chats{
+        position:absolute;
+        width:75%;
+        top:50px;
+        right:10px;
+        z-index: 1;
+    }
+>>>>>>> Jasmine
     #chat_content{
-            width: 35%;
+            max-width: 45%;
             margin-right: 0;
             margin-left:0;
             float: right;
     }
     .col-md-3{
-        width:20%;
+        max-width:20%;
         float:left;
     }
-	#screenBox {position:absolute; top:0; width:200%; height:100%;right:120%;}
-    #takescreenShot{
+	#screenBox {
+        position:absolute; 
+        top:-12px; 
+        width:300%; 
+        height:100%;
+        right:100%;
+        overflow:visible;
+    }
+        
+    #collapseTwo .panel-body{
+        height:auto;
+    }
+    
+
+        
+    #screenBox div{
+        overflow:visible;
+    }
+    #ButtonZone{
         position: absolute;
-        right: 330%;
-        top: 60px;
+        bottom:-4em;
+        display:block;
+        margin-top:2em;
+        margin-bottom:2em;
+        z-index: 1;
     }
-    #sendScreenshot{
-        position:absolute;
-        right:330%;
-        top:100px;;
-    }
+
     #chatWindow{
         margin-top:70px;
     }
+<<<<<<< HEAD
 =======
 @media (min-width: 992px) { 
 	#chats{position:absolute;top:50px;right:10px;}
@@ -61,12 +89,45 @@ input[type='file']	{border-radius: 0}
 	#screenBox {position:absolute;top:10%; width:190%;height:auto;right:105%;}
 >>>>>>> origin/master
 }
+=======
+    .row{
+        max-width:100%;
+    }
+    .accordion{
+        max-width:100%;
+    }
+    .accordion .row{
+        max-width:100%;
+    }
+    
+    #myCanvas{
+        display:block;  
+    }
+    #canvasZone{
+        position:absolute;
+        top:20vh;
+        left:-30%;
+        z-index:2;
+        display:block;
+    }
+    
+>>>>>>> Jasmine
 
-@media (min-width: 768px) and (max-width: 992px){
-	#chats{position:absolute;top:50px;right:10px;}
-	#screenBox2 {position:absolute;top:0px; width:100%;right:105%;}
-	#screenBox {position:absolute;top:80px; width:100%;right:105%;}
 }
+
+@media screen and (min-width: 1111px){
+        div.text-center .glyphicon{
+        font-size: 10em ;
+        margin-top:15%;
+    }
+   }
+
+@media screen and (min-width:769px) and (max-width: 1110px){
+        div.text-center .glyphicon{
+        font-size: 7em ;
+        margin-top:25%;
+    }
+   }
 
 .video-box {
 	height:200px;
@@ -74,6 +135,7 @@ input[type='file']	{border-radius: 0}
 }
 
 video {
+<<<<<<< HEAD
 	height: 100%;
 	width: 100%;
 <<<<<<< HEAD
@@ -81,3 +143,39 @@ video {
 =======
 }
 >>>>>>> origin/master
+=======
+
+	max-width: 100%;
+}
+
+
+@media screen and (max-width: 768px){
+    div.text-center .glyphicon{
+        font-size:15em;
+    }
+ }
+ 
+div.text-center .glyphicon{
+        color:lightgrey;
+    }
+    
+#clearCanvas, #closeCanvas{
+    display:inline-block;
+}
+
+#handler{
+    width:100px;
+    position:absolute;
+    top:20px;
+    left:100px;
+    z-index: 100;
+}
+
+#follower{
+    width:100px;
+    position:absolute;
+    top:20px;
+    left:100px;
+    z-index: 100;
+}
+>>>>>>> Jasmine
