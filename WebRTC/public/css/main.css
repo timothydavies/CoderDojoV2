@@ -27,11 +27,7 @@ input[type='file']	{border-radius: 0}
 #chats{z-index:-1} /* In firefox the chats panel will overlap with the signout button, blocking it; hence the z-index must be set. */
 
 /*NEW CODE ADDED*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-@media (min-width: 769px) { 
-	#chats{position:absolute;top:50px;right:10px;z-index: 1;}
-=======
+
 @media screen and (min-width: 769px) { 
 	#chats{
         position:absolute;
@@ -40,7 +36,7 @@ input[type='file']	{border-radius: 0}
         right:10px;
         z-index: 1;
     }
->>>>>>> Jasmine
+
     #chat_content{
             max-width: 45%;
             margin-right: 0;
@@ -81,15 +77,14 @@ input[type='file']	{border-radius: 0}
     #chatWindow{
         margin-top:70px;
     }
-<<<<<<< HEAD
-=======
-@media (min-width: 992px) { 
+
+/*@media (min-width: 992px) { 
 	#chats{position:absolute;top:50px;right:10px;}
 	#screenBox2 {position:absolute;top:0px; width:190%;right:105%;}
 	#screenBox {position:absolute;top:10%; width:190%;height:auto;right:105%;}
->>>>>>> origin/master
+
 }
-=======
+*/
     .row{
         max-width:100%;
     }
@@ -111,7 +106,6 @@ input[type='file']	{border-radius: 0}
         display:block;
     }
     
->>>>>>> Jasmine
 
 }
 
@@ -130,22 +124,11 @@ input[type='file']	{border-radius: 0}
    }
 
 .video-box {
-	height:200px;
 	border:solid 1px lightgrey;
 }
 
 video {
-<<<<<<< HEAD
-	height: 100%;
 	width: 100%;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/master
-=======
-
-	max-width: 100%;
 }
 
 
@@ -178,4 +161,4 @@ div.text-center .glyphicon{
     left:100px;
     z-index: 100;
 }
->>>>>>> Jasmine
+

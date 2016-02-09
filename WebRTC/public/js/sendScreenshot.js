@@ -1,8 +1,8 @@
+function sendScreenshot(){
 	    var canvas= document.getElementById("myCanvas");
 	    if (!canvas){
 		 console.log(' Canvas Null!');
 	    }
-
 		var image = canvas.toDataURL("img/png");
 		 socket.emit('screenshot', {image: image, name: getParameterByName('user'),url:"/img/mentor.png"});
 		
@@ -16,10 +16,6 @@
         add_ZoomIn();
         //$('#title').toggle();
         var canvasZone= document.getElementById("canvasZone");
-        
-<<<<<<< HEAD
-        canvasZone.remove();		
-=======
 		canvasZone.remove();
->>>>>>> Jasmine
+
       }
