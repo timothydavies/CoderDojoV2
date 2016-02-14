@@ -84,6 +84,7 @@ function webrtcInit(peerConnectionConfig, opts, video) {
                 addScreenShotButton();
             }
 
+
 		}
 	});
 	
@@ -98,7 +99,9 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 				container = opts.screenBox;
 
                 $('#editScreenshot').remove();
+
                 $('div#feedback-options').css('display','none');
+
 
 			}
 			if (container && el) {

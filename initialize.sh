@@ -9,9 +9,9 @@ mongo coderdojo initialize.js
 
 cd Administrator/
 echo "Start Admin Server."
-forever start bin/www.js
+npm start
 
 cd WebRTC/
 echo "Start Communication Server."
 export XIRSYS=70c9a87c-6338-11e5-b7f9-407599caac9d
-forever start bin/www.js
+npm start
