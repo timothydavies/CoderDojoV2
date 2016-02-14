@@ -28,7 +28,7 @@ var tempRoom;
 	Function to handle the receiving of ice server info.
 	This the data packet should be exactly what is returned by xirsys concerning ICE connection details. Hence, all the data will be in the data.d field.
 */
-function handleIceServers(data) {
+function handleIceServers_N(data) {
 	console.log(data);
 	console.log(data.d);
 	webrtc = webrtcInit(data.d, opts);
@@ -43,7 +43,7 @@ function firstPhaseClick() {
 /*	Function to handle the changing of room.
 	The data should include fields defining the name of the room and the name of ninja who will be joining 
 */
-function handleRoomChange (data) {
+function handleRoomChange_N (data) {
 	console.log('Changing to room: ' + data.room);
 	tempRoom = data.room;
 	$(mentorField).text(data.mentor);
@@ -56,17 +56,16 @@ function handleRoomChange (data) {
 
 function shareButtonClick() {
 	$(shareButton).text('Change Shared Window')
+    
 	webrtc.stopScreenShare();
-    var follower =document.createElement('img');
-    follower.id = "follower";
-    follower.src = "/img/Follower.svg";
-    $('body').append(follower);
 	webrtc.shareScreen(function (err) {
 		if (err) {
 			console.log('Share Screen Error: ',err);
 			$(shareButton).text('Share Window')
 		}
 	});
+    $('div#feedback-option').appendTo('#localScreen');  /////ninja arrow position needs to improve
+    $('div#feedback-option').css('display','block');
 }
 
 function secondPhaseClick() {
@@ -134,9 +133,9 @@ $('#shrinkButton').on('click',function(){
     window.resizeTo(oldWidth,oldHeight);
 });
 
-socket.on('iceServers',handleIceServers);
+socket.on('iceServers',handleIceServers_N);
 firstPhaseButton.onclick = firstPhaseClick;
-socket.on('changeRoom', handleRoomChange);
+socket.on('changeRoom', handleRoomChange_N);
 shareButton.onclick = shareButtonClick;
 secondPhaseButton.onclick = secondPhaseClick;
 socket.on('otherDisconnect', handleMentorDisconnect);
@@ -160,7 +159,8 @@ $(firstPhase).show();
 $(secondPhase).hide();
 $(thirdPhase).hide();
 $(nameField).text(getParameterByName('user'));
-$('#collapseTwo').collapse("hide");
+$('#collapseTwo').hide();
+//$('#collapseTwo').collapse("hide");
 //socket.emit('iceRequest', {ninja : getParameterByName('user')});
 
 

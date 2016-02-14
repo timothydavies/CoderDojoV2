@@ -76,7 +76,7 @@ function handleQueueUpdate(data) {
 /*	Function to handle the changing of room.
 	The data should include fields defining the name of the room and the name of ninja who will be joining 
 */
-function handleRoomChange(data) {
+function handleRoomChange_M(data) {
 	console.log('Changing to room: ' + data.room);
 	setRoom(data.room);
 	$('#ninjaName').text(data.ninja);
@@ -90,7 +90,7 @@ function handleRoomChange(data) {
 	Function to handle the receiving of ice server info.
 	This the data packet should be exactly what is returned by xirsys concerning ICE connection details. Hence, all the data will be in the data.d field.
 */
-function handleIceServers(data) {
+function handleIceServers_M(data) {
 	//console.log(data);
 	//console.log(data.d);
 	webrtc = webrtcInit(data.d, opts, true);
@@ -123,8 +123,8 @@ document.onunload = function(){
 }
 
 socket.on('queueUpdate', handleQueueUpdate);
-socket.on('changeRoom', handleRoomChange);
-socket.on('iceServers', handleIceServers);
+socket.on('changeRoom', handleRoomChange_M);
+socket.on('iceServers', handleIceServers_M);
 socket.on('otherDisconnect', handleNinjaDisconnect);
 
 $.ajax({
@@ -142,5 +142,6 @@ $.ajax({
 
 $(firstPhase).show();
 $(secondPhase).hide();
-$('#collapseTwo').collapse('hide');
+$('#collapseTwo').hide();
+//$('#collapseTwo').collapse('hide');
 //socket.emit('iceRequest', {mentor : getParameterByName('user')});

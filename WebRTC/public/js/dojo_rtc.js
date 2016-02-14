@@ -69,22 +69,21 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 			var newContainer = document.createElement('div');
 			newContainer.id = 'container_' + webrtc.getDomId(peer);
 			//$(newContainer).addClass("video-box embed-responsive embed-responsive-4by3");
-			$(newContainer).addClass("embed-responsive embed-responsive-4by3");
+			$(newContainer).addClass("video-box");
 			$(video).addClass("embed-responsive-item");
-<<<<<<< HEAD
+
 			container.appendChild(newContainer);      
             newContainer.appendChild(video);
-            if (inType != 'video') {
-            video.id="ninjaScreen";
-            addScreenShotButton();
-            addEditZone();
-            addHandler();
-            }     
+                 
             
-=======
 			newContainer.appendChild(video);
 			container.appendChild(newContainer);
->>>>>>> origin/master
+            if (inType != 'video') {
+                video.id="ninjaScreen";
+                addEditZone();
+                addScreenShotButton();
+            }
+
 		}
 	});
 	
@@ -97,10 +96,10 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 				container = opts.remoteCamBox;
 			} else {
 				container = opts.screenBox;
-<<<<<<< HEAD
+
                 $('#editScreenshot').remove();
-=======
->>>>>>> origin/master
+                $('div#feedback-options').css('display','none');
+
 			}
 			if (container && el) {
 				container.removeChild(el);

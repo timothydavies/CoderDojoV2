@@ -14,15 +14,13 @@ html
       padding-bottom: 20px;
       }
     link(rel='stylesheet', href='css/main.css')
-<<<<<<< HEAD
+
     link(rel='stylesheet', href='css/feedback.css')
-<<<<<<< HEAD
-    link(rel='stylesheet', media="screen", href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
-=======
->>>>>>> origin/master
-=======
+
     link(rel='stylesheet', media="screen", href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
->>>>>>> Jasmine
+
+    link(rel='stylesheet', media="screen", href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
+
     script(src='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
   body
     .container-fluid
@@ -115,23 +113,30 @@ html
                         span.ico.glyphicon.glyphicon-cog
                     br
                     br
-                    #screenBox.col-lg-12.embed-responsive.embed-responsive-4by3
-<<<<<<< HEAD
+                    //#screenBox.col-lg-12.embed-responsive.embed-responsive-4by3
+
+                    #screenBox.video-box         
+                            
+                          
                     br
-<<<<<<< HEAD
-                    
-                  button#takescreenShot.btn.btn-default(type='button', onclick='Screenshot()') Take screenShot
-                  button#sendScreenshot.btn.btn-default(type='button', onclick='sendScreenshot()') Send screenShot
-=======
->>>>>>> Jasmine
-                    
+                    div#feedback-options
+                        div.point-icon-div
+                            img#handler-bright.point-icon.handler(src='/img/h-bright.png')
+                            img#handler-dark.point-icon.handler(src='/img/h-dark.png')
+                        div#ButtonZone
+                            button#takescreenShot(type='button' onclick='Screenshot()' value='Take screenshot') Take a screenshot
+                        div#icon-color-div
+                            input.icon-btn(type='radio', name='icon', value='bright')
+                            small bright
+                            input.icon-btn(type='radio', name='icon', value='dark')
+                            small dark
                     br
+                    
    
           
                    
                     
-=======
->>>>>>> origin/master
+
                   #chatWindow(style='height:200px;border:solid 1px lightgrey; overflow-y:scroll')
                   form#chatForm(action='')
                     br
@@ -140,24 +145,24 @@ html
                     button#submit.col-xs-3.btn.btn-default(type='button')
                       span.ico.glyphicon.glyphicon-ok
                   br
+    
     // /container
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src='js/vendor/bootstrap.min.js')
     script(src='//simplewebrtc.com/latest.js')
-<<<<<<< HEAD
+
     
     script(src="//code.jquery.com/jquery-1.11.0.min.js")
     script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js")
     
-=======
->>>>>>> origin/master
+
     script(src='/socket.io/socket.io.js')
     script(src='js/miscHelpers.js')
     script(src='js/dojo_rtc.js')
     script(src='js/mentor.js')
     script(src='js/chat.js')
-<<<<<<< HEAD
+
     script(src='js/Screenshot.js')
     script(src='js/sendScreenshot.js')
     script(src='js/trackMouse.js')
@@ -165,7 +170,3 @@ html
     script(src='js/Drawing.js')
     script(src='js/feedback.js')
  
-    
-
-=======
->>>>>>> origin/master

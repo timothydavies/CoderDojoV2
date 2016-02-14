@@ -18,7 +18,7 @@ function addEditZone(){
     }
     
 function addScreenShotButton(){
-    var take_btn = document.createElement('input');
+   /* var take_btn = document.createElement('input');
     take_btn.type = "button";
     take_btn.id = 'takescreenShot';
     take_btn.value='Take screenshot';
@@ -29,11 +29,10 @@ function addScreenShotButton(){
     var buttonZone = document.createElement('div');
     buttonZone.id="ButtonZone";
     
-    $('#screenBox div').append(buttonZone);
-    console.log("Add btnn zone");
-    $('#ButtonZone').append(take_btn);
-    console.log("Add take screenshot button");
-
+    $('#screenBox').append(buttonZone);
+    */
+    $('div#feedback-options').insertAfter('#editScreenshot');
+    $('div#feedback-options').css('display','block');
     
 }
     

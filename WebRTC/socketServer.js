@@ -5,11 +5,7 @@ var fs = require('fs');
 var queue = [];
 var clients = {};
 var apikey = '';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/master
 if (process.env.XIRSYS) {
 	apikey = process.env.XIRSYS;
 } else {
@@ -173,22 +169,19 @@ io.on('connection', function (socket, error) {
 	socket.on('pm', function(data) {
 		socket.broadcast.to(me.pairing.id).emit('pm',data);
 	});
-<<<<<<< HEAD
+
     
     // This event is to take screenshot************************************************************ 
     socket.on('screenshot', function(data) {
 		socket.broadcast.to(me.pairing.id).emit('screenshot',data);
 	});
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
-=======
+
     
     socket.on('RTPointing', function(data) {
 		socket.broadcast.to(me.pairing.id).emit('RTPointing',data);
         
 	});
->>>>>>> Jasmine
+
 	
 	// We care about when people disconnect from the server because the help queue needs to be updated if they were in it and it needs to inform the other party if the disconnecting party was in a communication session
 	socket.on('disconnect', function() {
