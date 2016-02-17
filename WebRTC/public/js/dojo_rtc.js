@@ -1,5 +1,6 @@
 //var room = 'default';
 var room = 'waiting';
+var lastPeer;
 
 function setRoom(newRoom) {
 	room = newRoom;
@@ -66,22 +67,33 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 			container = opts.screenBox;
 		}
 		if (container) {
-			var newContainer = document.createElement('div');
-			newContainer.id = 'container_' + webrtc.getDomId(peer);
-			//$(newContainer).addClass("video-box embed-responsive embed-responsive-4by3");
-			$(newContainer).addClass("video-box");
-			$(video).addClass("embed-responsive-item");
-
-			container.appendChild(newContainer);      
-            newContainer.appendChild(video);
-                 
             
-			newContainer.appendChild(video);
-			container.appendChild(newContainer);
             if (inType != 'video') {
-                video.id="ninjaScreen";
-                addEditZone();
-                addScreenShotButton();
+                var newContainer = document.getElementById('container_' + webrtc.getDomId(peer));
+                if (newContainer == null){
+			        newContainer = document.createElement('div');
+			        newContainer.id = 'container_' + webrtc.getDomId(peer);
+			//$(newContainer).addClass("video-box embed-responsive embed-responsive-4by3");
+			        $(newContainer).addClass("video-box");
+			        $(video).addClass("embed-responsive-item");
+                    lastPeer=webrtc.getDomId(peer);
+                    newContainer.appendChild(video);
+                    }
+			        container.appendChild(newContainer);      
+            
+                    console.log('Add video');
+                    video.id="ninjaScreen";
+                    addEditZone();
+                    showMentorFeedbackZone()
+            }
+            else{
+                var newContainer_remote = document.createElement('div');
+			    newContainer_remote.id = 'container_remote_' + webrtc.getDomId(peer);
+			    $(newContainer_remote).addClass("embed-responsive embed-responsive-4by3");
+			    $(video).addClass("embed-responsive-item");
+			    newContainer_remote.appendChild(video);
+			    container.appendChild(newContainer_remote);
+                console.log('See mentor face!');
             }
 
 
@@ -93,19 +105,20 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 		if (peer) {
 			var inType = peer.type;
 			var el = document.getElementById('container_' + webrtc.getDomId(peer));
+            var el_remote = document.getElementById('container_remote_' + webrtc.getDomId(peer));
+            var v = document.getElementById('ninjaScreen');
 			if (inType == 'video') {
 				container = opts.remoteCamBox;
-			} else {
-				container = opts.screenBox;
-
+			} else {                
                 $('#editScreenshot').remove();
-
-                $('div#feedback-options').css('display','none');
-
-
+                var es=$('#editScreenshot');
+                es = null;
+				container = opts.screenBox;
+                el.removeChild(v);
 			}
 			if (container && el) {
 				container.removeChild(el);
+                hideFeedbackZone();
 			}
 		} else { // Thanks &yet for this silly case for local screen removal
 			container = opts.screenBox;

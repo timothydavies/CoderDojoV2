@@ -1,41 +1,17 @@
 
     
 function addEditZone(){
-    
-        var editZone = document.createElement('div');
-        editZone.id="editScreenshot";
-/*        var title = document.createElement('p');
-        title.innerHTML="Hightlight the screenshot";*/
-      
+        var editZone = document.getElementById('editScreenshot');
+        if (editZone==null){
+           editZone = document.createElement('div'); 
+           editZone.id="editScreenshot"; 
+           console.log("Add editzone");
+        }   
         $('#screenBox').append(editZone);
-        console.log("Add editzone");
- /*       $('#editScreenshot').append(title);
-        console.log("Add title");*/
-        //$('#editScreenshot').append(canvas);
-        //console.log("Add canvas");
         
-        //alert("You can use static feedback now!");
     }
     
-function addScreenShotButton(){
-   /* var take_btn = document.createElement('input');
-    take_btn.type = "button";
-    take_btn.id = 'takescreenShot';
-    take_btn.value='Take screenshot';
-    take_btn.onclick=function(){Screenshot()};
-    
-
-    
-    var buttonZone = document.createElement('div');
-    buttonZone.id="ButtonZone";
-    
-    $('#screenBox').append(buttonZone);
-    */
-    $('div#feedback-options').insertAfter('#editScreenshot');
-    $('div#feedback-options').css('display','block');
-    
-}
-    
+   
 function PIXEL_RATIO() {
     var ctx = document.createElement("canvas").getContext("2d"),
         dpr = window.devicePixelRatio || 1,

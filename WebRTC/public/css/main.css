@@ -49,13 +49,14 @@ input[type='file']	{border-radius: 0}
     }
 	#screenBox {
         position:absolute; 
+        min-height:3em;
         top:-0.5%; 
         width:300%; 
         right:110%;
         overflow:visible;
     }
     #localScreenBox{
-        position:absolute;
+        position:relative;
     }
         
     #collapseTwo .panel-body{
@@ -69,10 +70,9 @@ input[type='file']	{border-radius: 0}
     }
     #ButtonZone{
         display:block;
-        margin-top:1em;
         z-index: 1;
     }
-
+    
     #chatWindow{
         margin-top:70px;
     }
@@ -156,7 +156,31 @@ div.text-center .glyphicon{
     margin-right:1em;
 }
 
-div#feedback-options{
+div.feedback-options{
     display:none;
 }
+div#icon-color-div{
+    float:left;
+    display:inline-block;
+}
+#icon-color-div small{
+    margin-left:1em;
+    margin-right:1.5em;
+}
+div#ButtonZone{
+    float:right;
+    display:inline-block;
+}
+div.clear{
+    clear:both;
+    height:0;
+}
 
+#takescreenShot{
+    width:10em;
+}
+
+.resizebtn{
+    color:black;
+    font-size:11px;
+}

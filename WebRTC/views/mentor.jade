@@ -116,23 +116,25 @@ html
                     br
                     br
 
-                    //#screenBox.col-lg-12.embed-responsive.embed-responsive-4by3
+                   
 
-                    #screenBox.video-box         
-                            
-                          
-                    br
-                    div#feedback-options
+                    #screenBox.video-box.panel-primary
+                        #headingFour.panel-heading(role='tab')
+                            h4.panel-title CoderDojo                    
+                    br.afterscreen
+                    div#Mentor-feedback-options.feedback-options.panel-heading
                         div.point-icon-div
                             img#handler-bright.point-icon.handler(src='/img/h-bright.png')
                             img#handler-dark.point-icon.handler(src='/img/h-dark.png')
                         div#ButtonZone
-                            button#takescreenShot(type='button' onclick='Screenshot()' value='Take screenshot') Take a screenshot
+                            button#takescreenShot.btn.btn-default.btn-block.input-sm.pull-right(type='button' onclick='Screenshot()' value='Take screenshot') Take a screenshot
+                        
                         div#icon-color-div
                             input.icon-btn(type='radio', name='icon', value='bright')
                             small bright
                             input.icon-btn(type='radio', name='icon', value='dark')
                             small dark
+                        div.clear
 
                     br
                     

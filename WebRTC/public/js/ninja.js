@@ -56,16 +56,24 @@ function handleRoomChange_N (data) {
 
 function shareButtonClick() {
 	$(shareButton).text('Change Shared Window')
-    
-	webrtc.stopScreenShare();
+    if ($(shareButton).text()=='Change Shared Window'){
+        webrtc.stopScreenShare();
+    }
+	
+    console.log("click button");
 	webrtc.shareScreen(function (err) {
 		if (err) {
 			console.log('Share Screen Error: ',err);
 			$(shareButton).text('Share Window')
 		}
 	});
-    $('div#feedback-option').appendTo('#localScreen');  /////ninja arrow position needs to improve
-    $('div#feedback-option').css('display','block');
+    showNinjaFeedbackZone();
+}
+
+function showNinjaFeedbackZone(){
+    $('div#Ninja-feedback-options').insertAfter('#localScreen');
+    $('div#Ninja-feedback-options').css('display','block');
+    
 }
 
 function secondPhaseClick() {

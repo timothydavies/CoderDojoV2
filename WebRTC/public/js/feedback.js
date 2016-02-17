@@ -18,7 +18,11 @@
         });
  }
  
- 
+
+function hideFeedbackZone(){
+    $('div.feedback-options').insertAfter('.afterscreen');
+    $('div.feedback-options').css('display','none');
+} 
 /* $("#fancybox-img").load(function() {
   // Handler for .load() called.
     var ratio=$('img.fancybox').width()/$('img.fancybox').height();
