@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     
-    "start": "forever ./bin/www.js",
+    "start": "node ./bin/www.js",
     "stop": "forever stop ./bin/www.js",
     "poststop": "mongo admin --eval 'db.shutdownServer()' > /dev/null"
   },
