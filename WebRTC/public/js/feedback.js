@@ -22,6 +22,15 @@
 function hideFeedbackZone(){
     $('div.feedback-options').insertAfter('.afterscreen');
     $('div.feedback-options').css('display','none');
+    $('.point-icon').css('display','none');
+    var NinjaScreen = $('#localScreen').offset();
+    var y_distance = $('#localScreen').height();
+    var reset_x = NinjaScreen.left+"px";
+    var reset_y = y_distance+NinjaScreen.top+"px";
+    $('.follower').css({
+        'top':reset_x,
+        'left':reset_y,
+        }); 
 } 
 /* $("#fancybox-img").load(function() {
   // Handler for .load() called.

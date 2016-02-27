@@ -124,7 +124,13 @@ document.onunload = function(){
 
 function showMentorFeedbackZone(){
     $('div#Mentor-feedback-options').insertAfter('#editScreenshot');
-    $('div#Mentor-feedback-options').css('display','block');   
+    $('div#Mentor-feedback-options').css('display','block');
+    $('.handler').css({
+        'top':'90%',
+        'left':'0',
+        }); 
+    
+          
 }
 
 socket.on('queueUpdate', handleQueueUpdate);

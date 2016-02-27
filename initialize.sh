@@ -12,7 +12,7 @@ npm install
 npm update
 echo "Start Admin Server."
 npm start
-
+ cd ..
 cd WebRTC/
 echo "Start Communication Server."
 npm install

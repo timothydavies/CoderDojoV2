@@ -1,11 +1,16 @@
 var mousePressed = false;
 var lastX, lastY;
 var ctx;
-
-function InitThis(ratio,ctx1) {
+var CurrentVideo;
+var CurrentCanvas;
+var ctx;
+function InitThis(ratio,canvas,video) {
     //ctx = document.getElementById('myCanvas').getContext("2d");
-    ctx=ctx1;
+    ctx=canvas.getContext("2d");
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    CurrentVideo=video;
+    CurrentCanvas=canvas;
+    
 
     $(myCanvas).mousedown(function (e) {
         mousePressed = true;
@@ -46,6 +51,7 @@ function Draw(x1, y1, isDown) {
 	
 function clearArea(ctx) {
     // Use the identity matrix while clearing the canvas
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    //ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.drawImage(CurrentVideo ,0,0,CurrentVideo.videoWidth,CurrentVideo.videoHeight,0,0,CurrentCanvas.width/2,CurrentCanvas.height/2);
 }

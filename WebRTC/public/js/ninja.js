@@ -74,6 +74,7 @@ function showNinjaFeedbackZone(){
     $('div#Ninja-feedback-options').insertAfter('#localScreen');
     $('div#Ninja-feedback-options').css('display','block');
     
+      
 }
 
 function secondPhaseClick() {

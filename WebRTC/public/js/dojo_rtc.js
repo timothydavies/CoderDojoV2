@@ -28,7 +28,7 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 	} else {
 		var mediaOptions = {
 			audio: true,
-			video: false
+			video: true  
 		};
 		var localVideoOptions = {
 			muted: false,
@@ -93,7 +93,9 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 			    $(video).addClass("embed-responsive-item");
 			    newContainer_remote.appendChild(video);
 			    container.appendChild(newContainer_remote);
-                console.log('See mentor face!');
+                if ($.browser.mozilla) {
+                    video.mozSrcObject = video.stream;
+                }
             }
 
 
