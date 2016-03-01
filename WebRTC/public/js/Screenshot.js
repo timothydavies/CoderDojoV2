@@ -34,8 +34,7 @@ function createHiDPICanvas(can, w, h) {
 
 
         
-        
-	 function Screenshot(){
+var screenshot=function(){
 
         var video = document.getElementById("ninjaScreen");
         
@@ -90,11 +89,11 @@ function createEditZone(canvas,ctx,video){
    
     $('#editScreenshot').append(canvasZone);
     $('#canvasZone').append(clear_btn);
-    $('#canvasZone').append(close_btn);    
-    $('#canvasZone').append(canvas);
-    $('#canvasZone').append(send_btn);
-    
-    
+    $('#canvasZone').append(close_btn);
+    $('#canvasZone').append(send_btn);    
+    $('#canvasZone').append(canvas);  
     
     InitThis(ratio,canvas,video);
 }	  
+
+module.exports = screenshot;
