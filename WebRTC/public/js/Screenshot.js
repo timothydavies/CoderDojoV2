@@ -52,7 +52,7 @@ var screenshot=function(){
         
         
         
-        ctx.drawImage(video ,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width/2,canvas.height/2);
+        ctx.drawImage(video ,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width/ratio,canvas.height/ratio);
         createEditZone(canvas,ctx,video);
         console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);	
 		console.log('done');

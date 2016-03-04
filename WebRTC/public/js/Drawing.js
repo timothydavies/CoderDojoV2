@@ -4,12 +4,14 @@ var ctx;
 var CurrentVideo;
 var CurrentCanvas;
 var ctx;
-function InitThis(ratio,canvas,video) {
+var ratio;
+function InitThis(window_ratio,canvas,video) {
     //ctx = document.getElementById('myCanvas').getContext("2d");
     ctx=canvas.getContext("2d");
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     CurrentVideo=video;
     CurrentCanvas=canvas;
+    ratio=window_ratio;
     
 
     $(myCanvas).mousedown(function (e) {
@@ -35,8 +37,8 @@ function Draw(x1, y1, isDown) {
     var x;
     var y;
     if (isDown) {
-        x=x1/2;
-        y=y1/2;
+        x=x1/ratio;
+        y=y1/ratio;
         ctx.beginPath();
         ctx.strokeStyle = "red";
         ctx.lineWidth = 2;
@@ -53,5 +55,5 @@ function clearArea(ctx) {
     // Use the identity matrix while clearing the canvas
     //ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.drawImage(CurrentVideo ,0,0,CurrentVideo.videoWidth,CurrentVideo.videoHeight,0,0,CurrentCanvas.width/2,CurrentCanvas.height/2);
+    ctx.drawImage(CurrentVideo ,0,0,CurrentVideo.videoWidth,CurrentVideo.videoHeight,0,0,CurrentCanvas.width/ratio,CurrentCanvas.height/ratio);
 }

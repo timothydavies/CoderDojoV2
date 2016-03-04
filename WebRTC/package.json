@@ -5,9 +5,7 @@
   "scripts": {
     "start": "forever start bin/www.js",
     "stop" : "forever stop bin/www.js",   
-    "pretest": "mongod --fork --logpath /dev/null",
-	"test": "node_modules/.bin/mocha",
-    "posttest": "mongo admin --eval 'db.shutdownServer()' > /dev/null"
+	"test": "node_modules/.bin/mocha"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
