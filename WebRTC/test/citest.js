@@ -1,5 +1,5 @@
 'use strict';
-
+var should = require('should');
 describe('addition', function () {
  it('should add 1+1 correctly', function (done) {
    var onePlusOne = 1 + 1;

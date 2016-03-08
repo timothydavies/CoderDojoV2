@@ -96,5 +96,5 @@ function createEditZone(canvas,ctx,video){
     InitThis(ratio,canvas,video);
 }	  
 
-exports.screenshot = screenshot();
-exports.test = "succeed!!";
+//exports.screenshot = screenshot();
+//exports.test = "succeed!!";

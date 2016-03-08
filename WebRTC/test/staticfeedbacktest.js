@@ -5,28 +5,25 @@ var options = {
         browserName: 'firefox'
     }
 };
+
+var x=webdriverio
+    .remote(options);
+
  
 describe('Index page', function() {
 var s;
-var x=webdriverio
-    .remote(options);
-    x.init()
-    .url('https://localhost:8000/').then(function (status){
-        console.log(status);
-    });
+
   //this.timeout = 99999999;
 
-  it('should open chat application', function(status) {
+  it('should open chat application', function* () {
       
-      /*var title= x.getTitle();
+          yield x.init()
+            .url('webdriver.io/guide.html');
+            
+          var title=yield x.getTitle();
+          title.should.equal('---');
+          console.log(title);
       
-      title.should.matchAny('Coderdojo Communication');
-      console.log(title);
-      */
-      //done();
-      var e=1+1;
-      status.should.equal(5);
-      done();
     });
     x.end();
     
