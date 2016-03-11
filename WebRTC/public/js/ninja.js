@@ -23,7 +23,6 @@ var socket = io();
 var webrtc;
 var tempRoom;
 
-
 /*
 	Function to handle the receiving of ice server info.
 	This the data packet should be exactly what is returned by xirsys concerning ICE connection details. Hence, all the data will be in the data.d field.

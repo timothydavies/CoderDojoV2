@@ -1,0 +1,140 @@
+[INFO  - 2016-03-10T06:37:55.807Z] GhostDriver - Main - running on port 1707
+[INFO  - 2016-03-10T06:37:56.112Z] Session [9f888db0-e68a-11e5-bfb2-eba6fc992614] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-10T06:37:56.112Z] Session [9f888db0-e68a-11e5-bfb2-eba6fc992614] - page.customHeaders:  - {}
+[INFO  - 2016-03-10T06:37:56.112Z] Session [9f888db0-e68a-11e5-bfb2-eba6fc992614] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-10T06:37:56.112Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9f888db0-e68a-11e5-bfb2-eba6fc992614
+[ERROR - 2016-03-10T06:38:03.365Z] Session [9f888db0-e68a-11e5-bfb2-eba6fc992614] - page.onError - msg: TypeError: undefined is not an object (evaluating 'callbacks[i].apply')
+[ERROR - 2016-03-10T06:38:03.365Z] Session [9f888db0-e68a-11e5-bfb2-eba6fc992614] - page.onError - stack:
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-10T06:38:05.403Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-10T06:42:27.056Z] GhostDriver - Main - running on port 27642
+[INFO  - 2016-03-10T06:42:27.293Z] Session [412ba490-e68b-11e5-916c-dd2bc4e0cbd2] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-10T06:42:27.294Z] Session [412ba490-e68b-11e5-916c-dd2bc4e0cbd2] - page.customHeaders:  - {}
+[INFO  - 2016-03-10T06:42:27.294Z] Session [412ba490-e68b-11e5-916c-dd2bc4e0cbd2] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-10T06:42:27.294Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 412ba490-e68b-11e5-916c-dd2bc4e0cbd2
+[ERROR - 2016-03-10T06:42:35.141Z] Session [412ba490-e68b-11e5-916c-dd2bc4e0cbd2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'callbacks[i].apply')
+[ERROR - 2016-03-10T06:42:35.142Z] Session [412ba490-e68b-11e5-916c-dd2bc4e0cbd2] - page.onError - stack:
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-10T06:42:37.141Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-10T06:43:02.129Z] GhostDriver - Main - running on port 45569
+[INFO  - 2016-03-10T06:43:02.362Z] Session [56129850-e68b-11e5-83fd-1f8c26930ef8] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-10T06:43:02.362Z] Session [56129850-e68b-11e5-83fd-1f8c26930ef8] - page.customHeaders:  - {}
+[INFO  - 2016-03-10T06:43:02.362Z] Session [56129850-e68b-11e5-83fd-1f8c26930ef8] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-10T06:43:02.362Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 56129850-e68b-11e5-83fd-1f8c26930ef8
+[ERROR - 2016-03-10T06:43:09.353Z] Session [56129850-e68b-11e5-83fd-1f8c26930ef8] - page.onError - msg: TypeError: undefined is not an object (evaluating 'callbacks[i].apply')
+[ERROR - 2016-03-10T06:43:09.354Z] Session [56129850-e68b-11e5-83fd-1f8c26930ef8] - page.onError - stack:
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-10T06:43:11.402Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-10T06:49:05.525Z] GhostDriver - Main - running on port 35099
+[INFO  - 2016-03-10T06:49:05.602Z] Session [2e9477c0-e68c-11e5-ac6d-ad6e91c4f81f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-10T06:49:05.602Z] Session [2e9477c0-e68c-11e5-ac6d-ad6e91c4f81f] - page.customHeaders:  - {}
+[INFO  - 2016-03-10T06:49:05.602Z] Session [2e9477c0-e68c-11e5-ac6d-ad6e91c4f81f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-10T06:49:05.603Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 2e9477c0-e68c-11e5-ac6d-ad6e91c4f81f
+[ERROR - 2016-03-10T06:49:13.340Z] Session [2e9477c0-e68c-11e5-ac6d-ad6e91c4f81f] - page.onError - msg: TypeError: undefined is not an object (evaluating 'callbacks[i].apply')
+[ERROR - 2016-03-10T06:49:13.340Z] Session [2e9477c0-e68c-11e5-ac6d-ad6e91c4f81f] - page.onError - stack:
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-10T06:49:15.406Z] ShutdownReqHand - _handle - About to shutdown

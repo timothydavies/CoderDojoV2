@@ -1,30 +1,26 @@
-var webdriverio = require('webdriverio');
-var should = require('should');
-var options = {
-    desiredCapabilities: {
-        browserName: 'firefox'
-    }
-};
 
-var x=webdriverio
-    .remote(options);
+describe('Should log in as ninja and log out', function() {
+  
+  before(function() {
+     browser
+      .url('https://localhost:8000/sign_in?url=%2FMentor');
+  });
 
- 
-describe('Index page', function() {
-var s;
-
-  //this.timeout = 99999999;
-
-  it('should open chat application', function* () {
-      
-          yield x.init()
-            .url('webdriver.io/guide.html');
-            
-          var title=yield x.getTitle();
-          title.should.equal('---');
-          console.log(title);
-      
+  it('should open page', function () {   
+          var title=browser.getTitle();
+          title.should.equal('Sign In');
+          
     });
-    x.end();
-    
+  it('should open mentor sign in page', function () {   
+      /*
+        browser.click('#mentorEntry button'); 
+        browser.window(browser.windowHandles()).pause(1000);   
+        */
+      browser.setValue('#email', 'jj')
+      browser.setValue('#password', '123')
+      browser.click('.btn').pause(5000);
+      browser.getTitle().should.equal('Mentor Toolbar');
+      browser.click("#signOut");       
+    });
 });
+

@@ -84,7 +84,7 @@ function webrtcInit(peerConnectionConfig, opts, video) {
                     console.log('Add video');
                     video.id="ninjaScreen";
                     addEditZone();
-                    showMentorFeedbackZone()
+                    showMentorFeedbackZone();
             }
             else{
                 var newContainer_remote = document.createElement('div');

@@ -12,10 +12,16 @@
         </div>
      <div id="screenBox" class="video-box panel-primary">
 
-         <video src="1.mp4" autoplay style="width:200px;height:150px;" type="video/mp4">
+         <video id="ninjaScreen" src="1.mp4" autoplay style="width:200px;height:150px;" type="video/mp4">
                             
      </div>
-   
+     <div id="Mentor-feedback-options" class="feedback-options panel-heading">
+                  
+                       <div id="ButtonZone">
+                            <button id="takescreenShot" onclick='screenshot()' value='Take screenshot'> Take a screenshot</button>
+                       </div>
+     </div>
+    
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
     <script src='../../public/js/vendor/bootstrap.min.js'></script>
     <script src='https://simplewebrtc.com/latest.js'></script>
@@ -27,13 +33,17 @@
     
     <script src='../../public/js/miscHelpers.js'></script>
     <script src='../../public/js/dojo_rtc.js'></script>
-
+    <script src='../../node_modules/socket.io-client/socket.io.js'></script>
 
     <script src='../../public/js/Screenshot.js'></script>
     <script src='../../public/js/sendScreenshot.js'></script>
 
-    
+    <script src='../../public/js/mentor.js'></script>
     <script src='../../public/js/Drawing.js'></script>
     <script src='../../public/js/feedback.js'></script>
+    <script>
+        var x=addEditZone();
+        var y=showMentorFeedbackZone();
+    </script>
 </body>
 </html>

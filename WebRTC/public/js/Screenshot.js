@@ -56,6 +56,8 @@ var screenshot=function(){
         createEditZone(canvas,ctx,video);
         console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);	
 		console.log('done');
+        canvas.textContent=canvas.toDataURL("img/png");
+        console.log(canvas.textContent);
       }
 
 function createEditZone(canvas,ctx,video){

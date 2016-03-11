@@ -19,6 +19,9 @@ var mentorAvatar = document.getElementById("mentorAvatar");
 var socket = io();
 var webrtc;
 
+
+
+
 signOut.onclick = function() {
 	jQuery.post('/sign_out', {}, function() {
 		window.close();
@@ -122,6 +125,8 @@ document.onunload = function(){
 	}
 }
 
+
+
 function showMentorFeedbackZone(){
     $('div#Mentor-feedback-options').insertAfter('#editScreenshot');
     $('div#Mentor-feedback-options').css('display','block');
@@ -137,6 +142,9 @@ socket.on('queueUpdate', handleQueueUpdate);
 socket.on('changeRoom', handleRoomChange_M);
 socket.on('iceServers', handleIceServers_M);
 socket.on('otherDisconnect', handleNinjaDisconnect);
+socket.on('test_addVideo', addVideo);
+
+
 
 $.ajax({
 	dataType: "json",
@@ -156,3 +164,8 @@ $(secondPhase).hide();
 $('#collapseTwo').hide();
 //$('#collapseTwo').collapse('hide');
 //socket.emit('iceRequest', {mentor : getParameterByName('user')});
+/*
+mentorAvatar.onclick = function(){
+    addVideo();
+}
+*/

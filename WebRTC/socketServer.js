@@ -182,7 +182,9 @@ io.on('connection', function (socket, error) {
         
 	});
 
-	
+	socket.on('test_addVideo',function(){
+        socket.broadcast.to(me.pairing.id).emit('test_addVideo');
+    });
 	// We care about when people disconnect from the server because the help queue needs to be updated if they were in it and it needs to inform the other party if the disconnecting party was in a communication session
 	socket.on('disconnect', function() {
 		removeFromQueue(me);
@@ -196,6 +198,8 @@ io.on('connection', function (socket, error) {
 		console.log(me.name + ' has disconnected from the system');
 		clients[me.id] = null;
 	});
+    
+    
 });
 
 module.exports = io;
