@@ -126,7 +126,7 @@ describe('multiremote', function() {
               
               browserB.getAttribute('#myCanvas','textContent').then(function(cc){
                   cc.should.equal(highlighted_Canvas);
-                  console.log(highlighted_Canvas)
+                  //console.log(highlighted_Canvas)
               });
          });
          return browserB.pause(1000)
