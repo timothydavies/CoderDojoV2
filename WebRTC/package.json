@@ -33,6 +33,8 @@
     "should": "*",
     "forever": "*",
     "requirejs": "*",
-    "webdriverio": "*"
+    "webdriverio": "*",
+    "chai":"*",
+    "chai-as-promised":"*"
   }
 }
