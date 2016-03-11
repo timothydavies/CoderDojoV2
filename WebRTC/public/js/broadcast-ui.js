@@ -62,7 +62,7 @@ var config = {
 
         tr.onclick = function() {
             tr = this;
-            captureUserMedia(function() {
+            captureUserMediaForNinja(function() {
                 broadcastUI.joinRoom({
                     roomToken: tr.querySelector('.join').id,
                     joinUser: tr.id
@@ -102,6 +102,10 @@ function captureUserMedia(callback) {
             callback && callback();
         }
     });
+}
+ 
+ function captureUserMediaForNinja(callback) {
+    callback && callback();
 }
 
 /* on page load: get public rooms */
