@@ -104,9 +104,10 @@ describe('multiremote', function() {
                      .moveToObject('#myCanvas',80,80)
                      .buttonDown().then(function(){
                          browserB.buttonPress()
-                                 .moveToObject('#myCanvas',180,160)
+                         .moveToObject('#myCanvas',180,160)
+                         .buttonUp()
                       })
-                      .buttonUp()
+                      
                       .pause(1000)
     
             

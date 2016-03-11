@@ -26,11 +26,13 @@
 	"passport-local":"*",
 	"express-session":"*",
 	"stylus":"*"
+    
   },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
     "forever": "*",
-    "requirejs": "*"
+    "requirejs": "*",
+    "webdriverio": "~2.14.12"
   }
 }
