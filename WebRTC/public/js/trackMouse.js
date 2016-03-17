@@ -1,23 +1,38 @@
+/*
+******************************************************************************************
+This file is for dynamic feedback including: 
+  tracking the mentor's handler position 
+  change the ninja's follower location
+  display pointing icons
+******************************************************************************************
+*/
 
-//var target= document.getElementById("follower");
 var handle= document.getElementById("handler");
 
 var socket = io();
 
-//console.log("handle: "+handle.id);
 
+/*
+*********************************************
+track mouse event and change handler location
+**********************************************
+*/
 $('.handler').mousedown(function() {
-      //console.log('mouse down');
+      
       document.onmousemove = function(event) {
+          // get the absolute location (according to document) of screenBox on mentor side
       var SharedScreenOffset= $('#ninjaScreen').offset();
+      
+          // get screenBox size
       var MentorWidth = $('#ninjaScreen').width();
       var MentorHeight = $('#ninjaScreen').height();
-	  
-      var ArrowCorTocreenLeft = event.pageX-20-SharedScreenOffset.left;
-      var ArrowCorTocreenTop = event.pageY-20-SharedScreenOffset.top
+	     // get mouse location (relative to the screenBox)
+      var ArrowCorToScreenBoxLeft = event.pageX-20-SharedScreenOffset.left;
+      var ArrowCorToScreenBoxTop = event.pageY-20-SharedScreenOffset.top
       
-      var x=ArrowCorTocreenLeft+"px";
-	  var y=ArrowCorTocreenTop+"px";
+      var x=ArrowCorToScreenBoxLeft+"px";
+	  var y=ArrowCorToScreenBoxTop+"px";
+        // move handler to mouse location
  	  $('.handler').css({
            "left":x,
            "top":y
@@ -25,9 +40,9 @@ $('.handler').mousedown(function() {
 	  
       
       
-      //console.log("x:"+ x +" y:"+ y);
-	  socket.emit('RTPointing',{ MX: ArrowCorTocreenLeft,
-                                 MY: ArrowCorTocreenTop,
+        // send out socket with the data of handler location and screenBox size 
+	  socket.emit('RTPointing',{ MX: ArrowCorToScreenBoxLeft,
+                                 MY: ArrowCorToScreenBoxTop,
                                  Mwidth: MentorWidth,
                                  Mheight: MentorHeight});      
     }
@@ -38,14 +53,20 @@ document.onmouseup = function() {
     //}
 }
 
+/*
+******************************************************************************************
+ninja receives socket and changes follower location according to the data
+******************************************************************************************
+*/
 socket.on('RTPointing', function(data) {
 	var Mx = data.MX;
 	var My = data.MY;
     var Mwidth = data.Mwidth;
-    //var Mheight = data.Mheight;
     
     var NinjaScreen = $('#localScreen').offset();
     var Nwidth = $('#localScreen').width();
+    
+      // modify the relative location (to localScreen) according to size ratio
     var Nx = Mx * (Nwidth/Mwidth);
     var Ny = My * (Nwidth/Mwidth);
     var Nx_ab = Nx+NinjaScreen.left+"px";
@@ -56,6 +77,12 @@ socket.on('RTPointing', function(data) {
     });
 });
 
+
+/*
+******************************************************************************************
+display corresponding icon by selected radio button value
+******************************************************************************************
+*/
 $('.icon-btn').click(function(){
     $('.point-icon').css("display","none");
     var choice = $(this).attr('value');

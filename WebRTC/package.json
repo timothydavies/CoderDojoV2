@@ -5,7 +5,7 @@
   "scripts": {
     "start": "forever start bin/www.js",
     "stop" : "forever stop bin/www.js",   
-	"test": "node_modules/.bin/mocha"
+	"test": "node_modules/.bin/mocha --timeout 99999"
   },
   "dependencies": {
     "body-parser": "~1.13.2",

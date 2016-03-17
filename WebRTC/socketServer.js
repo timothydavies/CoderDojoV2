@@ -174,6 +174,7 @@ io.on('connection', function (socket, error) {
     // This event is to take screenshot************************************************************ 
     socket.on('screenshot', function(data) {
 		socket.broadcast.to(me.pairing.id).emit('screenshot',data);
+        //console.log('##################test send screenshot ',data);
 	});
 
     
@@ -184,6 +185,12 @@ io.on('connection', function (socket, error) {
 
 	socket.on('test_addVideo',function(){
         socket.broadcast.to(me.pairing.id).emit('test_addVideo');
+        
+    });
+    
+    socket.on('test_highlight',function(){
+        socket.broadcast.to(me.pairing.id).emit('test_highlight');
+        console.log('test draw');
     });
 	// We care about when people disconnect from the server because the help queue needs to be updated if they were in it and it needs to inform the other party if the disconnecting party was in a communication session
 	socket.on('disconnect', function() {

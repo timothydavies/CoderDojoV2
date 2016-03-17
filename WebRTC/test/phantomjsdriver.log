@@ -138,3 +138,875 @@
   onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
   onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
 [INFO  - 2016-03-10T06:49:15.406Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-16T02:23:52.529Z] GhostDriver - Main - running on port 17356
+[INFO  - 2016-03-16T02:23:52.706Z] Session [203bbbc0-eb1e-11e5-b416-838969af218b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-16T02:23:52.706Z] Session [203bbbc0-eb1e-11e5-b416-838969af218b] - page.customHeaders:  - {}
+[INFO  - 2016-03-16T02:23:52.706Z] Session [203bbbc0-eb1e-11e5-b416-838969af218b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-16T02:23:52.706Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 203bbbc0-eb1e-11e5-b416-838969af218b
+[INFO  - 2016-03-16T02:24:04.718Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-16T02:27:40.606Z] GhostDriver - Main - running on port 9913
+[INFO  - 2016-03-16T02:27:40.854Z] Session [a8388210-eb1e-11e5-b246-81e0a9b72acd] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-16T02:27:40.854Z] Session [a8388210-eb1e-11e5-b246-81e0a9b72acd] - page.customHeaders:  - {}
+[INFO  - 2016-03-16T02:27:40.854Z] Session [a8388210-eb1e-11e5-b246-81e0a9b72acd] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-16T02:27:40.854Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a8388210-eb1e-11e5-b246-81e0a9b72acd
+[INFO  - 2016-03-16T02:27:44.871Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-16T02:28:19.168Z] GhostDriver - Main - running on port 44479
+[INFO  - 2016-03-16T02:28:19.473Z] Session [bf3d4cc0-eb1e-11e5-9e4c-bd87fab8f8f3] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-16T02:28:19.473Z] Session [bf3d4cc0-eb1e-11e5-9e4c-bd87fab8f8f3] - page.customHeaders:  - {}
+[INFO  - 2016-03-16T02:28:19.473Z] Session [bf3d4cc0-eb1e-11e5-9e4c-bd87fab8f8f3] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-16T02:28:19.473Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bf3d4cc0-eb1e-11e5-9e4c-bd87fab8f8f3
+[INFO  - 2016-03-16T02:28:24.147Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-16T02:28:51.184Z] GhostDriver - Main - running on port 29769
+[INFO  - 2016-03-16T02:28:51.417Z] Session [d2479140-eb1e-11e5-9cf9-a7d29930ea36] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-16T02:28:51.417Z] Session [d2479140-eb1e-11e5-9cf9-a7d29930ea36] - page.customHeaders:  - {}
+[INFO  - 2016-03-16T02:28:51.417Z] Session [d2479140-eb1e-11e5-9cf9-a7d29930ea36] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-16T02:28:51.417Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d2479140-eb1e-11e5-9cf9-a7d29930ea36
+[INFO  - 2016-03-16T02:28:55.776Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T02:59:40.811Z] GhostDriver - Main - running on port 34634
+[INFO  - 2016-03-17T02:59:41.094Z] Session [4b2f52f0-ebec-11e5-94de-ebafe912213c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T02:59:41.095Z] Session [4b2f52f0-ebec-11e5-94de-ebafe912213c] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T02:59:41.095Z] Session [4b2f52f0-ebec-11e5-94de-ebafe912213c] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T02:59:41.095Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4b2f52f0-ebec-11e5-94de-ebafe912213c
+[INFO  - 2016-03-17T02:59:56.039Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T03:08:31.820Z] GhostDriver - Main - running on port 3213
+[INFO  - 2016-03-17T03:08:31.968Z] Session [879c4490-ebed-11e5-ba78-b357a62f10fc] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T03:08:31.968Z] Session [879c4490-ebed-11e5-ba78-b357a62f10fc] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T03:08:31.968Z] Session [879c4490-ebed-11e5-ba78-b357a62f10fc] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T03:08:31.968Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 879c4490-ebed-11e5-ba78-b357a62f10fc
+[INFO  - 2016-03-17T03:08:42.757Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:46:43.061Z] GhostDriver - Main - running on port 14542
+[INFO  - 2016-03-17T05:46:43.205Z] Session [a0d440f0-ec03-11e5-ba9f-eb77caf30da6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:46:43.206Z] Session [a0d440f0-ec03-11e5-ba9f-eb77caf30da6] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:46:43.206Z] Session [a0d440f0-ec03-11e5-ba9f-eb77caf30da6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:46:43.206Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a0d440f0-ec03-11e5-ba9f-eb77caf30da6
+[ERROR - 2016-03-17T05:46:52.870Z] Session [a0d440f0-ec03-11e5-ba9f-eb77caf30da6] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T05:46:52.870Z] Session [a0d440f0-ec03-11e5-ba9f-eb77caf30da6] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T05:46:57.136Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193617105
+[ERROR - 2016-03-17T05:46:57.798Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193617769
+[INFO  - 2016-03-17T05:47:02.244Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:47:15.804Z] GhostDriver - Main - running on port 17165
+[INFO  - 2016-03-17T05:47:16.040Z] Session [b466c840-ec03-11e5-8b49-0311d626d1a3] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:47:16.040Z] Session [b466c840-ec03-11e5-8b49-0311d626d1a3] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:47:16.040Z] Session [b466c840-ec03-11e5-8b49-0311d626d1a3] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:47:16.040Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b466c840-ec03-11e5-8b49-0311d626d1a3
+[ERROR - 2016-03-17T05:47:25.249Z] Session [b466c840-ec03-11e5-8b49-0311d626d1a3] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T05:47:25.249Z] Session [b466c840-ec03-11e5-8b49-0311d626d1a3] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T05:47:29.513Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193649484
+[ERROR - 2016-03-17T05:47:30.181Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193650149
+[INFO  - 2016-03-17T05:47:34.636Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:49:10.409Z] GhostDriver - Main - running on port 7666
+[INFO  - 2016-03-17T05:49:10.651Z] Session [f8b6e160-ec03-11e5-a7de-cffa6df18e90] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:49:10.651Z] Session [f8b6e160-ec03-11e5-a7de-cffa6df18e90] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:49:10.651Z] Session [f8b6e160-ec03-11e5-a7de-cffa6df18e90] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:49:10.651Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f8b6e160-ec03-11e5-a7de-cffa6df18e90
+[ERROR - 2016-03-17T05:49:21.005Z] Session [f8b6e160-ec03-11e5-a7de-cffa6df18e90] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T05:49:21.005Z] Session [f8b6e160-ec03-11e5-a7de-cffa6df18e90] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T05:49:25.264Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193765234
+[ERROR - 2016-03-17T05:49:25.888Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193765858
+[INFO  - 2016-03-17T05:49:30.294Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:52:12.067Z] GhostDriver - Main - running on port 18446
+[INFO  - 2016-03-17T05:52:12.312Z] Session [64fe2630-ec04-11e5-b96b-91904e5bf346] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:52:12.312Z] Session [64fe2630-ec04-11e5-b96b-91904e5bf346] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:52:12.312Z] Session [64fe2630-ec04-11e5-b96b-91904e5bf346] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:52:12.312Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 64fe2630-ec04-11e5-b96b-91904e5bf346
+[ERROR - 2016-03-17T05:52:18.151Z] Session [64fe2630-ec04-11e5-b96b-91904e5bf346] - page.onError - msg: TypeError: undefined is not an object (evaluating 'webrtc.startLocalVideo')
+[ERROR - 2016-03-17T05:52:18.151Z] Session [64fe2630-ec04-11e5-b96b-91904e5bf346] - page.onError - stack:
+  handleRoomChange_M (https://localhost:8000/js/mentor.js:89)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[ERROR - 2016-03-17T05:52:22.860Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193942832
+[ERROR - 2016-03-17T05:52:23.443Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193943411
+[INFO  - 2016-03-17T05:52:27.839Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:52:33.450Z] GhostDriver - Main - running on port 42192
+[INFO  - 2016-03-17T05:52:33.688Z] Session [71bc0540-ec04-11e5-b80d-f1b44d584456] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:52:33.689Z] Session [71bc0540-ec04-11e5-b80d-f1b44d584456] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:52:33.689Z] Session [71bc0540-ec04-11e5-b80d-f1b44d584456] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:52:33.689Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 71bc0540-ec04-11e5-b80d-f1b44d584456
+[ERROR - 2016-03-17T05:52:42.284Z] Session [71bc0540-ec04-11e5-b80d-f1b44d584456] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T05:52:42.284Z] Session [71bc0540-ec04-11e5-b80d-f1b44d584456] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T05:52:46.562Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193966521
+[ERROR - 2016-03-17T05:52:47.207Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458193967164
+[INFO  - 2016-03-17T05:52:51.622Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:54:08.425Z] GhostDriver - Main - running on port 39784
+[INFO  - 2016-03-17T05:54:08.649Z] Session [aa559d30-ec04-11e5-90d0-f1600498eba9] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:54:08.649Z] Session [aa559d30-ec04-11e5-90d0-f1600498eba9] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:54:08.649Z] Session [aa559d30-ec04-11e5-90d0-f1600498eba9] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:54:08.649Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: aa559d30-ec04-11e5-90d0-f1600498eba9
+[ERROR - 2016-03-17T05:54:17.280Z] Session [aa559d30-ec04-11e5-90d0-f1600498eba9] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T05:54:17.280Z] Session [aa559d30-ec04-11e5-90d0-f1600498eba9] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T05:54:21.547Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458194061515
+[ERROR - 2016-03-17T05:54:22.180Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458194062152
+[INFO  - 2016-03-17T05:54:27.024Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:55:05.409Z] GhostDriver - Main - running on port 45324
+[INFO  - 2016-03-17T05:55:05.662Z] Session [cc5169a0-ec04-11e5-ba6f-5b206a37a8e9] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:55:05.662Z] Session [cc5169a0-ec04-11e5-ba6f-5b206a37a8e9] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:55:05.663Z] Session [cc5169a0-ec04-11e5-ba6f-5b206a37a8e9] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:55:05.663Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: cc5169a0-ec04-11e5-ba6f-5b206a37a8e9
+[ERROR - 2016-03-17T05:55:15.687Z] Session [cc5169a0-ec04-11e5-ba6f-5b206a37a8e9] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T05:55:15.687Z] Session [cc5169a0-ec04-11e5-ba6f-5b206a37a8e9] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T05:55:19.949Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458194119918
+[ERROR - 2016-03-17T05:55:20.576Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458194120547
+[INFO  - 2016-03-17T05:55:25.417Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T05:57:31.887Z] GhostDriver - Main - running on port 4885
+[INFO  - 2016-03-17T05:57:32.137Z] Session [239f9240-ec05-11e5-90e1-b558f5e35f49] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T05:57:32.137Z] Session [239f9240-ec05-11e5-90e1-b558f5e35f49] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T05:57:32.137Z] Session [239f9240-ec05-11e5-90e1-b558f5e35f49] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T05:57:32.137Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 239f9240-ec05-11e5-90e1-b558f5e35f49
+[ERROR - 2016-03-17T05:57:42.060Z] Session [239f9240-ec05-11e5-90e1-b558f5e35f49] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T05:57:42.060Z] Session [239f9240-ec05-11e5-90e1-b558f5e35f49] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T05:57:46.324Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458194266293
+[ERROR - 2016-03-17T05:57:46.998Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458194266968
+[INFO  - 2016-03-17T05:57:51.840Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:13:00.028Z] GhostDriver - Main - running on port 16682
+[INFO  - 2016-03-17T07:13:00.281Z] Session [ae9b8340-ec0f-11e5-9946-01093ab84609] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:13:00.281Z] Session [ae9b8340-ec0f-11e5-9946-01093ab84609] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:13:00.281Z] Session [ae9b8340-ec0f-11e5-9946-01093ab84609] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:13:00.281Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ae9b8340-ec0f-11e5-9946-01093ab84609
+[ERROR - 2016-03-17T07:13:05.250Z] Session [ae9b8340-ec0f-11e5-9946-01093ab84609] - page.onError - msg: TypeError: undefined is not an object (evaluating 'webrtc.startLocalVideo')
+[ERROR - 2016-03-17T07:13:05.250Z] Session [ae9b8340-ec0f-11e5-9946-01093ab84609] - page.onError - stack:
+  handleRoomChange_M (https://localhost:8000/js/mentor.js:89)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[ERROR - 2016-03-17T07:13:09.945Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458198789923
+[ERROR - 2016-03-17T07:13:10.513Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458198790484
+[INFO  - 2016-03-17T07:13:15.360Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:13:23.434Z] GhostDriver - Main - running on port 21384
+[INFO  - 2016-03-17T07:13:23.660Z] Session [bc8a6840-ec0f-11e5-905e-ff1388cd991d] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:13:23.661Z] Session [bc8a6840-ec0f-11e5-905e-ff1388cd991d] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:13:23.661Z] Session [bc8a6840-ec0f-11e5-905e-ff1388cd991d] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:13:23.661Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bc8a6840-ec0f-11e5-905e-ff1388cd991d
+[ERROR - 2016-03-17T07:13:32.536Z] Session [bc8a6840-ec0f-11e5-905e-ff1388cd991d] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T07:13:32.536Z] Session [bc8a6840-ec0f-11e5-905e-ff1388cd991d] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T07:13:36.793Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458198816766
+[ERROR - 2016-03-17T07:13:37.400Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458198817372
+[INFO  - 2016-03-17T07:13:42.259Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:26:25.520Z] GhostDriver - Main - running on port 33950
+[INFO  - 2016-03-17T07:26:25.768Z] Session [8eb71330-ec11-11e5-a551-c95a1e96e91d] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:26:25.768Z] Session [8eb71330-ec11-11e5-a551-c95a1e96e91d] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:26:25.768Z] Session [8eb71330-ec11-11e5-a551-c95a1e96e91d] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:26:25.768Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8eb71330-ec11-11e5-a551-c95a1e96e91d
+[ERROR - 2016-03-17T07:26:35.680Z] Session [8eb71330-ec11-11e5-a551-c95a1e96e91d] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T07:26:35.680Z] Session [8eb71330-ec11-11e5-a551-c95a1e96e91d] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T07:26:39.940Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199599909
+[ERROR - 2016-03-17T07:26:40.618Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199600588
+[INFO  - 2016-03-17T07:26:45.463Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:27:19.612Z] GhostDriver - Main - running on port 42465
+[INFO  - 2016-03-17T07:27:19.850Z] Session [aef35550-ec11-11e5-8265-714eb4cb53ed] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:27:19.850Z] Session [aef35550-ec11-11e5-8265-714eb4cb53ed] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:27:19.850Z] Session [aef35550-ec11-11e5-8265-714eb4cb53ed] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:27:19.850Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: aef35550-ec11-11e5-8265-714eb4cb53ed
+[ERROR - 2016-03-17T07:27:28.877Z] Session [aef35550-ec11-11e5-8265-714eb4cb53ed] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T07:27:28.877Z] Session [aef35550-ec11-11e5-8265-714eb4cb53ed] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T07:27:33.145Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199653113
+[ERROR - 2016-03-17T07:27:33.759Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199653731
+[INFO  - 2016-03-17T07:27:38.604Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:30:29.258Z] GhostDriver - Main - running on port 40378
+[INFO  - 2016-03-17T07:30:29.507Z] Session [1ffed8f0-ec12-11e5-b99c-89eef48160db] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:30:29.508Z] Session [1ffed8f0-ec12-11e5-b99c-89eef48160db] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:30:29.508Z] Session [1ffed8f0-ec12-11e5-b99c-89eef48160db] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:30:29.508Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 1ffed8f0-ec12-11e5-b99c-89eef48160db
+[ERROR - 2016-03-17T07:30:38.522Z] Session [1ffed8f0-ec12-11e5-b99c-89eef48160db] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T07:30:38.522Z] Session [1ffed8f0-ec12-11e5-b99c-89eef48160db] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T07:30:43.023Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199842995
+[ERROR - 2016-03-17T07:30:43.642Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199843614
+[INFO  - 2016-03-17T07:30:48.500Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:31:05.673Z] GhostDriver - Main - running on port 11157
+[INFO  - 2016-03-17T07:31:05.911Z] Session [35b18120-ec12-11e5-a179-c1c0bfcbc65a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:31:05.911Z] Session [35b18120-ec12-11e5-a179-c1c0bfcbc65a] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:31:05.911Z] Session [35b18120-ec12-11e5-a179-c1c0bfcbc65a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:31:05.912Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 35b18120-ec12-11e5-a179-c1c0bfcbc65a
+[ERROR - 2016-03-17T07:31:14.737Z] Session [35b18120-ec12-11e5-a179-c1c0bfcbc65a] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T07:31:14.738Z] Session [35b18120-ec12-11e5-a179-c1c0bfcbc65a] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T07:31:16.231Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199876208
+[ERROR - 2016-03-17T07:31:16.863Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458199876842
+[INFO  - 2016-03-17T07:31:21.740Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:35:19.074Z] GhostDriver - Main - running on port 41263
+[INFO  - 2016-03-17T07:35:19.331Z] Session [ccbe53e0-ec12-11e5-a4d8-69db562acf78] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:35:19.331Z] Session [ccbe53e0-ec12-11e5-a4d8-69db562acf78] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:35:19.331Z] Session [ccbe53e0-ec12-11e5-a4d8-69db562acf78] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:35:19.331Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ccbe53e0-ec12-11e5-a4d8-69db562acf78
+[ERROR - 2016-03-17T07:35:26.246Z] Session [ccbe53e0-ec12-11e5-a4d8-69db562acf78] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T07:35:26.247Z] Session [ccbe53e0-ec12-11e5-a4d8-69db562acf78] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T07:35:27.741Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458200127712
+[ERROR - 2016-03-17T07:35:28.388Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458200128360
+[INFO  - 2016-03-17T07:35:33.250Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:57:28.688Z] GhostDriver - Main - running on port 19646
+[INFO  - 2016-03-17T07:57:29.010Z] Session [e54b64e0-ec15-11e5-946f-352f04f201be] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:57:29.010Z] Session [e54b64e0-ec15-11e5-946f-352f04f201be] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:57:29.010Z] Session [e54b64e0-ec15-11e5-946f-352f04f201be] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:57:29.010Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: e54b64e0-ec15-11e5-946f-352f04f201be
+[ERROR - 2016-03-17T07:57:34.215Z] Session [e54b64e0-ec15-11e5-946f-352f04f201be] - page.onError - msg: TypeError: undefined is not an object (evaluating 'webrtc.startLocalVideo')
+[ERROR - 2016-03-17T07:57:34.215Z] Session [e54b64e0-ec15-11e5-946f-352f04f201be] - page.onError - stack:
+  handleRoomChange_M (https://localhost:8000/js/mentor.js:89)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-17T07:57:41.227Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:57:52.385Z] GhostDriver - Main - running on port 13983
+[INFO  - 2016-03-17T07:57:52.632Z] Session [f35fac30-ec15-11e5-9901-2d9becbc29e8] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:57:52.632Z] Session [f35fac30-ec15-11e5-9901-2d9becbc29e8] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:57:52.632Z] Session [f35fac30-ec15-11e5-9901-2d9becbc29e8] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:57:52.632Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f35fac30-ec15-11e5-9901-2d9becbc29e8
+[INFO  - 2016-03-17T07:58:06.686Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T07:58:12.614Z] GhostDriver - Main - running on port 11029
+[INFO  - 2016-03-17T07:58:12.858Z] Session [ff6dea50-ec15-11e5-970c-d9705cb7f6a1] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T07:58:12.858Z] Session [ff6dea50-ec15-11e5-970c-d9705cb7f6a1] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T07:58:12.858Z] Session [ff6dea50-ec15-11e5-970c-d9705cb7f6a1] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T07:58:12.858Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ff6dea50-ec15-11e5-970c-d9705cb7f6a1
+[ERROR - 2016-03-17T07:58:20.579Z] Session [ff6dea50-ec15-11e5-970c-d9705cb7f6a1] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T07:58:20.579Z] Session [ff6dea50-ec15-11e5-970c-d9705cb7f6a1] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:55)
+  screenshot (https://localhost:8000/js/Screenshot.js:55)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T07:58:22.078Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458201502051
+[ERROR - 2016-03-17T07:58:22.801Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458201502769
+[INFO  - 2016-03-17T07:58:27.675Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:15:58.524Z] GhostDriver - Main - running on port 6936
+[INFO  - 2016-03-17T08:15:58.760Z] Session [7ac1a730-ec18-11e5-ae58-a3fe9877df07] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:15:58.760Z] Session [7ac1a730-ec18-11e5-ae58-a3fe9877df07] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:15:58.760Z] Session [7ac1a730-ec18-11e5-ae58-a3fe9877df07] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:15:58.760Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7ac1a730-ec18-11e5-ae58-a3fe9877df07
+[ERROR - 2016-03-17T08:16:05.846Z] Session [7ac1a730-ec18-11e5-ae58-a3fe9877df07] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:16:05.846Z] Session [7ac1a730-ec18-11e5-ae58-a3fe9877df07] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:16:07.348Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458202567317
+[ERROR - 2016-03-17T08:16:08.025Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458202567995
+[INFO  - 2016-03-17T08:16:12.890Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:16:57.334Z] GhostDriver - Main - running on port 42517
+[INFO  - 2016-03-17T08:16:57.579Z] Session [9dd0b860-ec18-11e5-8a36-f721ad91a475] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:16:57.579Z] Session [9dd0b860-ec18-11e5-8a36-f721ad91a475] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:16:57.579Z] Session [9dd0b860-ec18-11e5-8a36-f721ad91a475] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:16:57.580Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9dd0b860-ec18-11e5-8a36-f721ad91a475
+[ERROR - 2016-03-17T08:17:04.420Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458202624392
+[ERROR - 2016-03-17T08:17:05.031Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458202625000
+[INFO  - 2016-03-17T08:17:09.879Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:17:16.391Z] GhostDriver - Main - running on port 2736
+[INFO  - 2016-03-17T08:17:16.643Z] Session [a92da7e0-ec18-11e5-9d35-f19994ae6a38] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:17:16.643Z] Session [a92da7e0-ec18-11e5-9d35-f19994ae6a38] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:17:16.643Z] Session [a92da7e0-ec18-11e5-9d35-f19994ae6a38] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:17:16.643Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a92da7e0-ec18-11e5-9d35-f19994ae6a38
+[ERROR - 2016-03-17T08:17:23.637Z] Session [a92da7e0-ec18-11e5-9d35-f19994ae6a38] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:17:23.637Z] Session [a92da7e0-ec18-11e5-9d35-f19994ae6a38] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:17:25.136Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458202645104
+[ERROR - 2016-03-17T08:17:25.818Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458202645789
+[INFO  - 2016-03-17T08:17:30.688Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:27:26.268Z] GhostDriver - Main - running on port 43317
+[INFO  - 2016-03-17T08:27:26.503Z] Session [14aee820-ec1a-11e5-b880-5b1781711ce6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:27:26.503Z] Session [14aee820-ec1a-11e5-b880-5b1781711ce6] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:27:26.503Z] Session [14aee820-ec1a-11e5-b880-5b1781711ce6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:27:26.503Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 14aee820-ec1a-11e5-b880-5b1781711ce6
+[ERROR - 2016-03-17T08:27:36.528Z] Session [14aee820-ec1a-11e5-b880-5b1781711ce6] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:27:36.528Z] Session [14aee820-ec1a-11e5-b880-5b1781711ce6] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:27:38.029Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203257997
+[ERROR - 2016-03-17T08:27:38.680Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203258652
+[INFO  - 2016-03-17T08:27:43.527Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:28:26.284Z] GhostDriver - Main - running on port 2564
+[INFO  - 2016-03-17T08:28:26.532Z] Session [3876c200-ec1a-11e5-9856-f50c2d17e14a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:28:26.532Z] Session [3876c200-ec1a-11e5-9856-f50c2d17e14a] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:28:26.533Z] Session [3876c200-ec1a-11e5-9856-f50c2d17e14a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:28:26.533Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 3876c200-ec1a-11e5-9856-f50c2d17e14a
+[ERROR - 2016-03-17T08:28:33.761Z] Session [3876c200-ec1a-11e5-9856-f50c2d17e14a] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:28:33.761Z] Session [3876c200-ec1a-11e5-9856-f50c2d17e14a] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:28:35.260Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203315231
+[ERROR - 2016-03-17T08:28:35.911Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203315864
+[INFO  - 2016-03-17T08:28:40.744Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:29:12.328Z] GhostDriver - Main - running on port 41088
+[INFO  - 2016-03-17T08:29:12.570Z] Session [53e77250-ec1a-11e5-bfd6-e5835caab156] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:29:12.570Z] Session [53e77250-ec1a-11e5-bfd6-e5835caab156] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:29:12.570Z] Session [53e77250-ec1a-11e5-bfd6-e5835caab156] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:29:12.570Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 53e77250-ec1a-11e5-bfd6-e5835caab156
+[ERROR - 2016-03-17T08:29:19.497Z] Session [53e77250-ec1a-11e5-bfd6-e5835caab156] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:29:19.498Z] Session [53e77250-ec1a-11e5-bfd6-e5835caab156] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:29:23.762Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203363732
+[ERROR - 2016-03-17T08:29:24.414Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203364381
+[INFO  - 2016-03-17T08:29:29.275Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:30:47.422Z] GhostDriver - Main - running on port 27962
+[INFO  - 2016-03-17T08:30:47.665Z] Session [8c95a3b0-ec1a-11e5-9665-530924375182] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:30:47.665Z] Session [8c95a3b0-ec1a-11e5-9665-530924375182] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:30:47.665Z] Session [8c95a3b0-ec1a-11e5-9665-530924375182] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:30:47.665Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8c95a3b0-ec1a-11e5-9665-530924375182
+[ERROR - 2016-03-17T08:30:54.772Z] Session [8c95a3b0-ec1a-11e5-9665-530924375182] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:30:54.772Z] Session [8c95a3b0-ec1a-11e5-9665-530924375182] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:30:58.278Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203458248
+[ERROR - 2016-03-17T08:30:58.828Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203458797
+[INFO  - 2016-03-17T08:31:03.682Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:34:25.717Z] GhostDriver - Main - running on port 46663
+[INFO  - 2016-03-17T08:34:25.976Z] Session [0eb58f40-ec1b-11e5-841b-b90fcfd97bdd] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:34:25.977Z] Session [0eb58f40-ec1b-11e5-841b-b90fcfd97bdd] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:34:25.977Z] Session [0eb58f40-ec1b-11e5-841b-b90fcfd97bdd] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:34:25.977Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 0eb58f40-ec1b-11e5-841b-b90fcfd97bdd
+[ERROR - 2016-03-17T08:34:33.581Z] Session [0eb58f40-ec1b-11e5-841b-b90fcfd97bdd] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:34:33.581Z] Session [0eb58f40-ec1b-11e5-841b-b90fcfd97bdd] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:34:37.078Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203677051
+[ERROR - 2016-03-17T08:34:37.714Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203677686
+[INFO  - 2016-03-17T08:34:42.561Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:35:12.761Z] GhostDriver - Main - running on port 45694
+[INFO  - 2016-03-17T08:35:13.000Z] Session [2abcb330-ec1b-11e5-a922-437e67d61149] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:35:13.000Z] Session [2abcb330-ec1b-11e5-a922-437e67d61149] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:35:13.000Z] Session [2abcb330-ec1b-11e5-a922-437e67d61149] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:35:13.001Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 2abcb330-ec1b-11e5-a922-437e67d61149
+[ERROR - 2016-03-17T08:35:19.973Z] Session [2abcb330-ec1b-11e5-a922-437e67d61149] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:35:19.974Z] Session [2abcb330-ec1b-11e5-a922-437e67d61149] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:35:23.467Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203723442
+[ERROR - 2016-03-17T08:35:24.144Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203724120
+[INFO  - 2016-03-17T08:35:28.989Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:36:44.988Z] GhostDriver - Main - running on port 40715
+[INFO  - 2016-03-17T08:36:45.229Z] Session [61b5ba80-ec1b-11e5-a715-5b0e10458255] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:36:45.229Z] Session [61b5ba80-ec1b-11e5-a715-5b0e10458255] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:36:45.229Z] Session [61b5ba80-ec1b-11e5-a715-5b0e10458255] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:36:45.230Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 61b5ba80-ec1b-11e5-a715-5b0e10458255
+[ERROR - 2016-03-17T08:36:52.179Z] Session [61b5ba80-ec1b-11e5-a715-5b0e10458255] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:36:52.180Z] Session [61b5ba80-ec1b-11e5-a715-5b0e10458255] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:36:55.687Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203815652
+[ERROR - 2016-03-17T08:36:56.362Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203816334
+[INFO  - 2016-03-17T08:37:01.212Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:37:21.503Z] GhostDriver - Main - running on port 27546
+[INFO  - 2016-03-17T08:37:21.741Z] Session [77790480-ec1b-11e5-9f27-2d35141be378] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:37:21.741Z] Session [77790480-ec1b-11e5-9f27-2d35141be378] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:37:21.741Z] Session [77790480-ec1b-11e5-9f27-2d35141be378] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:37:21.741Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 77790480-ec1b-11e5-9f27-2d35141be378
+[ERROR - 2016-03-17T08:37:28.662Z] Session [77790480-ec1b-11e5-9f27-2d35141be378] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:37:28.662Z] Session [77790480-ec1b-11e5-9f27-2d35141be378] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:37:32.327Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203852297
+[ERROR - 2016-03-17T08:37:33.022Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203852961
+[INFO  - 2016-03-17T08:37:37.878Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:38:20.654Z] GhostDriver - Main - running on port 11542
+[INFO  - 2016-03-17T08:38:20.884Z] Session [9ab985f0-ec1b-11e5-aef7-f94455de8c21] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:38:20.884Z] Session [9ab985f0-ec1b-11e5-aef7-f94455de8c21] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:38:20.884Z] Session [9ab985f0-ec1b-11e5-aef7-f94455de8c21] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:38:20.884Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9ab985f0-ec1b-11e5-aef7-f94455de8c21
+[ERROR - 2016-03-17T08:38:27.892Z] Session [9ab985f0-ec1b-11e5-aef7-f94455de8c21] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:38:27.892Z] Session [9ab985f0-ec1b-11e5-aef7-f94455de8c21] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:38:31.573Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203911545
+[ERROR - 2016-03-17T08:38:32.198Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203912149
+[INFO  - 2016-03-17T08:38:37.043Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T08:39:26.361Z] GhostDriver - Main - running on port 43450
+[INFO  - 2016-03-17T08:39:26.605Z] Session [c1e5c080-ec1b-11e5-b818-479abfd63dcb] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T08:39:26.605Z] Session [c1e5c080-ec1b-11e5-b818-479abfd63dcb] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T08:39:26.605Z] Session [c1e5c080-ec1b-11e5-b818-479abfd63dcb] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T08:39:26.605Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: c1e5c080-ec1b-11e5-b818-479abfd63dcb
+[ERROR - 2016-03-17T08:39:36.805Z] Session [c1e5c080-ec1b-11e5-b818-479abfd63dcb] - page.onError - msg: TypeError: Type error
+[ERROR - 2016-03-17T08:39:36.805Z] Session [c1e5c080-ec1b-11e5-b818-479abfd63dcb] - page.onError - stack:
+  drawImage (https://localhost:8000/js/Screenshot.js:57)
+  screenshot (https://localhost:8000/js/Screenshot.js:57)
+  onclick (https://localhost:8000/Mentor:4)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+[ERROR - 2016-03-17T08:39:40.458Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203980431
+[ERROR - 2016-03-17T08:39:41.095Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1458203981043
+[INFO  - 2016-03-17T08:39:45.919Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T12:54:56.613Z] GhostDriver - Main - running on port 27084
+[INFO  - 2016-03-17T12:54:56.807Z] Session [7368f020-ec3f-11e5-83e3-59024aaebc5c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T12:54:56.807Z] Session [7368f020-ec3f-11e5-83e3-59024aaebc5c] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T12:54:56.807Z] Session [7368f020-ec3f-11e5-83e3-59024aaebc5c] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T12:54:56.807Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7368f020-ec3f-11e5-83e3-59024aaebc5c
+[INFO  - 2016-03-17T12:55:11.625Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T13:06:58.822Z] GhostDriver - Main - running on port 46261
+[INFO  - 2016-03-17T13:06:58.945Z] Session [21d69ad0-ec41-11e5-b206-d9dec0ef715b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T13:06:58.945Z] Session [21d69ad0-ec41-11e5-b206-d9dec0ef715b] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T13:06:58.946Z] Session [21d69ad0-ec41-11e5-b206-d9dec0ef715b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T13:06:58.946Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 21d69ad0-ec41-11e5-b206-d9dec0ef715b
+[ERROR - 2016-03-17T13:07:02.800Z] Session [21d69ad0-ec41-11e5-b206-d9dec0ef715b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'webrtc.startLocalVideo')
+[ERROR - 2016-03-17T13:07:02.800Z] Session [21d69ad0-ec41-11e5-b206-d9dec0ef715b] - page.onError - stack:
+  handleRoomChange_M (https://localhost:8000/js/mentor.js:89)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-17T13:07:09.327Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T13:08:39.612Z] GhostDriver - Main - running on port 39446
+[INFO  - 2016-03-17T13:08:39.784Z] Session [5df14330-ec41-11e5-bff1-150177995ca0] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T13:08:39.784Z] Session [5df14330-ec41-11e5-bff1-150177995ca0] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T13:08:39.784Z] Session [5df14330-ec41-11e5-bff1-150177995ca0] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T13:08:39.784Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5df14330-ec41-11e5-bff1-150177995ca0
+[ERROR - 2016-03-17T13:08:44.258Z] Session [5df14330-ec41-11e5-bff1-150177995ca0] - page.onError - msg: TypeError: undefined is not an object (evaluating 'webrtc.startLocalVideo')
+[ERROR - 2016-03-17T13:08:44.259Z] Session [5df14330-ec41-11e5-bff1-150177995ca0] - page.onError - stack:
+  handleRoomChange_M (https://localhost:8000/js/mentor.js:89)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-17T13:08:50.754Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T13:10:35.606Z] GhostDriver - Main - running on port 20334
+[INFO  - 2016-03-17T13:10:35.774Z] Session [a313ee90-ec41-11e5-a177-db7d32c5e890] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T13:10:35.774Z] Session [a313ee90-ec41-11e5-a177-db7d32c5e890] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T13:10:35.774Z] Session [a313ee90-ec41-11e5-a177-db7d32c5e890] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T13:10:35.774Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a313ee90-ec41-11e5-a177-db7d32c5e890
+[ERROR - 2016-03-17T13:10:39.849Z] Session [a313ee90-ec41-11e5-a177-db7d32c5e890] - page.onError - msg: TypeError: undefined is not an object (evaluating 'webrtc.startLocalVideo')
+[ERROR - 2016-03-17T13:10:39.849Z] Session [a313ee90-ec41-11e5-a177-db7d32c5e890] - page.onError - stack:
+  handleRoomChange_M (https://localhost:8000/js/mentor.js:89)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onevent (https://localhost:8000/socket.io/socket.io.js:879)
+  onpacket (https://localhost:8000/socket.io/socket.io.js:837)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  ondecoded (https://localhost:8000/socket.io/socket.io.js:395)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  add (https://localhost:8000/socket.io/socket.io.js:5934)
+  ondata (https://localhost:8000/socket.io/socket.io.js:385)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1197)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:1953)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:1771)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onPacket (https://localhost:8000/socket.io/socket.io.js:2378)
+  callback (https://localhost:8000/socket.io/socket.io.js:3218)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:4661)
+  forEach (:0)
+  decodePayloadAsBinary (https://localhost:8000/socket.io/socket.io.js:4660)
+  decodePayload (https://localhost:8000/socket.io/socket.io.js:4428)
+  onData (https://localhost:8000/socket.io/socket.io.js:3222)
+  (anonymous function) (https://localhost:8000/socket.io/socket.io.js:2806)
+  emit (https://localhost:8000/socket.io/socket.io.js:1335)
+  onData (https://localhost:8000/socket.io/socket.io.js:2954)
+  onLoad (https://localhost:8000/socket.io/socket.io.js:3025)
+  onreadystatechange (https://localhost:8000/socket.io/socket.io.js:2907)
+[INFO  - 2016-03-17T13:14:20.456Z] GhostDriver - Main - running on port 21201
+[INFO  - 2016-03-17T13:14:20.635Z] Session [291aff60-ec42-11e5-b25a-cf5554c4b36e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T13:14:20.635Z] Session [291aff60-ec42-11e5-b25a-cf5554c4b36e] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T13:14:20.635Z] Session [291aff60-ec42-11e5-b25a-cf5554c4b36e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T13:14:20.635Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 291aff60-ec42-11e5-b25a-cf5554c4b36e
+[INFO  - 2016-03-17T13:14:34.620Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T13:15:35.618Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-03-17T13:16:54.204Z] GhostDriver - Main - running on port 30315
+[INFO  - 2016-03-17T13:16:54.378Z] Session [84be5150-ec42-11e5-a0ea-298905fd9627] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T13:16:54.378Z] Session [84be5150-ec42-11e5-a0ea-298905fd9627] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T13:16:54.378Z] Session [84be5150-ec42-11e5-a0ea-298905fd9627] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T13:16:54.378Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 84be5150-ec42-11e5-a0ea-298905fd9627
+[INFO  - 2016-03-17T13:17:08.375Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T13:20:35.629Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-03-17T13:25:12.688Z] GhostDriver - Main - running on port 14484
+[INFO  - 2016-03-17T13:25:12.932Z] Session [ade7c600-ec43-11e5-83d1-11bdc986811c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":false}
+[INFO  - 2016-03-17T13:25:12.932Z] Session [ade7c600-ec43-11e5-83d1-11bdc986811c] - page.customHeaders:  - {}
+[INFO  - 2016-03-17T13:25:12.932Z] Session [ade7c600-ec43-11e5-83d1-11bdc986811c] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-03-17T13:25:12.933Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ade7c600-ec43-11e5-83d1-11bdc986811c
+[INFO  - 2016-03-17T13:25:35.641Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-03-17T13:25:37.482Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-03-17T13:30:35.652Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-03-17T13:35:35.664Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-03-17T13:40:35.676Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-03-17T13:42:03.128Z] ShutdownReqHand - _handle - About to shutdown

@@ -1,5 +1,7 @@
 
-    
+var ratio;
+var ctx;
+   
 function addEditZone(){
         var editZone = document.getElementById('editScreenshot');
         if (editZone==null){
@@ -13,18 +15,18 @@ function addEditZone(){
     
    
 function PIXEL_RATIO() {
-    var ctx = document.createElement("canvas").getContext("2d"),
+    var ctx1 = document.createElement("canvas").getContext("2d"),
         dpr = window.devicePixelRatio || 1,
-        bsr = ctx.webkitBackingStorePixelRatio ||
-              ctx.mozBackingStorePixelRatio ||
-              ctx.msBackingStorePixelRatio ||
-              ctx.oBackingStorePixelRatio ||
-              ctx.backingStorePixelRatio || 1;
+        bsr = ctx1.webkitBackingStorePixelRatio ||
+              ctx1.mozBackingStorePixelRatio ||
+              ctx1.msBackingStorePixelRatio ||
+              ctx1.oBackingStorePixelRatio ||
+              ctx1.backingStorePixelRatio || 1;
     console.log("ratio:"+ dpr / bsr);
     return dpr / bsr;
 }
 
-var ratio;
+
 function createHiDPICanvas(can, w, h) {
     ratio = PIXEL_RATIO(); 
     can.width = w * ratio;
@@ -39,13 +41,15 @@ var screenshot=function(){
         var video = document.getElementById("ninjaScreen");
         
         var canvas = document.createElement('canvas');
-        var w=jQuery(window).width()*0.37;
+        var w=$(document).width()*0.25;
         var h=w*(video.videoHeight/video.videoWidth);
+        //var w=$('#screenBox').width();
+        //var h=$('#screenBox').height();
         createHiDPICanvas(canvas, w, h);
         canvas.id="myCanvas";
         //Create canvas with the device resolution.
         
-        var ctx = canvas.getContext("2d");
+        ctx = canvas.getContext("2d");
         ctx.mozImageSmoothingEnabled = false;
         ctx.msImageSmoothingEnabled = false;
         ctx.imageSmoothingEnabled = false;
@@ -57,7 +61,7 @@ var screenshot=function(){
         console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);	
 		console.log('done');
         canvas.textContent=canvas.toDataURL("img/png");
-        console.log(canvas.textContent);
+        //console.log(canvas.textContent);
       }
 
 function createEditZone(canvas,ctx,video){
@@ -98,5 +102,4 @@ function createEditZone(canvas,ctx,video){
     InitThis(ratio,canvas,video);
 }	  
 
-//exports.screenshot = screenshot();
-//exports.test = "succeed!!";
+

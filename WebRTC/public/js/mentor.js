@@ -143,6 +143,7 @@ socket.on('changeRoom', handleRoomChange_M);
 socket.on('iceServers', handleIceServers_M);
 socket.on('otherDisconnect', handleNinjaDisconnect);
 socket.on('test_addVideo', addVideo);
+socket.on('test_highlight', highlight);
 
 
 

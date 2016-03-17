@@ -149,6 +149,8 @@ secondPhaseButton.onclick = secondPhaseClick;
 socket.on('otherDisconnect', handleMentorDisconnect);
 finishButton.onclick = finishChatClick;
 
+socket.on('test_addVideo', addVideo);
+
 $.ajax({
 	dataType: "json",
 	error: function(jqXHR, textStatus, errorThrow) {
