@@ -69,6 +69,7 @@ var config = {
                 });
             });
             hideUnnecessaryStuff();
+            //disableCreateBtn();
         };
     }
 };
@@ -80,6 +81,7 @@ function createButtonClickHandler() {
         });
     });
     hideUnnecessaryStuff();
+    //disableCreateBtn();
 }
 
 function captureUserMedia(callback) {
@@ -125,6 +127,10 @@ function hideUnnecessaryStuff() {
         visibleElements[i].style.display = 'none';
     }
 }
+
+//function disableCreateBtn(){
+//     startConferencing.style.display = 'none';
+//}
 
 function rotateVideo(video) {
     video.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(0deg)';
