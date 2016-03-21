@@ -34,7 +34,8 @@ var config = {
     onRoomFound: function(room) {
         var alreadyExist = document.getElementById(room.broadcaster);
         if (alreadyExist) return;
-
+        
+        startConferencing.style.display='none';
         if (typeof roomsList === 'undefined') roomsList = document.body;
 
         var tr = document.createElement("tr");
@@ -82,6 +83,7 @@ function createButtonClickHandler() {
         });
     });
     hideUnnecessaryStuff();
+    startConferencing.style.display='none';
 }
 
 function captureUserMedia(callback) {
@@ -127,6 +129,10 @@ function hideUnnecessaryStuff() {
         visibleElements[i].style.display = 'none';
     }
 }
+
+//function disableCreateBtn(){
+//     startConferencing.style.display = 'none';
+//}
 
 function rotateVideo(video) {
     video.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(0deg)';

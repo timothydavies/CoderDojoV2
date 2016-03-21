@@ -19,6 +19,7 @@ var domain = 'coderdojo-uwa.com.au';
 var identity = 'uwadojo';
 var application = 'dojo';
 var domain = 'coderdojo.com.au';
+
 // Attach the websocket handling
 var io = socketio();
 
