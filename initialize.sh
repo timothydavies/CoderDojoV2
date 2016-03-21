@@ -17,5 +17,5 @@ cd WebRTC/
 echo "Start Communication Server."
 npm install
 npm update
-export XIRSYS=70c9a87c-6338-11e5-b7f9-407599caac9d
+export XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
 npm start
