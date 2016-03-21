@@ -62,6 +62,7 @@ var config = {
 
         tr.onclick = function() {
             tr = this;
+            startConferencing.style.display='none';
             captureUserMediaForNinja(function() {
                 broadcastUI.joinRoom({
                     roomToken: tr.querySelector('.join').id,
@@ -69,6 +70,7 @@ var config = {
                 });
             });
             hideUnnecessaryStuff();
+            
         };
     }
 };

@@ -19,7 +19,7 @@ function addVideo(){
         var container=document.getElementById("screenBox");                
         container.appendChild(newContainer);      
         video.id="ninjaScreen";
-        addEditZone();
+        addCanvasZone();
         showMentorFeedbackZone();
     }
     else{

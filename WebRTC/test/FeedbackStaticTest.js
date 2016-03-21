@@ -51,7 +51,9 @@ describe('test mentor static feedback', function() {
 	});
     it('should open chat application', function() {
         return browserB.init().url('https://localhost:8000/sign_in?url=%2FMentor')
-                        .windowHandleSize({width: 0, height: 0})
+                        .then(function(){
+                            ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
+                        })
                         .pause(1000);
         //return browserB.init().url('http://webdriver.io');
     });
@@ -68,9 +70,10 @@ describe('test mentor static feedback', function() {
     it('ninja should request', function() {
 			
 			return browserB.pause(1000).then(function(){
+                        
                         ninjaSocket.emit('requestHelp');
-                    })
-                           .getHTML('#helpQueue .btn',false).should.eventually.to.exist;
+                    }).pause(1000)
+                    .getHTML('#helpQueue .btn',false).should.eventually.to.exist;
 	});
     
     it('mentor should answer', function() {

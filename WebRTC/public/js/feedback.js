@@ -1,4 +1,17 @@
+/*
+******************************************************************************************
+This file is for general feedback including: 
+  bind fancybox features to sent screenshot in chat window (zoom-in feature)
+  when the session is finished, hide feedback zone and reset pointing icons position
+******************************************************************************************
+*/
 
+/*
+*********************************************
+bind fancybox features to sent screenshot in chat window (zoom-in feature)
+this is mainly completed by fancybox built-in functions
+**********************************************
+*/
  function add_ZoomIn(){
         var addToAll = false;
         var gallery = false;
@@ -18,7 +31,11 @@
         });
  }
  
-
+/*
+*********************************************
+when the session is finished, hide feedback zone and reset pointing icons position
+**********************************************
+*/
 function hideFeedbackZone(){
     $('div.feedback-options').insertAfter('.afterscreen');
     $('div.feedback-options').css('display','none');
@@ -32,14 +49,4 @@ function hideFeedbackZone(){
         'left':reset_y,
         }); 
 } 
-/* $("#fancybox-img").load(function() {
-  // Handler for .load() called.
-    var ratio=$('img.fancybox').width()/$('img.fancybox').height();
-    var ZoomInHeight=500;
-    var ZoomInWidth=ZoomInHeight*ratio;
-     $("#fancybox-img").css({
-                             'width':ZoomInWidth,
-                             'height':ZoomInHeight,
-                             'speedIn':'300',
-                             'speedOut':'300'});
- });*/
+

@@ -11,9 +11,14 @@ if (process.env.XIRSYS) {
 } else {
 	throw 'No XIRSYS api key supplied'
 }
+/*
 var identity = 'benuwa';
 var application = 'dojo';
 var domain = 'coderdojo-uwa.com.au';
+*/
+var identity = 'uwadojo';
+var application = 'dojo';
+var domain = 'coderdojo.com.au';
 // Attach the websocket handling
 var io = socketio();
 
@@ -61,7 +66,7 @@ function createRoom (roomName) {
 	};
 	request(options, function (err, response, body) {
 		if (!err && response.statusCode == 201) {
-			console.log(body)
+			console.log(body+"request response")
 		}
 		else if (err) {
 			console.log('Something bad happened\n' + body + '\n' + err);

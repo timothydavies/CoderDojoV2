@@ -9,8 +9,8 @@ describe('Basic Server Test', function() {
 	this.timeout(10000);
 	
 	before(function() {
-		mentorSocket = io('https://localhost:8000',{forceNew: true});
-		ninjaSocket = io('https://localhost:8000',{forceNew: true});
+		mentorSocket = io('https://localhost:8000/',{forceNew: true});
+		ninjaSocket = io('https://localhost:8000/',{forceNew: true});
 	});
 	
 	after(function() {

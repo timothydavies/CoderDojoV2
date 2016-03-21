@@ -108,7 +108,7 @@ describe('test mentor handler', function() {
    
          function test(data) {
 				should.exist(data);
-				data.should.have.property('MX',57.65625);
+				data.should.have.property('MX',57.1875);
                 data.should.have.property('MY',37.96875);
 			};    
          browserB.moveToObject('#handler-bright')

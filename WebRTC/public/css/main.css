@@ -77,13 +77,13 @@ input[type='file']	{border-radius: 0}
         margin-top:70px;
     }
 
-/*@media (min-width: 992px) { 
+@media (max-width: 768px) { 
 	#chats{position:absolute;top:50px;right:10px;}
 	#screenBox2 {position:absolute;top:0px; width:190%;right:105%;}
 	#screenBox {position:absolute;top:10%; width:190%;height:auto;right:105%;}
 
 }
-*/
+
     .row{
         max-width:100%;
     }
@@ -97,7 +97,7 @@ input[type='file']	{border-radius: 0}
     #myCanvas{
         display:block;  
     }
-    #canvasZone{
+    #canvasBtnZone{
         position: absolute;
         top: 0;
         left: 0%;
