@@ -7,7 +7,7 @@ var queue=[];
 
 var WebdriverIO = require('webdriverio'),
     matrix = WebdriverIO.multiremote({
-       browserB: { desiredCapabilities: { browserName: 'chrome' } },
+       browserB: { desiredCapabilities: { browserName: 'firefox' } },
        /*browserB: { 
             desiredCapabilities: 
             { 

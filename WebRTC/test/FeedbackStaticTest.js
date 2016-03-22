@@ -4,7 +4,7 @@ var io = require('socket.io-client');
 var ninjaSocket;
 var WebdriverIO = require('webdriverio'),
     matrix = WebdriverIO.multiremote({
-       browserB: { desiredCapabilities: { browserName: 'chrome' } },
+       browserB: { desiredCapabilities: { browserName: 'firefox' } },
        /*
        browserA: { 
             desiredCapabilities: 
@@ -50,7 +50,8 @@ describe('test mentor static feedback', function() {
 		ninjaSocket.disconnect();
 	});
     it('should open chat application', function() {
-        return browserB.init().url('https://localhost:8000/sign_in?url=%2FMentor')
+        return browserB.init().windowHandleSize({width: 1000, height: 800})
+                        .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                         })

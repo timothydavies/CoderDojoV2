@@ -7,7 +7,7 @@ var x;
 
 var WebdriverIO = require('webdriverio'),
     matrix = WebdriverIO.multiremote({
-       browserB: { desiredCapabilities: { browserName: 'chrome' } },
+       browserB: { desiredCapabilities: { browserName: 'firefox' } },
        /*
        browserB: { 
             desiredCapabilities: 
@@ -54,8 +54,13 @@ describe('test mentor handler', function() {
 		ninjaSocket.disconnect();
 	});
     it('should open chat application', function() {
-        return browserB.init().url('https://localhost:8000/sign_in?url=%2FMentor')
-        .pause(2000);
+        return browserB.init()
+                       .windowHandleSize({width: 1000, height: 800})
+                       .url('https://localhost:8000/sign_in?url=%2FMentor')
+                       .then(function(){
+                            ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
+                        })
+                       .pause(2000);
         //return browserB.init().url('http://webdriver.io');
     });
 
@@ -108,8 +113,11 @@ describe('test mentor handler', function() {
    
          function test(data) {
 				should.exist(data);
-				data.should.have.property('MX',57.1875);
-                data.should.have.property('MY',37.96875);
+				data.should.have.property('MX');
+                data.MX.should.be.above(57);
+                data.should.have.property('MY');
+                data.MY.should.be.above(37);
+           
 			};    
          browserB.moveToObject('#handler-bright')
                      .buttonDown().then(function(){
