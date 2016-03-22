@@ -141,28 +141,3 @@ function rotateVideo(video) {
     }, 1000);
 }
 
-(function() {
-    
-    var uniqueToken = document.getElementById('unique-token');
-    var shareLink = document.getElementById('share-link');
-    var plink = document.getElementById("plink");
-    var b = document.createElement("h2");
-    var ahref = document.createElement("a");
-    
-    $(b).css("text-align","center");
-    $(ahref).attr({
-        href:location.href,
-        target:"_blank"
-    });
-    $(ahref).text("Share this link");
-    $(b).append($(ahref));
-    
-    if (uniqueToken)
-        if (location.hash.length > 2) $(shareLink).append($(b));
-        else {
-            var t = "broadcast/#"+(Math.random() * new Date().getTime()).toString(36).toUpperCase().replace( /\./g , '-');
-            $(uniqueToken).text(t);
-            $(plink).attr("href",t);
-        }    
-    
-})();

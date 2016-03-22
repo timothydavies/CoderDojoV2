@@ -17,17 +17,15 @@ html
                 -o-transition: all 1s ease;
                 -webkit-transition: all 1s ease;
                 transition: all 1s ease;
-                vertical-align: top;
-
-                width: 45%;
-            }
-
-            input {
-                border: 1px solid #d9d9d9;
-                border-radius: 1px;
-                font-size: 2em;
-                margin: .2em;
-                width: 100%;
+                vertical-align: middle;
+                
+                max-width: 100%;
+                height: auto;
+                border-style: solid;
+                border-width: 10px;
+                border-color: white;
+                
+                
             }
 
             .setup {
@@ -47,28 +45,32 @@ html
                 border-left: 1px solid rgb(189, 189, 189);
                 padding: .5em;
             }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #start-conferencing {
+                margin-left: 0em;
+            }
+            #conference-name{
+                margin-left: 0em;
+                width: 123px;
+            }
+            
   script.
     document.createElement('article')
   body
     article
-      table(class="visible")
-        tr
-          td(style="text-align: right;")
-            input(type="text", id="conference-name", placeholder="Please enter your broadcast name")
-          td
-          button(id="start-conferencing",class="btn btn-primary btn-block").
-            New Broadcast
-      table(id="rooms-list" class="visible")
+      div(class='container')
+        div(class='page-header')
+          h1 CoderDojo Broadcasting
+        div(class='form-group visible')
+          label(for='conference-name') Broadcast Name:
+          input(type="text", id="conference-name",class='form-control')
+        button(id="start-conferencing",class="btn btn-primary") New Broadcast
+        table(id="rooms-list" class="visible")
      
-      table(class="visible")
-        tr
-          td(id="share-link")
-            h2
-              strong Private Broadcast??
-              a(id='plink' href='', target='_top', title='Open this link in new tab. Then your broadcasting room will be private!')
-                code
-                  strong(id="unique-token") #123456789
-      div(id="participants")
+        div(id="participants")
       
 
 script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')          
