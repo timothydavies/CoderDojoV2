@@ -2,6 +2,11 @@
 // MIT License       - www.WebRTC-Experiment.com/licence
 // Experiments       - github.com/muaz-khan/WebRTC-Experiment
 
+if ($(window).width()<=500){
+    $('#start-conferencing').css('display','none');
+    $('div.form-group').css('display','none');
+}
+
 var config = {
     openSocket: function(config) {
         // https://github.com/muaz-khan/WebRTC-Experiment/blob/master/Signaling.md
