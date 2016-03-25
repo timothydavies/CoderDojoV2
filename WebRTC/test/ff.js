@@ -6,21 +6,43 @@ var ninjaSocket;
   
 var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ desiredCapabilities: {browserName: 'firefox'}});
- 
+       /*
+       browserA: { 
+            desiredCapabilities: 
+            { 
+                browserName: 'phantomjs',
+                //'phantomjs.binary.path': require('../node_modules/phantomjs').path,
+                'phantomjs.cli.args': [
+                '--ignore-ssl-errors=true',
+                '--ssl-protocol=any', // tlsv1
+                '--web-security=false',
+                '--load-images=true',
+          //'--debug=false',
+          //'--webdriver-logfile=webdriver.log',
+          //'--webdriver-loglevel=DEBUG',
+                ],
+                logLevel: 'silent'
+            } 
+        }
+      */ 
+
+  //  browserA = matrix.select('browserA'),
+
      
 var should = require('should');
     var chai = require('chai');
     var chaiAsPromised = require('chai-as-promised');
- 
+    assert = require('assert');
     chai.use(chaiAsPromised);
     expect = chai.expect;
     chai.Should();
-    chaiAsPromised.transferPromiseness = browserB.transferPromiseness;
+//    chaiAsPromised.transferPromiseness = browserB.transferPromiseness;
 
 
 
 describe('test mentor static feedback', function() {
-    
+    this.timeout(99999999);
+
     //this.timeout = 99999999;
     before(function() {
 		
@@ -29,50 +51,63 @@ describe('test mentor static feedback', function() {
     after(function() {
 		ninjaSocket.disconnect();
 	});
-    it('should open chat application', function() {
+    it('should open chat application', function(done) {
         browserB.init().windowHandleSize({width: 1000, height: 800})
                         .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                         })
-                        .pause(1000);
+                        .pause(1000)
+                        .call(done);
         //return browserB.init().url('http://webdriver.io');
     });
 
-    it('should fill email and password and login as mentor', function() {
+    it('should fill email and password and login as mentor', function(done) {
         browserB.setValue('#email', 'jj')
                         .setValue('#password', '123')
                         .click('.btn').pause(1000)
-                        .getTitle().should.eventually.equal('Mentor Toolbar')
-                        .pause(2000);  
+                        .getTitle().then(function(title){
+                            title.should.equal('Mentor Toolbar');
+                        })
+                        .pause(2000)
+                        .call(done);
              
     });
     
-    it('ninja should request', function() {
+    it('ninja should request', function(done) {
 			
-			browserB.pause(1000).then(function(){
+			browserB.pause(500).then(function(){
                         
                         ninjaSocket.emit('requestHelp');
                     }).pause(1000)
-                    .getHTML('#helpQueue .btn',false).should.eventually.to.exist;
+                    .getHTML('#helpQueue .btn',false).then(function(ele){
+                        ele.should.exist;
+                    })
+                    .call(done);
 	});
     
-    it('mentor should answer', function() {
-			browserB.click('#helpQueue .btn').pause(1000)
-                           .getHTML('#headingThree h4 a',false).should.eventually.equal('Chats')
-                           .pause(1000);
+    it('mentor should answer', function(done) {
+			       browserB.click('#helpQueue .btn').pause(1000)
+                           .getHTML('#headingThree h4 a',false).then(function(ele){
+                               ele.should.equal('Chats');
+                           })
+                           .pause(1000)
+                           .call(done);
 	});
     
-    it('should add video', function() {
+    it('should add video', function(done) {
             
-			browserB.pause(1000).then(function(){
+	browserB.pause(1000).then(function(){
                 ninjaSocket.emit('test_addVideo');
             })
-            .getHTML('#ninjaScreen',false).should.eventually.to.exist
-            .pause(1000);
+            .getHTML('#ninjaScreen',false).then(function(ele){
+                        ele.should.exist;
+                    })
+            .pause(1000)
+            .call(done);
 	});
     
-    it('should take screenshot', function() {
+    it('should take screenshot', function(done) {
             
             browserB.pause(1000)
                             
@@ -81,15 +116,16 @@ describe('test mentor static feedback', function() {
                               isVisible.should.equal(true);
                             }) 
                             .pause(2000)
+                            .call(done);
                          
 	});
     
     
     
     
-    it('should cancel current screenshot and take a new one', function() {
+    it('should cancel current screenshot and take a new one', function(done) {
 
-        browserB.click('#closeCanvas').pause(1000)
+                browserB.click('#closeCanvas').pause(1000)
                         .isVisible('#myCanvas').then(function(isVisible) {
                             isVisible.should.equal(false);
                         }) 
@@ -97,18 +133,20 @@ describe('test mentor static feedback', function() {
                         .isVisible('#myCanvas').then(function(isVisible) {
                             isVisible.should.equal(true);
                         })
-                        .pause(3000);  
+                        .pause(3000)
+                        .call(done);  
 	});
     
-    it('should highlight screenshot', function() {
+    it('should highlight screenshot', function(done) {
         ninjaSocket.emit('test_highlight');
-        browserB.pause(1000)
+         browserB.pause(1000)
                        .getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
                             txtContent.should.equal('changed'); 
                         })
-                        .pause(3000);
+                        .pause(3000)
+                        .call(done);
     });
-    it('should send out image', function() {
+    it('should send out image', function(done) {
 
         function test(data){
             data.should.have.property('image');
@@ -122,17 +160,21 @@ describe('test mentor static feedback', function() {
                          .pause(2000);  
                          
         ninjaSocket.once('screenshot',test);
-        browserB.pause(1000);
+        browserB.pause(1000)
+                .call(done);
 	});
     
-    it('should sign out', function() {
+    it('should sign out', function(done) {
         
          browserB.click('#signOut')
-                        .pause(2000);
+                        .pause(2000)
+                        .call(done);
 	});
 
-    it('should end the session', function() {
-        browserB.pause(2000).end();
+    it('should end the session', function(done) {
+         browserB.pause(2000)
+                       .end()
+                       .call(done);
     });
 
 });
