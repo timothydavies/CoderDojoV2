@@ -34,7 +34,7 @@
     "should": "*",
     "forever": "*",
     "requirejs": "*",
-    "webdriverio": "~2.14.12",
+    "webdriverio": "*",
     "chai":"*",
     "chai-as-promised":"*"
   }
