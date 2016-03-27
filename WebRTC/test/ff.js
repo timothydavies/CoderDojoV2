@@ -52,7 +52,8 @@ describe('test mentor static feedback', function() {
     before(function(done) {
 		
 		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
-        browserB.init(done)
+        browserB.pause(5000)
+                .init(done)
                 .windowHandleSize({width: 1000, height: 800})
                         .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
