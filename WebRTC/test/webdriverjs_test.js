@@ -9,10 +9,10 @@ var should = require('should');
 var webdriver = require('selenium-webdriver');
 var test = require('selenium-webdriver/testing');
 var io = require('socket.io-client');
-const mochaTimeOut = 30000; //ms
+
  
 test.describe('Feedbacktest', function() {
-  this.timeout(mochaTimeOut);
+  this.timeout(99999999);
   test.before(function(){
       ninjaSocket = io('https://localhost:8000',{forceNew: true});
   });
