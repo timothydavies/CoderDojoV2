@@ -11,27 +11,7 @@ var WebdriverIO = require('webdriverio'),
          }
      });
      
-       /*
-       browserA: { 
-            desiredCapabilities: 
-            { 
-                browserName: 'phantomjs',
-                //'phantomjs.binary.path': require('../node_modules/phantomjs').path,
-                'phantomjs.cli.args': [
-                '--ignore-ssl-errors=true',
-                '--ssl-protocol=any', // tlsv1
-                '--web-security=false',
-                '--load-images=true',
-          //'--debug=false',
-          //'--webdriver-logfile=webdriver.log',
-          //'--webdriver-loglevel=DEBUG',
-                ],
-                logLevel: 'silent'
-            } 
-        }
-      */ 
-
-  //  browserA = matrix.select('browserA'),
+          
 
      
 var should = require('should');
@@ -51,8 +31,8 @@ describe('test mentor static feedback', function() {
     //this.timeout = 99999999;
     before(function(done) {
 		
-		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
-        browserB.pause(5000)
+		ninjaSocket = io('https://localhost:8000',{forceNew: true});
+        browserB.pause(1000)
                 .init(done)
                 .windowHandleSize({width: 1000, height: 800})
                         .url('https://localhost:8000/sign_in?url=%2FMentor')
