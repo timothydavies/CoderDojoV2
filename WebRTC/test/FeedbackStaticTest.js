@@ -6,7 +6,28 @@ var ninjaSocket;
   
 var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ desiredCapabilities: {browserName: 'firefox'}});
- 
+       /*
+       browserA: { 
+            desiredCapabilities: 
+            { 
+                browserName: 'phantomjs',
+                //'phantomjs.binary.path': require('../node_modules/phantomjs').path,
+                'phantomjs.cli.args': [
+                '--ignore-ssl-errors=true',
+                '--ssl-protocol=any', // tlsv1
+                '--web-security=false',
+                '--load-images=true',
+          //'--debug=false',
+          //'--webdriver-logfile=webdriver.log',
+          //'--webdriver-loglevel=DEBUG',
+                ],
+                logLevel: 'silent'
+            } 
+        }
+      */ 
+
+  //  browserA = matrix.select('browserA'),
+
      
 var should = require('should');
     var chai = require('chai');
@@ -30,7 +51,7 @@ describe('test mentor static feedback', function() {
 		ninjaSocket.disconnect();
 	});
     it('should open chat application', function() {
-        browserB.init().windowHandleSize({width: 1000, height: 800})
+        return browserB.init().windowHandleSize({width: 1000, height: 800})
                         .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
@@ -40,7 +61,7 @@ describe('test mentor static feedback', function() {
     });
 
     it('should fill email and password and login as mentor', function() {
-        browserB.setValue('#email', 'jj')
+        return browserB.setValue('#email', 'jj')
                         .setValue('#password', '123')
                         .click('.btn').pause(1000)
                         .getTitle().should.eventually.equal('Mentor Toolbar')
@@ -50,7 +71,7 @@ describe('test mentor static feedback', function() {
     
     it('ninja should request', function() {
 			
-			browserB.pause(1000).then(function(){
+			return browserB.pause(1000).then(function(){
                         
                         ninjaSocket.emit('requestHelp');
                     }).pause(1000)
@@ -58,14 +79,14 @@ describe('test mentor static feedback', function() {
 	});
     
     it('mentor should answer', function() {
-			browserB.click('#helpQueue .btn').pause(1000)
+			return browserB.click('#helpQueue .btn').pause(1000)
                            .getHTML('#headingThree h4 a',false).should.eventually.equal('Chats')
                            .pause(1000);
 	});
     
     it('should add video', function() {
             
-			browserB.pause(1000).then(function(){
+			return browserB.pause(1000).then(function(){
                 ninjaSocket.emit('test_addVideo');
             })
             .getHTML('#ninjaScreen',false).should.eventually.to.exist
@@ -74,7 +95,7 @@ describe('test mentor static feedback', function() {
     
     it('should take screenshot', function() {
             
-            browserB.pause(1000)
+            return browserB.pause(1000)
                             
                            .click('#takescreenShot').pause(1000)
                             .isVisible('#myCanvas').then(function(isVisible) {
@@ -89,7 +110,7 @@ describe('test mentor static feedback', function() {
     
     it('should cancel current screenshot and take a new one', function() {
 
-        browserB.click('#closeCanvas').pause(1000)
+        return browserB.click('#closeCanvas').pause(1000)
                         .isVisible('#myCanvas').then(function(isVisible) {
                             isVisible.should.equal(false);
                         }) 
@@ -102,7 +123,7 @@ describe('test mentor static feedback', function() {
     
     it('should highlight screenshot', function() {
         ninjaSocket.emit('test_highlight');
-        browserB.pause(1000)
+        return browserB.pause(1000)
                        .getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
                             txtContent.should.equal('changed'); 
                         })
@@ -122,17 +143,17 @@ describe('test mentor static feedback', function() {
                          .pause(2000);  
                          
         ninjaSocket.once('screenshot',test);
-        browserB.pause(1000);
+        return browserB.pause(1000);
 	});
     
     it('should sign out', function() {
         
-         browserB.click('#signOut')
+         return browserB.click('#signOut')
                         .pause(2000);
 	});
 
     it('should end the session', function() {
-        browserB.pause(2000).end();
+        return browserB.pause(2000).end();
     });
 
 });

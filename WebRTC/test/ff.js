@@ -5,7 +5,12 @@ var ninjaSocket;
 
   
 var WebdriverIO = require('webdriverio'),
-     browserB = WebdriverIO.remote({ desiredCapabilities: {browserName: 'firefox'}});
+     browserB = WebdriverIO.remote({ 
+         desiredCapabilities: {
+             browserName: 'chrome'
+         }
+     });
+     
        /*
        browserA: { 
             desiredCapabilities: 
@@ -44,23 +49,22 @@ describe('test mentor static feedback', function() {
     this.timeout(99999999);
 
     //this.timeout = 99999999;
-    before(function() {
+    before(function(done) {
 		
-		ninjaSocket = io('https://localhost:8000',{forceNew: true});
-	});
-    after(function() {
-		ninjaSocket.disconnect();
-	});
-    it('should open chat application', function(done) {
-        browserB.init().windowHandleSize({width: 1000, height: 800})
+		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
+        browserB.init(done)
+                .windowHandleSize({width: 1000, height: 800})
                         .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                         })
                         .pause(1000)
                         .call(done);
-        //return browserB.init().url('http://webdriver.io');
-    });
+	});
+    after(function() {
+		ninjaSocket.disconnect();
+	});
+
 
     it('should fill email and password and login as mentor', function(done) {
         browserB.setValue('#email', 'jj')
