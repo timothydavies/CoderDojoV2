@@ -8,8 +8,9 @@ before_script:
   
   
 script:
+  - "ls"
   - "mongo coderdojo initialize.js"
-  - "cd /WebRTC"
+  - "cd WebRTC/"
   - "java -jar ./test/selenium-server-standalone-2.52.0.jar &"
   - sleep 5
   - "npm install"
