@@ -9,7 +9,7 @@ before_script:
   - "cd /WebRTC"
 before_install:
   - "java -jar ./test/selenium-server-standalone-2.35.0.jar &"
-   - sleep 5
+  - sleep 5
 install:
   - "npm install"
   - "npm update"
