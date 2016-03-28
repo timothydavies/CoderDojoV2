@@ -9,7 +9,7 @@ before_script:
   
 before_install:
   - "cd /WebRTC"
-  - "java -jar ./test/selenium-server-standalone-2.35.0.jar &"
+  - "java -jar ./test/selenium-server-standalone-2.52.0.jar &"
   - sleep 5
 install:
   - "npm install"
@@ -20,3 +20,4 @@ env:
   - XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
 services:
   - mongodb
+sudo: requireds
