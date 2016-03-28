@@ -16,7 +16,7 @@ script:
   - "npm install"
   - "npm update"
   - "npm install forever -g"
-  - "forever bin/www.js"
+  - "forever start bin/www.js"
   - "npm test"
 env:
   - XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
