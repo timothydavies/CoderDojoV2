@@ -173,5 +173,14 @@ $('#collapseTwo').hide();
 //$('#collapseTwo').collapse("hide");
 //socket.emit('iceRequest', {ninja : getParameterByName('user')});
 
+//Change of Socket
 
 
+var toBroadcast = document.getElementById('toBroadcast');
+
+if (toBroadcast) toBroadcast.onclick = toBroadcastClick;
+
+function toBroadcastClick(){  
+    alert('!!!!!!');
+    socket.emit('sendUserIdentity',{client:'ninja'});
+}

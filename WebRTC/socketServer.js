@@ -23,6 +23,9 @@ var domain = 'coderdojo.com.au';
 // Attach the websocket handling
 var io = socketio();
 
+// Global var for identity record
+var clientIdentity;
+
 // Function to communicate with the Xirsys api and delete a room
 function deleteRoom (roomName) {
 	console.log('deleting room: ' + roomName);
@@ -211,6 +214,19 @@ io.on('connection', function (socket, error) {
 		console.log(me.name + ' has disconnected from the system');
 		clients[me.id] = null;
 	});
+    // Get user identity to decide if the broadcast button should be hidden
+    socket.on('sendUserIdentity',function(data){
+        if (data.client == 'ninja'){
+            clientIdentity = 'ninja';
+            console.log('ninja1');
+        }   
+    });
+    
+    socket.on('hideBtn',function(){
+        socket.emit('getIdentity',{client:clientIdentity});
+        console.log(clientIdentity);
+        clientIdentity = 'mentor';
+});
     
     
 });

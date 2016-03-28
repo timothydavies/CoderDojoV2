@@ -2,6 +2,7 @@
 // MIT License       - www.WebRTC-Experiment.com/licence
 // Experiments       - github.com/muaz-khan/WebRTC-Experiment
 
+
 var config = {
     openSocket: function(config) {
         // https://github.com/muaz-khan/WebRTC-Experiment/blob/master/Signaling.md
@@ -35,7 +36,8 @@ var config = {
         var alreadyExist = document.getElementById(room.broadcaster);
         if (alreadyExist) return;
         
-        startConferencing.style.display='none';
+        hideInputandButton();
+        
         if (typeof roomsList === 'undefined') roomsList = document.body;
 
         var tr = document.createElement("tr");
@@ -111,9 +113,13 @@ function captureUserMedia(callback) {
  function captureUserMediaForNinja(callback) {
     callback && callback();
 }
+ 
+ 
 
 /* on page load: get public rooms */
+
 var broadcastUI = broadcast(config);
+
 
 /* UI specific */
 var participants = document.getElementById("participants") || document.body;
@@ -121,6 +127,12 @@ var startConferencing = document.getElementById('start-conferencing');
 var roomsList = document.getElementById('rooms-list');
 
 if (startConferencing) startConferencing.onclick = createButtonClickHandler;
+var socketio = io();
+
+socketio.emit('hideBtn');
+socketio.on('getIdentity',function(data){
+    if (data.client == 'ninja') hideInputandButton();
+}); 
 
 function hideUnnecessaryStuff() {
     var visibleElements = document.getElementsByClassName('visible'),
@@ -130,9 +142,18 @@ function hideUnnecessaryStuff() {
     }
 }
 
-//function disableCreateBtn(){
-//     startConferencing.style.display = 'none';
-//}
+function hideInputandButton(){
+    startConferencing.style.display='none';
+    var formElements = document.getElementsByClassName('form-group'),
+        length = formElements.length;
+    for (var i = 0; i < length; i++) {
+        formElements[i].style.display = 'none'
+    }
+}
+
+function disableCreateBtn(){
+     startConferencing.style.display = 'none';
+}
 
 function rotateVideo(video) {
     video.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(0deg)';

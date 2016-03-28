@@ -10,7 +10,6 @@ var mentor = require('./routes/mentor');
 var ninja = require('./routes/ninja');
 var broadcast = require('./routes/broadcast');
 var eplayer = require('./routes/eplayer');
-var broadcastpri = require('./routes/broadcastpri');
 var uploadVideo = require('./routes/videoUpload');
 
 var app = express();
@@ -59,7 +58,6 @@ app.use('/Mentor',mentor);
 app.use('/Ninja',ninja);
 app.use('/Broadcast',broadcast);
 app.use('/Eplayer',eplayer);
-app.use('/Broadcast/*',broadcastpri);
 app.use('/Upload',uploadVideo);
 
 
