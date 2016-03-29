@@ -48,11 +48,15 @@ describe('test mentor static feedback', function() {
 
 
     it('should fill email and password and login as mentor', function(done) {
-        browserB.setValue('#email', 'jj')
+        browserB.getTitle().then(function(title){
+                            console.log(title);
+                        })
+                        .setValue('#email', 'jj')
                         .setValue('#password', '123')
                         .click('.btn').pause(1000)
-                        .getTitle().should.eventually.equal('Mentor Toolbar')
-                       
+                        .getTitle().then(function(title){
+                            title.should.equal('Mentor Toolbar');
+                        })
                         .pause(1000)
                         .call(done);
              

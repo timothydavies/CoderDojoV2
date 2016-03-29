@@ -120,7 +120,7 @@ describe('test mentor handler', function() {
 
    
     it('should end the session', function(done) {
-        browserB.pause(2000).end()
+        browserB.end()
                 .call(done);
     });
 
