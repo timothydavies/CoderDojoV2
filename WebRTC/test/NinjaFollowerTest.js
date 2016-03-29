@@ -43,7 +43,9 @@ describe('test ninja follower', function() {
     it('should fill email and password and login as mentor', function(done) {
                 browserB.setValue('label input', '123')
                         .click('.btn').pause(1000)
-                        .getTitle().should.eventually.equal('Ninja Toolbar')
+                        .getTitle().then(function(title){
+                            title.should.equal('Ninja')
+                        })
                         .call(done);  
              
     });
