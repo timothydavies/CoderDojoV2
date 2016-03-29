@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "start": "forever start bin/www.js",
-    "stop" : "forever stop bin/www.js",   
-	"test": "node_modules/.bin/mocha --timeout 99999"
+    "stop" : "forever stop bin/www.js", 
+    "pretest" :"sleep 2",  
+	"test": "./node_modules/mocha/bin/mocha --timeout 99999"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -34,6 +35,7 @@
     "forever": "*",
     "requirejs": "*",
     "webdriverio": "*",
+    "selenium-webdriver":"*",
     "chai":"*",
     "chai-as-promised":"*"
   }

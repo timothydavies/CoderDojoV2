@@ -2,7 +2,6 @@
 // MIT License       - www.WebRTC-Experiment.com/licence
 // Experiments       - github.com/muaz-khan/WebRTC-Experiment
 
-
 var config = {
     openSocket: function(config) {
         // https://github.com/muaz-khan/WebRTC-Experiment/blob/master/Signaling.md

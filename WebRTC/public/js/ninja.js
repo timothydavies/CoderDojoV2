@@ -141,6 +141,13 @@ $('#shrinkButton').on('click',function(){
     window.resizeTo(oldWidth,oldHeight);
 });
 
+$('#ninjaBroadcast').on('click',function(){
+    var url = "Broadcast";
+			 var w = window.open(url, "_blank", "status=no, menubar=yes, titlebar=yes, toolbar=yes, location=no, width=500, height=620, scrollbars=yes", false);
+             
+			return w?false:true;
+});
+
 socket.on('iceServers',handleIceServers_N);
 firstPhaseButton.onclick = firstPhaseClick;
 socket.on('changeRoom', handleRoomChange_N);

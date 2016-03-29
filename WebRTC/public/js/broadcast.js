@@ -73,7 +73,7 @@ var broadcast = function(config) {
             },
             onRemoteStream: function(stream) {
                 if (!stream) return;
-
+                console.log(stream);
                 video[moz ? 'mozSrcObject' : 'src'] = moz ? stream : URL.createObjectURL(stream);
                 video.play();
 
