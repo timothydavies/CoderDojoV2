@@ -51,9 +51,8 @@ describe('test mentor static feedback', function() {
         browserB.setValue('#email', 'jj')
                         .setValue('#password', '123')
                         .click('.btn').pause(1000)
-                        .getTitle().then(function(title){
-                            title.should.equal('Mentor Toolbar');
-                        })
+                        .getTitle().should.eventually.equal('Mentor Toolbar')
+                       
                         .pause(1000)
                         .call(done);
              
