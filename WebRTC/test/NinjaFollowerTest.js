@@ -32,6 +32,7 @@ describe('test ninja follower', function() {
         browserB.init(done)
                 .windowHandleSize({width: 200, height: 800})
                 .url('https://localhost:8000/sign_in/meeting?url=%2FNinja')
+                .pause(2000)
                 .call(done);
 	});
     after(function() {

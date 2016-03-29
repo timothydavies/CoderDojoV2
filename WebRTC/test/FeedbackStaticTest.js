@@ -39,7 +39,7 @@ describe('test mentor static feedback', function() {
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                         })
-                        //.pause(1000)
+                        .pause(2000)
                         .call(done);
 	});
     after(function() {
