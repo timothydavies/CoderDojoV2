@@ -1,6 +1,14 @@
 language: node_js
+
 node_js:
-  - "5"
+  - "4"
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
@@ -17,7 +25,9 @@ script:
   - "forever start bin/www.js"
   - "npm test"
 env:
+  - CXX=g++-4.8
   - XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
+  
 services:
   - mongodb
 sudo: requireds
