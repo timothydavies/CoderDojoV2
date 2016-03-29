@@ -63,7 +63,7 @@ describe('test mentor handler', function() {
 	});
     
     it('mentor should answer', function(done) {
-			       browserB.pause(200)
+			       browserB.pause(1000)
                            .click('#helpQueue .btn').pause(1000)
                            .getHTML('#headingThree h4 a',false).then(function(btn){
                                 btn.should.equal('Chats');
@@ -73,7 +73,7 @@ describe('test mentor handler', function() {
     
     it('should add video', function(done) {
             
-			browserB.pause(200).then(function(){
+			browserB.pause(1000).then(function(){
                        ninjaSocket.emit('test_addVideo');
                     })
                    .getHTML('#ninjaScreen',false).then(function(btn){
@@ -84,7 +84,7 @@ describe('test mentor handler', function() {
     
     it('should enable pointing handler', function(done) {
             
-           return browserB.pause(200)
+           return browserB.pause(1000)
                            .click('#handler-option1').pause(300)
                            .getCssProperty('#handler-bright','display').then(function(display){
                                display.value.should.equal('block');

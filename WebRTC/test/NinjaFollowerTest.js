@@ -58,7 +58,7 @@ describe('test ninja follower', function() {
 			browserB.click('#firstPhaseButton').pause(1000);
             mentorSocket.once('queueUpdate', addQueue);
 
-            browserB.pause(2000)
+            browserB.pause(1000)
                     .getHTML('#secondPhaseButton',false).then(function(btn){
                                                              btn.should.equal('OK');
                                                              })
