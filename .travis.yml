@@ -19,7 +19,7 @@ install: true
 script:
   - "mongo coderdojo initialize.js"
   - "cd WebRTC/"
-  - sleep 5
+  - sleep 3
   - 'npm install'
   - 'npm update'
   - "npm install forever -g"
