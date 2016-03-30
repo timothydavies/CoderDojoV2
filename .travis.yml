@@ -14,11 +14,13 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - "nohup bash -c 'java -jar WebRTC/test/selenium-server-standalone-2.52.0.jar &'"
   - sleep 3 # give xvfb some time to start
+install: true
 script:
-  - "ls"
   - "mongo coderdojo initialize.js"
   - "cd WebRTC/"
   - sleep 1
+  - 'npm install'
+  - 'npm update'
   - "npm install forever -g"
   - 'sudo chmod 777 ../runComServer.sh'
   - 'chmod 0777 ./node_modules/.bin/mocha'
