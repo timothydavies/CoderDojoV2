@@ -34,7 +34,7 @@ describe('test mentor static feedback', function() {
 		ninjaSocket = io('https://localhost:8000',{forceNew: true});
         browserB//.pause(1000)
                 .init(done)
-                //.windowHandleSize({width: 1000, height: 800})
+                .windowHandleSize({width: 1000, height: 800})
                         .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
@@ -48,8 +48,8 @@ describe('test mentor static feedback', function() {
 
 
     it('should fill email and password and login as mentor', function(done) {
-        browserB.setValue('label input#email', 'jj')
-                .setValue('label input#password', '123')
+        browserB.setValue('#email', 'jj')
+                .setValue('#password', '123')
                 .click('.btn').pause(1000)
                 .getTitle().then(function(title){
                        title.should.equal('Mentor Toolbar');
