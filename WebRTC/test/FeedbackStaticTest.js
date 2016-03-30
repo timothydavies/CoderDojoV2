@@ -32,14 +32,14 @@ describe('test mentor static feedback', function() {
     before(function(done) {
 		
 		ninjaSocket = io('https://localhost:8000',{forceNew: true});
-        browserB//.pause(1000)
+        browserB.pause(1000)
                 .init(done)
                 .windowHandleSize({width: 1000, height: 800})
                         .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                         })
-                        .pause(2000)
+                        .pause(1000)
                         .call(done);
 	});
     after(function() {
