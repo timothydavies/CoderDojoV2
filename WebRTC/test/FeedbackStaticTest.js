@@ -7,7 +7,6 @@ var ninjaSocket;
 var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
          desiredCapabilities: {
-             port: 4445,
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
              platform: 'Linux',
@@ -39,7 +38,7 @@ describe('test mentor static feedback', function() {
         browserB.pause(1000)
                 .init(done)
                 .windowHandleSize({width: 1000, height: 800})
-                        .url('https://docs.travis-ci.com/user/sauce-connect/')
+                        .url('https://localhost:8000/sign_in?url=%2FMentor')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                         })

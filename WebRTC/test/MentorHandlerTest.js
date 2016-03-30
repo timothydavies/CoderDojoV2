@@ -32,7 +32,7 @@ describe('test mentor handler', function() {
 		ninjaSocket = io('https://localhost:8000',{forceNew: true});
         browserB.init(done)
                 .windowHandleSize({width: 1000, height: 800})
-                .url('https://localhost:8000/sign_in?url=%2FMentor')
+                .url('http://www.library.uwa.edu.au')
                 .then(function(){
                      ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                  })
