@@ -1,14 +1,9 @@
 language: node_js
 
 node_js:
-  - "4"
+  - "0.12"
 
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
   sauce_connect: 
     username: "CoderDojoDev"
     access_key: "d079bf09-33be-4565-aea4-f07ffd191a7d"
@@ -24,9 +19,9 @@ script:
   - "npm install forever -g"
   - "npm start"
   - 'chmod 0777 ./node_modules/.bin/mocha'
-  - "npm test"
+  - "./node_modules/.bin/mocha ./test/MentorHandlerTest.js"
 env:
-  - CXX=g++-4.8 XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
+  - XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
   
 services:
   - mongodb
