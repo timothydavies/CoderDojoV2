@@ -18,15 +18,14 @@ script:
   - "ls"
   - "mongo coderdojo initialize.js"
   - "cd WebRTC/"
-  - sleep 5
-  - "npm install"
-  - "npm update"
+  - sleep 1
   - "npm install forever -g"
-  - "export XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4"
-  - "forever start bin/www.js"
+  - 'sudo chmod 777 ../runComServer.sh'
+  - 'chmod 0777 ./node_modules/.bin/mocha'
+  - "../runComServer.sh"
   - "npm test"
 env:
-  - CXX=g++-4.8
+  - CXX=g++-4.8 XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
   
 services:
   - mongodb
