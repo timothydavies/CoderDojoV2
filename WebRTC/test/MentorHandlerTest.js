@@ -7,6 +7,7 @@ var x;
  var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
          desiredCapabilities: {
+             'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox'
          }
      });
