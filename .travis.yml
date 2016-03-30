@@ -12,18 +12,22 @@ addons:
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
+  - sleep 10 # give xvfb some time to start
+  
+  
 install: true
 script:
   - "mongo coderdojo initialize.js"
   - "cd WebRTC/"
+  - "java -jar /test/selenium-server-standalone-2.52.0.jar &"
   - sleep 1
   - 'npm install'
   - 'npm update'
   - "npm install forever -g"
+  - 'sudo chmod 777 ../runComServer.sh'
   - 'chmod 0777 ./node_modules/.bin/mocha'
-  - "npm start"
-  - "java -jar WebRTC/test/selenium-server-standalone-2.52.0.jar & ./node_modules/.bin/mocha ./test/FeedbackStaticTest.js"
+  - "../runComServer.sh"
+  - "./node_modules/.bin/mocha ./test/FeedbackStaticTest.js"
 env:
   - CXX=g++-4.8 XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
   
