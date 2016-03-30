@@ -38,7 +38,7 @@ describe('test mentor static feedback', function() {
         browserB.pause(1000)
                 .init(done)
                 .windowHandleSize({width: 1000, height: 800})
-                        .url('https://localhost:8000/sign_in?url=%2FMentor')
+                        .url('https://docs.travis-ci.com/user/sauce-connect/')
                         .then(function(){
                             ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                         })
