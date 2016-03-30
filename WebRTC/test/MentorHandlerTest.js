@@ -6,10 +6,15 @@ var x;
 
  var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
+
+         user: 'CoderDojoDev',
+         key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
          desiredCapabilities: {
-             port: 4445,
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-             browserName: 'firefox'
+             browserName: 'firefox',
+             user: 'CoderDojoDev',
+             key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
+
          }
      });
     
@@ -26,17 +31,18 @@ var should = require('should');
 
 describe('test mentor handler', function() {
     
-    //this.timeout = 99999999;
+   //this.timeout(99999999);
     before(function(done) {
 		mentorSocket = io('https://localhost:8000',{forceNew: true});
 		ninjaSocket = io('https://localhost:8000',{forceNew: true});
         browserB.init(done)
                 .windowHandleSize({width: 1000, height: 800})
-                .url('http://www.library.uwa.edu.au')
+                .url('https://localhost:8000/sign_in?url=%2FMentor')
                 .then(function(){
                      ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                  })
                  .call(done);
+                 done();
 	});
     after(function() {
 		mentorSocket.disconnect();
