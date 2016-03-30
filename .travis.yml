@@ -28,5 +28,5 @@ env:
   
 services:
   - mongodb
-sudo: false
+sudo: required
 
