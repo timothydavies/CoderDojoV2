@@ -48,19 +48,15 @@ describe('test mentor static feedback', function() {
 
 
     it('should fill email and password and login as mentor', function(done) {
-        browserB.getTitle().then(function(title){
-                            console.log(title);
-                        })
-                        /*
-                        .setValue('#email', 'jj')
-                        .setValue('#password', '123')
-                        .click('.btn').pause(1000)
-                        .getTitle().then(function(title){
-                            title.should.equal('Mentor Toolbar');
-                        })
-                        */
-                        .pause(1000)
-                        .call(done);
+        browserB.setValue('label input#email', 'jj')
+                .setValue('label input#password', '123')
+                .click('.btn').pause(1000)
+                .getTitle().then(function(title){
+                       title.should.equal('Mentor Toolbar');
+                 })
+                        
+                 .pause(1000)
+                 .call(done);
              
     });
     
