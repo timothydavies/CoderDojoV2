@@ -9,7 +9,9 @@ var queue=[];
      browserB = WebdriverIO.remote({ 
          desiredCapabilities: {
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-             browserName: 'firefox'
+             browserName: 'firefox',
+             platform: 'Linux',
+             name : 'CoderDojo Test'
          }
      });
 

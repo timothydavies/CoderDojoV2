@@ -9,8 +9,8 @@ var WebdriverIO = require('webdriverio'),
          desiredCapabilities: {
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
-             username: process.env.SAUCE_USERNAME,
-             accessKey: process.env.SAUCE_ACCESS_KEY,
+             platform: 'Linux',
+             name : 'CoderDojo Test'
          }
      });
      
