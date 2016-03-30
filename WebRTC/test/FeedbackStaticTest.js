@@ -49,7 +49,7 @@ describe('test mentor static feedback', function() {
 
     it('should fill email and password and login as mentor', function(done) {
         browserB.setValue('#email', 'jj')
-                .setValue('#password', '123')
+                .setValue('#password', '123').pause(1000)
                 .click('.btn').pause(1000)
                 .getTitle().then(function(title){
                        title.should.equal('Mentor Toolbar');
