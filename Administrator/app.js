@@ -51,6 +51,7 @@ app.use('/avatars', dry_layers.DataService.createRouter('avatar'));
 app.use('/dojos', dry_layers.DataService.createRouter('dojo'));
 app.use('/meetings', dry_layers.DataService.createRouter('meeting'));
 app.use('/users', dry_layers.DataService.createRouter('user'));
+app.use('/roles', dry_layers.DataService.createRouter('role'));
 app.use('/administrator', require('./routes/administrator'));
 app.use('/champion', require('./routes/champion'));
 app.use('/mentor', require('./routes/mentor'));

@@ -40,7 +40,6 @@ describe('test ninja follower', function() {
 		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
 		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB.init(done)
-                .windowHandleSize({width: 200, height: 800})
                 .url('https://127.0.0.1:8000/sign_in/meeting?url=%2FNinja')
                 .pause(2000)
                 .call(done);
