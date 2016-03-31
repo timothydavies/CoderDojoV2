@@ -38,7 +38,7 @@ var session = {
      "name" : "WWW",
      "password" : "123", 
 }
-var meeting = {
+var meeting1 = {
      "_id" : "1",
      "name" : "WWW" ,
      "location" : "56fd1de65fd3b21db12f9a97",
@@ -50,4 +50,4 @@ db.user.insert(item1);
 db.user.insert(item2);
 db.user.insert(item3);
 db.dojo.insert(session);
-db.meeting.insert(meeting);
+db.meeting.insert(meeting1);

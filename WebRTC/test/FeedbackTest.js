@@ -91,7 +91,8 @@ describe('test mentor feedback', function() {
     it('should add video', function(done) {
             ninjaSocket.emit('test_addVideo');
          
-            browserB.getHTML('#ninjaScreen',false).then(function(ele){
+            browserB.pause(1000)
+            .getHTML('#ninjaScreen',false).then(function(ele){
                         ele.should.exist;
                     })
             .call(done);
