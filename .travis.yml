@@ -7,7 +7,7 @@ addons:
   sauce_connect: 
     username: "CoderDojoDev"
     access_key: "d079bf09-33be-4565-aea4-f07ffd191a7d"
-    direct-domains: saucelabs.com
+    direct-domains: 127.0.0.1
   
 install: true
 script:
