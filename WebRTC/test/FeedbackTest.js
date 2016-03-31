@@ -154,57 +154,11 @@ describe('test mentor feedback', function() {
 
 
 describe('test mentor handler', function() {
-    
-  
-
-
-    it('should fill email and password and login as mentor', function(done) {
-               browserB.getTitle().then(function(v){
-                   console.log(v);
-               })
-                        .setValue('input[name="email"]', 'jj')
-                        .setValue('input[name="password"]', '123')
-                 
-                        .click('.btn').pause(1000)
-                        .getTitle().should.eventually.equal('Mentor Toolbar')
-                        .call(done);  
-             
-    });
-    
-    it('ninja should request', function(done) {
-			
-			        browserB.then(function(){
-                        ninjaSocket.emit('requestHelp'); 
-                    }).pause(1000)
-                    .getHTML('#helpQueue .btn',false).then(function(btn){
-                        btn.should.exist;
-                    })
-                    .call(done);
-	});
-    
-    it('mentor should answer', function(done) {
-			       browserB.pause(1000)
-                           .click('#helpQueue .btn').pause(1000)
-                           .getHTML('#headingThree h4 a',false).then(function(btn){
-                                btn.should.equal('Chats');
-                            })
-                            .call(done);
-	});
-    
-    it('should add video', function(done) {
-            
-			browserB.then(function(){
-                       ninjaSocket.emit('test_addVideo');
-                    })
-                   .getHTML('#ninjaScreen',false).then(function(btn){
-                        btn.should.exist;
-                    })
-                    .call(done);
-	});
+   
     
     it('should enable pointing handler', function(done) {
-            
-           return browserB.pause(1000)
+           ninjaSocket.emit('test_addVideo'); 
+           browserB.pause(1000)
                            .click('#handler-option1').pause(300)
                            .getCssProperty('#handler-bright','display').then(function(display){
                                display.value.should.equal('block');

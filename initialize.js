@@ -31,7 +31,8 @@ var item3 = { "_id" : "3",
              "roles" : ["Champion" ], 
              "email" : "c", 
              "password" : "123", 
-             "username" : "c" };
+             "username" : "c",
+             "avatar" : "data:," };
 var session = {
      "_id" : "1",
      "name" : "WWW" 
