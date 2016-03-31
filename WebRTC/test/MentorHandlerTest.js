@@ -112,9 +112,9 @@ describe('test mentor handler', function() {
          function test(data) {
 				should.exist(data);
 				data.should.have.property('MX');
-                data.MX.should.be.above(57);
+                data.MX.should.not.equal(0);
                 data.should.have.property('MY');
-                data.MY.should.be.above(37);
+                data.MY.should.not.equal(0);
            
 			};    
          browserB.moveToObject('#handler-bright')

@@ -104,8 +104,12 @@ describe('test ninja follower', function() {
                                  Mwidth: 400,
                                  Mheight: 300});
                                  })
-                            .getLocation('#follower-bright','x').should.eventually.be.above(50)
-                            .getLocation('#follower-bright','y').should.eventually.be.above(340)
+                            .getLocation('#follower-bright','x').then(function(x){
+                                x.should.not.equal(0);
+                            })
+                            .getLocation('#follower-bright','y').then(function(y){
+                                y.should.not.equal(0);
+                            })
                             .call(done);
                         
     
