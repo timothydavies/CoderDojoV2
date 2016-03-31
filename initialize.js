@@ -39,10 +39,11 @@ var session = {
 var meeting = {
      "_id" : "1",
      "name" : "WWW" ,
+     "location" : "56fd1de65fd3b21db12f9a97",
      "password" : "123",
-     "location" : "uwa",
      "avatar" : "data:,"
 }
+
 db.user.insert(item1);
 db.user.insert(item2);
 db.user.insert(item3);
