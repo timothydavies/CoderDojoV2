@@ -35,7 +35,8 @@ var item3 = { "_id" : "3",
              "avatar" : "data:," };
 var session = {
      "_id" : "1",
-     "name" : "WWW" 
+     "name" : "WWW",
+     "password" : "123", 
 }
 var meeting = {
      "_id" : "1",
