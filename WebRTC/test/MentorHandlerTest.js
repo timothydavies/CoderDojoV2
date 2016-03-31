@@ -6,18 +6,18 @@ var x;
 
  var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
-         /*
+         
          host: 'ondemand.saucelabs.com',
          logLevel: 'silent',
          port:80,
          user: 'CoderDojoDev',
          key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
-         */
+         
          desiredCapabilities: {
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
              name: 'sauce connect',
-            //'public': true
+             'public': true
          }
      });
     
