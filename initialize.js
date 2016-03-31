@@ -33,11 +33,15 @@ var item3 = { "_id" : "3",
              "password" : "123", 
              "username" : "c" };
 var session = {
+     "_id" : "1",
      "name" : "WWW" 
 }
 var meeting = {
+     "_id" : "1",
      "name" : "WWW" ,
-     "password" : "123"
+     "password" : "123",
+     "location" : "uwa",
+     "avatar" : "data:,"
 }
 db.user.insert(item1);
 db.user.insert(item2);
