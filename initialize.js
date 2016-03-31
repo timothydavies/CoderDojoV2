@@ -33,21 +33,20 @@ var item3 = { "_id" : "3",
              "password" : "123", 
              "username" : "c",
              "avatar" : "data:," };
-var session = {
+var session1 = {
      "_id" : "1",
-     "name" : "WWW",
-     "password" : "123", 
+     "name" : "uwa",
 }
 var meeting1 = {
      "_id" : "1",
-     "name" : "WWW" ,
+     "name" : "uwa" ,
      "location" : "56fd1de65fd3b21db12f9a97",
-     "password" : "123",
+     "password" : "1",
      "avatar" : "data:,"
 }
 
 db.user.insert(item1);
 db.user.insert(item2);
 db.user.insert(item3);
-db.dojo.insert(session);
+db.dojo.insert(session1);
 db.meeting.insert(meeting1);

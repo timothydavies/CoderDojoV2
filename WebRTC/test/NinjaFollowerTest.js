@@ -50,7 +50,7 @@ describe('test ninja follower', function() {
 	});
 
     it('should fill email and password and login as mentor', function(done) {
-                browserB.setValue('input[name="password"]', '123')
+                browserB.setValue('input[name="password"]', '1')
                         .click('.btn').pause(1000)
                         .getTitle().then(function(title){
                             title.should.equal('Ninja')
