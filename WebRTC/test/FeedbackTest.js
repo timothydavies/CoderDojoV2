@@ -37,16 +37,19 @@ var should = require('should');
 
 describe('test mentor feedback', function() {
     this.timeout(99999999);
-    before(function(done) {
+      before(function(done) {
+		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
 		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB
                 .init(done)
+                //.windowHandleSize({width: 1200, height: 800})
                 .url('https://127.0.0.1:8000/sign_in?url=%2FMentor')
                 .then(function(){
                      ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                  }).call(done);
 	});
     after(function() {
+		mentorSocket.disconnect();
 		ninjaSocket.disconnect();
 	});
 
@@ -165,22 +168,7 @@ describe('test mentor feedback', function() {
 
 describe('test mentor handler', function() {
     
-   this.timeout(99999999);
-    before(function(done) {
-		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
-		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
-        browserB
-                .init(done)
-                //.windowHandleSize({width: 1200, height: 800})
-                .url('https://127.0.0.1:8000/sign_in?url=%2FMentor')
-                .then(function(){
-                     ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
-                 }).call(done);
-	});
-    after(function() {
-		mentorSocket.disconnect();
-		ninjaSocket.disconnect();
-	});
+  
 
 
     it('should fill email and password and login as mentor', function(done) {
