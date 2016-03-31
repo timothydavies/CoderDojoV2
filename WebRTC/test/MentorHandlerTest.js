@@ -40,7 +40,7 @@ describe('test mentor handler', function() {
         browserB
                 .init(done)
                 .windowHandleSize({width: 1000, height: 800})
-                .url('http://127.0.0.1:8001')
+                .url('https://127.0.0.1:8000/sign_in?url=%2FMentor')
                 .then(function(){
                      ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
                  }).call(done);
