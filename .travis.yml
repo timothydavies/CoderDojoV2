@@ -7,12 +7,13 @@ addons:
   sauce_connect: 
     username: "CoderDojoDev"
     access_key: "d079bf09-33be-4565-aea4-f07ffd191a7d"
-    direct-domains: 127.0.0.1
+    no_ssl_bump_domains: 127.0.0.1
   
 install: true
 script:
   - "mongo coderdojo initialize.js"
   - "cd WebRTC/"
+
   - sleep 5
   - 'npm install'
   - 'npm update'

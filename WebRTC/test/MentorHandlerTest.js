@@ -52,7 +52,10 @@ describe('test mentor handler', function() {
 
 
     it('should fill email and password and login as mentor', function(done) {
-               browserB.setValue('#email', 'jj')
+               browserB.getTitle().then(function(v){
+                   console.log(v);
+               })
+                        .setValue('#email', 'jj')
                         .setValue('#password', '123')
                         .click('.btn').pause(1000)
                         .getTitle().should.eventually.equal('Mentor Toolbar')
