@@ -42,7 +42,6 @@ describe('test mentor feedback', function() {
 		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB
                 .init(done)
-                //.windowHandleSize({width: 1200, height: 800})
                 .url('https://127.0.0.1:8000/sign_in?url=%2FMentor')
                 .then(function(){
                      ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
@@ -149,18 +148,6 @@ describe('test mentor feedback', function() {
         ninjaSocket.once('screenshot',test);
         browserB.call(done);
 	});
-    
-    it('should sign out', function(done) {
-        
-         browserB.click('#signOut')
-                        .pause(1000)
-                        .call(done);
-	});
-
-    it('should end the session', function(done) {
-         browserB.end()
-                       .call(done);
-    });
 
 });
 
