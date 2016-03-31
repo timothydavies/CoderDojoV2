@@ -67,7 +67,7 @@ describe('test mentor handler', function() {
     
     it('ninja should request', function(done) {
 			
-			        browserB.pause(1000).then(function(){
+			        browserB.then(function(){
                         ninjaSocket.emit('requestHelp'); 
                     }).pause(1000)
                     .getHTML('#helpQueue .btn',false).then(function(btn){
@@ -87,7 +87,7 @@ describe('test mentor handler', function() {
     
     it('should add video', function(done) {
             
-			browserB.pause(1000).then(function(){
+			browserB.then(function(){
                        ninjaSocket.emit('test_addVideo');
                     })
                    .getHTML('#ninjaScreen',false).then(function(btn){

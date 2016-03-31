@@ -83,7 +83,6 @@ describe('test mentor static feedback', function() {
                            .getHTML('#headingThree h4 a',false).then(function(ele){
                                ele.should.equal('Chats');
                            })
-                           .pause(1000)
                            .call(done);
 	});
     
@@ -95,7 +94,6 @@ describe('test mentor static feedback', function() {
             .getHTML('#ninjaScreen',false).then(function(ele){
                         ele.should.exist;
                     })
-            .pause(1000)
             .call(done);
 	});
     
@@ -105,7 +103,6 @@ describe('test mentor static feedback', function() {
                             .isVisible('#myCanvas').then(function(isVisible) {
                               isVisible.should.equal(true);
                             }) 
-                            .pause(1000)
                             .call(done);
                          
 	});
@@ -123,14 +120,12 @@ describe('test mentor static feedback', function() {
                         .isVisible('#myCanvas').then(function(isVisible) {
                             isVisible.should.equal(true);
                         })
-                        .pause(1000)
                         .call(done);  
 	});
     
     it('should highlight screenshot', function(done) {
         ninjaSocket.emit('test_highlight');
-         browserB.pause(1000)
-                       .getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
+         browserB.getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
                             txtContent.should.equal('changed'); 
                         })
                         .pause(1000)
@@ -156,13 +151,12 @@ describe('test mentor static feedback', function() {
     it('should sign out', function(done) {
         
          browserB.click('#signOut')
-                        .pause(2000)
+                        .pause(1000)
                         .call(done);
 	});
 
     it('should end the session', function(done) {
-         browserB//.pause(2000)
-                       .end()
+         browserB.end()
                        .call(done);
     });
 

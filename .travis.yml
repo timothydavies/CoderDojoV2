@@ -20,7 +20,7 @@ script:
   - "npm install forever -g"
   - "npm start"
   - 'chmod 0777 ./node_modules/.bin/mocha'
-  - "./node_modules/.bin/mocha ./test/MentorHandlerTest.js"
+  - "npm test"
 env:
   - XIRSYS=d61e9bc4-ef33-11e5-99b3-f77709746db4
   
