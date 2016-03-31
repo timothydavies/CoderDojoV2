@@ -4,17 +4,23 @@ var ninjaSocket;
 var mentorSocket;
 var queue=[];
 
-
-   var WebdriverIO = require('webdriverio'),
+ var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
+         
+         host: 'ondemand.saucelabs.com',
+         logLevel: 'silent',
+         port:80,
+         user: 'CoderDojoDev',
+         key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
+         
          desiredCapabilities: {
-             port: 4445,
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
-             platform: 'Linux',
-             name : 'CoderDojo Test'
+             name: process.env.TRAVIS_JOB_NUMBER,
+             'public': true
          }
      });
+    
 
 var should = require('should');
     var chai = require('chai');
@@ -31,11 +37,11 @@ describe('test ninja follower', function() {
     
     //this.timeout = 99999999;
     before(function(done) {
-		mentorSocket = io('https://localhost:8000',{forceNew: true});
-		ninjaSocket = io('https://localhost:8000',{forceNew: true});
+		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
+		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB.init(done)
                 .windowHandleSize({width: 200, height: 800})
-                .url('https://localhost:8000/sign_in/meeting?url=%2FNinja')
+                .url('https://127.0.0.1:8000/sign_in/meeting?url=%2FNinja')
                 .pause(2000)
                 .call(done);
 	});
@@ -46,7 +52,7 @@ describe('test ninja follower', function() {
 
     it('should fill email and password and login as mentor', function(done) {
                 browserB.setValue('label input', '123')
-                        .click('.btn').pause(1000)
+                        .click('button').pause(1000)
                         .getTitle().then(function(title){
                             title.should.equal('Ninja')
                         })

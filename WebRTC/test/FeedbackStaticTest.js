@@ -4,13 +4,20 @@ var io = require('socket.io-client');
 var ninjaSocket;
 
   
-var WebdriverIO = require('webdriverio'),
+ var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
+         
+         host: 'ondemand.saucelabs.com',
+         logLevel: 'silent',
+         port:80,
+         user: 'CoderDojoDev',
+         key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
+         
          desiredCapabilities: {
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
-             platform: 'Linux',
-             name : 'CoderDojo Test'
+             name: process.env.TRAVIS_JOB_NUMBER,
+             'public': true
          }
      });
      
@@ -30,20 +37,15 @@ var should = require('should');
 
 describe('test mentor static feedback', function() {
     this.timeout(99999999);
-
-    //this.timeout = 99999999;
     before(function(done) {
-		
-		ninjaSocket = io('https://localhost:8000',{forceNew: true});
-        browserB.pause(1000)
+		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
+        browserB
                 .init(done)
-                .windowHandleSize({width: 1000, height: 800})
-                        .url('https://localhost:8000/sign_in?url=%2FMentor')
-                        .then(function(){
-                            ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
-                        })
-                        .pause(1000)
-                        .call(done);
+                .windowHandleSize({width: 1200, height: 800})
+                .url('https://127.0.0.1:8000/sign_in?url=%2FMentor')
+                .then(function(){
+                     ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
+                 }).call(done);
 	});
     after(function() {
 		ninjaSocket.disconnect();
@@ -51,17 +53,18 @@ describe('test mentor static feedback', function() {
 
 
     it('should fill email and password and login as mentor', function(done) {
-        browserB.setValue('#email', 'jj')
-                .setValue('#password', '123').pause(1000)
-                .click('.btn').pause(1000)
-                .getTitle().then(function(title){
-                       title.should.equal('Mentor Toolbar');
-                 })
-                        
-                 .pause(1000)
-                 .call(done);
+               browserB.getTitle().then(function(v){
+                   console.log(v);
+               })
+                        .setValue('input[name="email"]', 'jj')
+                        .setValue('input[name="password"]', '123')
+                 
+                        .click('.btn').pause(1000)
+                        .getTitle().should.eventually.equal('Mentor Toolbar')
+                        .call(done);  
              
     });
+    
     
     it('ninja should request', function(done) {
 			
