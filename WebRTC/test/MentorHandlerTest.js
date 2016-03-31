@@ -56,8 +56,9 @@ describe('test mentor handler', function() {
                browserB.getTitle().then(function(v){
                    console.log(v);
                })
-                        .setValue('input', 'jj')
-                        .setValue('#password', '123')
+                        .setValue('input[name="email"]', 'jj')
+                        .setValue('input[name="password"]', '123')
+                 
                         .click('.btn').pause(1000)
                         .getTitle().should.eventually.equal('Mentor Toolbar')
                         .call(done);  
