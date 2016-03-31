@@ -43,4 +43,4 @@ db.user.insert(item1);
 db.user.insert(item2);
 db.user.insert(item3);
 db.dojo.insert(session);
-dojo.meeting.insert(meeting);
+db.meeting.insert(meeting);
