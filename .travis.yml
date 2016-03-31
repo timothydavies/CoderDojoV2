@@ -13,7 +13,7 @@ install: true
 script:
   - "mongo coderdojo initialize.js"
   - "cd WebRTC/"
-  - "java -jar ./test/selenium-server-standalone-2.50.jar -firefoxProfileTemplate ./test/browser_certificate"
+  - "java -jar ./test/selenium-server-standalone-2.52.0.jar -firefoxProfileTemplate ./test/browser_certificate"
   - sleep 5
   - 'npm install'
   - 'npm update'
