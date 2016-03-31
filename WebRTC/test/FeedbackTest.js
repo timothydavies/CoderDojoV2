@@ -35,7 +35,7 @@ var should = require('should');
 
 
 
-describe('test mentor static feedback', function() {
+describe('test mentor feedback', function() {
     this.timeout(99999999);
     before(function(done) {
 		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
@@ -50,7 +50,7 @@ describe('test mentor static feedback', function() {
 		ninjaSocket.disconnect();
 	});
 
-
+    describe('static', function() {
     it('should fill email and password and login as mentor', function(done) {
                browserB.getTitle().then(function(v){
                    console.log(v);
@@ -269,4 +269,5 @@ describe('test mentor handler', function() {
                 .call(done);
     });
 
+});
 });
