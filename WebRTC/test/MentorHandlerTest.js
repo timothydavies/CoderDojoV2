@@ -59,7 +59,7 @@ describe('test mentor handler', function() {
                         .setValue('input[name="email"]', 'jj')
                         .setValue('input[name="password"]', '123')
                  
-                        .click('.btn').pause(1000)
+                        .click('button').pause(1000)
                         .getTitle().should.eventually.equal('Mentor Toolbar')
                         .call(done);  
              
