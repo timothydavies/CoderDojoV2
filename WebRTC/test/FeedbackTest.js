@@ -42,6 +42,7 @@ describe('test mentor feedback', function() {
 		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB
                 .init(done)
+                .windowHandleSize({width: 1300, height: 1000});
                 .url('https://127.0.0.1:8000/sign_in?url=%2FMentor')
                 .then(function(){
                      ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
@@ -88,11 +89,9 @@ describe('test mentor feedback', function() {
 	});
     
     it('should add video', function(done) {
-            
-	browserB.getTitle().then(function(){
-                ninjaSocket.emit('test_addVideo');
-            })
-            .getHTML('#ninjaScreen',false).then(function(ele){
+            ninjaSocket.emit('test_addVideo');
+         
+            browserB.getHTML('#ninjaScreen',false).then(function(ele){
                         ele.should.exist;
                     })
             .call(done);
@@ -107,10 +106,7 @@ describe('test mentor feedback', function() {
                             .call(done);
                          
 	});
-    
-    
-    
-    
+ 
     it('should cancel current screenshot and take a new one', function(done) {
 
                 browserB.click('#closeCanvas').pause(1000)
