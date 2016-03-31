@@ -6,15 +6,17 @@ var x;
 
  var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
-
+         host: 'ondemand.saucelabs.com',
+         logLevel: 'silent',
+         port:80,
          user: 'CoderDojoDev',
          key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
+         
          desiredCapabilities: {
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
-             user: 'CoderDojoDev',
-             key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
-
+             name: 'admin',
+            'public': true
          }
      });
     
@@ -31,18 +33,17 @@ var should = require('should');
 
 describe('test mentor handler', function() {
     
-   //this.timeout(99999999);
+   this.timeout(99999999);
     before(function(done) {
-		mentorSocket = io('https://localhost:8000',{forceNew: true});
-		ninjaSocket = io('https://localhost:8000',{forceNew: true});
-        browserB.init(done)
+		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
+		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
+        browserB
+                .init(done)
                 .windowHandleSize({width: 1000, height: 800})
-                .url('https://localhost:8000/sign_in?url=%2FMentor')
+                .url('http://127.0.0.1:8001')
                 .then(function(){
                      ninjaSocket.emit('iceRequest', {mentor:'Test Ninja'});
-                 })
-                 .call(done);
-                 done();
+                 }).call(done);
 	});
     after(function() {
 		mentorSocket.disconnect();
