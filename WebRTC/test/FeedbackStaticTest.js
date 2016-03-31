@@ -123,11 +123,11 @@ describe('test mentor static feedback', function() {
 	});
     
     it('should highlight screenshot', function(done) {
-        ninjaSocket.emit('test_highlight');
-         browserB.getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
+         ninjaSocket.emit('test_highlight');
+         browserB.pause(2000).getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
                             txtContent.should.equal('changed'); 
                         })
-                        .pause(1000)
+                        .pause(2000)
                         .call(done);
     });
     it('should send out image', function(done) {
