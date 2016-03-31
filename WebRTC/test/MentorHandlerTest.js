@@ -14,9 +14,9 @@ var x;
          key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
          */
          desiredCapabilities: {
-            // 'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+             'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
-             name: 'admin',
+             name: 'sauce connect',
             //'public': true
          }
      });
@@ -56,7 +56,7 @@ describe('test mentor handler', function() {
                browserB.getTitle().then(function(v){
                    console.log(v);
                })
-                        .setValue('#email', 'jj')
+                        .setValue('input', 'jj')
                         .setValue('#password', '123')
                         .click('.btn').pause(1000)
                         .getTitle().should.eventually.equal('Mentor Toolbar')
