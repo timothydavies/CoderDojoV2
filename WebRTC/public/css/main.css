@@ -28,7 +28,7 @@ input[type='file']	{border-radius: 0}
 
 /*NEW CODE ADDED*/
 
-@media screen and (min-width: 769px) { 
+@media screen and (min-width: 1000px) { 
 	#chats{
         position:absolute;
         width:75%;
@@ -77,7 +77,7 @@ input[type='file']	{border-radius: 0}
         margin-top:70px;
     }
 
-@media (max-width: 768px) { 
+@media (max-width: 999px) { 
 	#chats{position:absolute;top:50px;right:10px;}
 	#screenBox2 {position:absolute;top:0px; width:190%;right:105%;}
 	#screenBox {position:absolute;top:10%; width:190%;height:auto;right:105%;}

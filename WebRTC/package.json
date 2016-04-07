@@ -34,8 +34,7 @@
     "should": "*",
     "forever": "*",
     "requirejs": "*",
-    "webdriverio": "*",
-    "selenium-webdriver":"*",
+    "webdriverio": "4.0.3",
     "chai":"*",
     "chai-as-promised":"*"
   }

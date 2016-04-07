@@ -31,15 +31,22 @@ var item3 = { "_id" : "3",
              "roles" : ["Champion" ], 
              "email" : "c", 
              "password" : "123", 
-             "username" : "c" };
-var session = {
-     "name" : "WWW" 
+             "username" : "c",
+             "avatar" : "data:," };
+var session1 = {
+     "_id" : "1",
+     "name" : "uwa",
 }
-var meeting = {
-     "name" : "WWW" ,
-     "password" : "123"
+var meeting1 = {
+     "_id" : "1",
+     "name" : "uwa" ,
+     "location" : "56fd1de65fd3b21db12f9a97",
+     "password" : "1",
+     "avatar" : "data:,"
 }
+
 db.user.insert(item1);
 db.user.insert(item2);
 db.user.insert(item3);
-db.dojo.insert(session);
+db.dojo.insert(session1);
+db.meeting.insert(meeting1);

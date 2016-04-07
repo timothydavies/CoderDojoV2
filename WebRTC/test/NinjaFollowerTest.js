@@ -4,13 +4,23 @@ var ninjaSocket;
 var mentorSocket;
 var queue=[];
 
-
-   var WebdriverIO = require('webdriverio'),
+ var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
+         
+         host: 'ondemand.saucelabs.com',
+         logLevel: 'silent',
+         port:80,
+         user: 'CoderDojoDev',
+         key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
+         
          desiredCapabilities: {
-             browserName: 'firefox'
+             'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+             browserName: 'firefox',
+             name: process.env.TRAVIS_JOB_NUMBER,
+             'public': true
          }
      });
+    
 
 var should = require('should');
     var chai = require('chai');
@@ -27,11 +37,11 @@ describe('test ninja follower', function() {
     
     //this.timeout = 99999999;
     before(function(done) {
-		mentorSocket = io('https://localhost:8000',{forceNew: true});
-		ninjaSocket = io('https://localhost:8000',{forceNew: true});
+		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
+		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB.init(done)
-                .windowHandleSize({width: 200, height: 800})
-                .url('https://localhost:8000/sign_in/meeting?url=%2FNinja')
+                .url('https://127.0.0.1:8000/sign_in/meeting?url=%2FNinja')
+                .pause(2000)
                 .call(done);
 	});
     after(function() {
@@ -40,9 +50,12 @@ describe('test ninja follower', function() {
 	});
 
     it('should fill email and password and login as mentor', function(done) {
-                browserB.setValue('label input', '123')
+                browserB.selectByValue('#sign-in-dialog-meetings', '1')
+                        .setValue('input[name="password"]', '1')
                         .click('.btn').pause(1000)
-                        .getTitle().should.eventually.equal('Ninja Toolbar')
+                        .getTitle().then(function(title){
+                            title.should.equal('Ninja')
+                        })
                         .call(done);  
              
     });
@@ -58,7 +71,7 @@ describe('test ninja follower', function() {
 			browserB.click('#firstPhaseButton').pause(1000);
             mentorSocket.once('queueUpdate', addQueue);
 
-            browserB.pause(2000)
+            browserB.pause(1000)
                     .getHTML('#secondPhaseButton',false).then(function(btn){
                                                              btn.should.equal('OK');
                                                              })
@@ -91,15 +104,19 @@ describe('test ninja follower', function() {
                                  Mwidth: 400,
                                  Mheight: 300});
                                  })
-                            .getLocation('#follower-bright','x').should.eventually.be.above(50)
-                            .getLocation('#follower-bright','y').should.eventually.be.above(340)
+                            .getLocation('#follower-bright','x').then(function(x){
+                                x.should.not.equal(0);
+                            })
+                            .getLocation('#follower-bright','y').then(function(y){
+                                y.should.not.equal(0);
+                            })
                             .call(done);
                         
     
 	});
   
     it('should end the session', function(done) {
-        browserB.pause(2000).end()
+        browserB.end()
                 .call(done);
     });
 
