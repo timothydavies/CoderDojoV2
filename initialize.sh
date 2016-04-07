@@ -3,7 +3,7 @@
 clear
 echo "Set up initial MongoDB."
 
-mongod --fork --logpath /dev/null
+#mongod --fork --logpath /dev/null
 mongo coderdojo initialize.js
 #sudo mongo coderdojo initilize.js
 
