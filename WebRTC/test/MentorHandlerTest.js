@@ -24,7 +24,7 @@ var should = require('should');
 
 describe('test mentor handler', function() {
     
-    //this.timeout = 99999999;
+    this.timeout = 99999999;
     before(function(done) {
 		mentorSocket = io('https://localhost:8000',{forceNew: true});
 		ninjaSocket = io('https://localhost:8000',{forceNew: true});

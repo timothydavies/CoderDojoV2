@@ -132,7 +132,7 @@ UploadVideo.prototype.uploadFile = function(file) {
       // The times are in millis, so we need to divide by 1000 to get seconds.
       var bytesPerSecond = bytesUploaded / ((currentTime - this.uploadStartTime) / 1000);
       var estimatedSecondsRemaining = (totalBytes - bytesUploaded) / bytesPerSecond;
-      var percentageComplete = (bytesUploaded * 100) / totalBytes;
+      var percentageComplete = Math.round((bytesUploaded * 100) / totalBytes);
 
       $('#upload-progress').attr({
         value: bytesUploaded,

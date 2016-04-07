@@ -53,13 +53,11 @@ var config = {
             });
             $(btnjoin).text("Join Room");
             $(std).append($(btnjoin));
-            $(td).text(room.roomName);
+            $(td).text(room.roomName+'  ');
             $(tr).append($(td));
             $(tr).append($(std));
         })();
         
-        //tr.innerHTML = '<td>' + room.roomName + '</td>' +
-         //   '<td><button class="join" id="' + room.roomToken + '">Join Room</button></td>';
         roomsList.insertBefore(tr, roomsList.firstChild);
 
         tr.onclick = function() {
@@ -126,6 +124,7 @@ var startConferencing = document.getElementById('start-conferencing');
 var roomsList = document.getElementById('rooms-list');
 
 if (startConferencing) startConferencing.onclick = createButtonClickHandler;
+
 var socketio = io();
 
 socketio.emit('hideBtn');

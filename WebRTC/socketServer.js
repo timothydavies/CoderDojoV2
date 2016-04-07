@@ -221,7 +221,7 @@ io.on('connection', function (socket, error) {
             console.log('ninja1');
         }   
     });
-    
+    // Send clientIdentity to Broadcast-ui for button hiding
     socket.on('hideBtn',function(){
         socket.emit('getIdentity',{client:clientIdentity});
         console.log(clientIdentity);
