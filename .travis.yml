@@ -17,7 +17,7 @@ script:
   - sleep 5
   - 'npm install'
   - 'npm update'
-  - 'npm install forever -g'
+  - "npm install forever -g"
   - "npm start"
   - 'chmod 0777 ./node_modules/.bin/mocha'
   - "npm test"
@@ -27,20 +27,3 @@ env:
 services:
   - mongodb
 sudo: required
-
-notifications:
-  email:
-    recipients:
-      - 21451437@student.uwa.edu.au
-      - 21551684@student.uwa.edu.au
- deploy:
- provider: codedeploy
-      access_key_id: "AKIAIL2CFUPPJYOJTSGQ"
-      secret_access_key: "MIIEpAIBAAKCAQEAptPfHDWSfjmfwK2ex3cXGG26sojEp3sqhOZpu5jewoxbiSJzIQ/odqQ6nEOqyKXJor9Gm4BwsYsl9OJprscVYgMFUmxFJkqges3Bhvp06NdDrAWn0ptiQf4G0M3npA9GyqH3Tb4kE3bYTfoFOnHxxkmTab6Ep92Hm19sEarjmPZqStblEix5p8TTB2Gs8xSA2+HiUf7q4loq9IeM6wh1j3vL/4bWKP+oaMLjRTfHekunWAPk3hiZX7UvzFXNA4I3q+Yw39QxOF7AYAoZvtSH++eEIkEAt4UhWwMQO/oN7UcQcBnmYKW8stqpDmLCyLaIvU1L6uZBxaI7p1EvmvD4RQIDAQABAoIBAF0AajW4q9UQXL22THjYLBjjOxxCYJcZc4epR7JcM3rzcigN+26oBqj1PvNUScYXnkPLLBqOTMS9VMii29WiiIoeMv5S+22wVqx/Pe74euo+7yvb70Xad7lgWv5We1cbaRSXnF1LraLoMwetZPLDCMzIwZRGsH9AYVO9q2piAQWJFnARO8mG7VPXe3pI/VIUA0oIE5FuqzftR1A2OY+lTrvi0vAyRe/aN5avukawg87ho6QO6CTr63StwH1JnYriLZpJi/ZzWB65V3wnyRbJHBjBcSYX92o2vuXX7y1XE3N876ZUAWBsk6DZyQcoe83FRICjEF65wvtMSTkjqtGLh5UCgYEA/OyF2qum5jwsDAwLikbOdcGWDMaXmFNFsOFXGfjwRZFR7rYJcgra3PN2DWsQT9dUgyibF+IYU8B678EKB5Jbdizc07IcVu+ShVh+naGbE837jp8ssMIiC5suwBbe1e7z/y06dANbIuG04kBMoiQG1oSQY6eLEJfBYItF4G3+NR8CgYEAqNtJ0URp7zE8qxTlCBLwAlRlQh8Cz1BikzEJA+vGbWhbfv52780O0VoMOzSIGqa0OJWqV7Pn4pEvIQC/7yTgGBQGYl7rRdyvEOn+mcx5f5oJH2yNFMFb7he7q1whX1ALTtf9pFI4gF8kH7Bfjc2idUTCB4I6ms1QMz2IA0ZE4hsCgYEAtlx/gpQjSXv3MlR4+aFl+We0HdAOu6jG5esD11kzPKWz0o70LoL/HTJ5WuFoKHkUmWDsuoKtka2FtlqUNbNkOMfODOEuJ8yi83xEBrnfy57IEyRXn7bJv16LjbqvvsaErOdabw2AZ50fw8YiuwGI4KFCTmgeD7+rkUW6A0CrencCgYBa/+sVS3BnxroyXQ1dP493QfJcIwhJn8GwH5IDOfJzDfWZSBvi+jjNHGFRGutqqYKgqA/oOf1y/dlPSO8nO1FFyKz0IMFcoiT60ZAzZJ3p5aKa+85AbEBV3RZ3sCwQCLw/XmnEP8dRb3SxW0Tzz+mIl2iV0VoyCQn6w2NkmF8RFwKBgQCIQVVYrQCCSqjszLuOnlwCsd/S6rxwt+mEmKMIn+68vgGSrNZ6ucpUpgkCiEKALxb9X9mmzoZtpO4ZACHkqNgoowzMa1m10aSys+cvu0cppkIU/XLl5I4OL4gVXLOVQMXmq9TLRQqGVGy+Q9QYTpqeipMwXRSKOX0y8hM7mNkGSg=="
-      bucket: "S3 Bucket”
-      revision_type: github
-      key: latest/coderdojo.zip
-      application: CoderDojoV2
-      bundle_type: zip
-
-    
