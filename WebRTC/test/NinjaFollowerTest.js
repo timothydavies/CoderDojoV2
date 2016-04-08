@@ -38,19 +38,20 @@ describe('test ninja follower', function() {
     //this.timeout = 99999999;
     before(function(done) {
 		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
-		ninjaSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB.init(done)
                 .url('https://127.0.0.1:8000/sign_in/meeting?url=%2FNinja')
                 .pause(2000)
                 .call(done);
 	});
     after(function() {
-		mentorSocket.disconnect();
 		ninjaSocket.disconnect();
 	});
 
-    it('should fill email and password and login as mentor', function(done) {
-                browserB.selectByValue('#sign-in-dialog-meetings', '1')
+    it('should fill email and password and login as ninja', function(done) {
+                browserB.getTitle().then(function(v){
+                          console.log(v);
+                         })
+                        .selectByValue('#sign-in-dialog-meetings', '1')
                         .setValue('input[name="password"]', '1')
                         .click('.btn').pause(1000)
                         .getTitle().then(function(title){
