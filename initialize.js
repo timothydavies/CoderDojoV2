@@ -36,14 +36,14 @@ var item3 = { "_id" : "3",
 var session1 = {
      "_id" : "1",
      "name" : "uwa",
-}
+};
 var meeting1 = {
      "_id" : "1",
      "name" : "uwa" ,
      "location" : "56fd1de65fd3b21db12f9a97",
      "password" : "1",
      "avatar" : "data:,"
-}
+};
 
 db.user.insert(item1);
 db.user.insert(item2);

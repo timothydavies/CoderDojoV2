@@ -13,8 +13,6 @@ addons:
 install: true
 script:
   - "mongo coderdojo initialize.js"
-  - "mongo coderdojo db.dojo.find().pretty()"
-  - "mongo coderdojo db.meeting.find().pretty()"
   - "cd WebRTC/"
   - sleep 5
   - 'npm install'
