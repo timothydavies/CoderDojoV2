@@ -50,5 +50,3 @@ db.user.insert(item2);
 db.user.insert(item3);
 db.dojo.insert(session1);
 db.meeting.insert(meeting1);
-db.dojo.find().pretty();
-db.meeting.find().pretty();
