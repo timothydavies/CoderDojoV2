@@ -1,4 +1,5 @@
 
+
 var collections=["user","role","dojo","avatar","meeting"];
 var roles=["Administrator","Champion","Mentor","Ninja"];
 
