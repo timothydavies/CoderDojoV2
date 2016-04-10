@@ -25,6 +25,7 @@ var item2 = { "_id" : "2",
              "email" : "jj", 
              "password" : "123", 
              "username" : "jj" };
+
 var item3 = { "_id" : "3",
              "firstName" : "c", 
              "lastName" : "l", 
@@ -46,6 +47,7 @@ var meeting1 = {
 
 db.user.insert(item1);
 db.user.insert(item2);
-db.user.insert(item3);
 db.dojo.insert(session1);
+db.user.insert(item3);
+
 db.meeting.insert(meeting1);
