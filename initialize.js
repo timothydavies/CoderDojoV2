@@ -40,7 +40,7 @@ var session1 = {
 var meeting1 = {
      "_id" : "146546",
      "name" : "uwa" ,
-     "location" : "56fd1de65fd3b21db12f9a97",
+     "location" : "146546",
      "password" : "1",
 };
 
