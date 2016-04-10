@@ -29,20 +29,19 @@ var item3 = { "_id" : "3",
              "firstName" : "c", 
              "lastName" : "l", 
              "roles" : ["Champion" ], 
+             "dojos" : ["146546"],
              "email" : "c", 
              "password" : "123", 
-             "username" : "c",
-             "avatar" : "data:," };
+             "username" : "c"};
 var session1 = {
-     "_id" : "1",
+     "_id" : "146546",
      "name" : "uwa",
 };
 var meeting1 = {
-     "_id" : "1",
+     "_id" : "146546",
      "name" : "uwa" ,
      "location" : "56fd1de65fd3b21db12f9a97",
      "password" : "1",
-     "avatar" : "data:,"
 };
 
 db.user.insert(item1);

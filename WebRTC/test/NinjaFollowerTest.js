@@ -44,7 +44,7 @@ describe('test ninja follower', function() {
                 .call(done);
 	});
     after(function() {
-		ninjaSocket.disconnect();
+		mentorSocket.disconnect();
 	});
 
     it('should fill email and password and login as ninja', function(done) {
