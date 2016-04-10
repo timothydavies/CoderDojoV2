@@ -15,7 +15,7 @@ var ninjaSocket;
          
          desiredCapabilities: {
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-             browserName: 'firefox',
+             browserName: 'chrome',
              name: process.env.TRAVIS_JOB_NUMBER,
              'public': true
          }
