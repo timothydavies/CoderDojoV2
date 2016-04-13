@@ -39,7 +39,7 @@ describe('test ninja follower', function() {
     before(function(done) {
 		mentorSocket = io('https://127.0.0.1:8000/',{forceNew: true});
         browserB.init(done)
-                .url('https://localhost:8000/sign_in/meeting?url=%2FNinja')
+                .url('https://127.0.0.1:8000/sign_in/meeting?url=%2FNinja')
                 .pause(2000)
                 .call(done);
 	});

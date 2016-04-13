@@ -126,7 +126,7 @@ describe('test mentor feedback', function() {
          browserB.pause(2000).getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
                             txtContent.should.equal('changed'); 
                         })
-                        .pause(2000)
+                        .pause(1000)
                         .call(done);
     });
     it('should send out image', function(done) {
