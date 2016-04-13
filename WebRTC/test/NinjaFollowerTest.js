@@ -51,7 +51,7 @@ describe('test ninja follower', function() {
                 browserB.getTitle().then(function(v){
                           console.log(v);
                          })
-                        .selectByValue('#sign-in-dialog-meetings', 'UWA')
+                        .selectByIndex('#sign-in-dialog-meetings', 0)
                         .setValue('input[name="password"]', '123')
                         .click('.btn').pause(1000)
                         .getTitle().then(function(title){
