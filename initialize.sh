@@ -4,7 +4,7 @@ clear
 echo "Set up initial MongoDB."
 
 #mongod --fork --logpath /dev/null
-mongo coderdojo initialize.js
+mongorestore dump/
 #sudo mongo coderdojo initilize.js
 
 cd Administrator/

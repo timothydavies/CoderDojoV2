@@ -39,7 +39,7 @@ describe('test ninja follower', function() {
     before(function(done) {
 		mentorSocket = io('https://127.0.0.1:8000/',{forceNew: true});
         browserB.init(done)
-                .url('https://localhost:8000/Ninja')
+                .url('https://localhost:8000/sign_in/meeting?url=%2FNinja')
                 .pause(2000)
                 .call(done);
 	});
@@ -51,7 +51,7 @@ describe('test ninja follower', function() {
                 browserB.getTitle().then(function(v){
                           console.log(v);
                          })
-                        //.selectByValue('#sign-in-dialog-meetings', '1')
+                        .selectByValue('#sign-in-dialog-meetings', 'UWA')
                         .setValue('input[name="password"]', '123')
                         .click('.btn').pause(1000)
                         .getTitle().then(function(title){
