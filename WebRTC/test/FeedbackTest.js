@@ -124,7 +124,7 @@ describe('test mentor feedback', function() {
     it('should highlight screenshot', function(done) {
          ninjaSocket.emit('test_highlight');
          browserB.pause(2000).getAttribute('#myCanvas', 'textContent').then(function(txtContent) {
-                            txtContent.should.equal('changed'); 
+                            txtContent.should.not.equal(' '); 
                         })
                         .pause(1000)
                         .call(done);
