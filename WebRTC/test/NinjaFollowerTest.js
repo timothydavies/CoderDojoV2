@@ -52,7 +52,7 @@ describe('test ninja follower', function() {
                           console.log(v);
                          })
                         //.selectByValue('#sign-in-dialog-meetings', '1')
-                        .setValue('input[name="password"]', '1')
+                        .setValue('input[name="password"]', '123')
                         .click('.btn').pause(1000)
                         .getTitle().then(function(title){
                             title.should.equal('Ninja')
