@@ -15,7 +15,7 @@ var queue=[];
          
          desiredCapabilities: {
              'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-             browserName: 'chrome',
+             browserName: 'firefox',
              name: process.env.TRAVIS_JOB_NUMBER,
              'public': true
          }
@@ -37,7 +37,7 @@ describe('test ninja follower', function() {
     
     //this.timeout = 99999999;
     before(function(done) {
-		mentorSocket = io('https://127.0.0.1:8000/',{forceNew: true});
+		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB.init(done)
                 .url('https://127.0.0.1:8000/sign_in/meeting?url=%2FNinja')
                 .pause(2000)
@@ -51,9 +51,9 @@ describe('test ninja follower', function() {
                 browserB.getTitle().then(function(v){
                           console.log(v);
                          })
-                        .selectByIndex('#sign-in-dialog-meetings', 0)
-                        .setValue('input[name="password"]', '123').pause(1000)
-                        .click('button[value="sign-in"]').pause(1000)
+                        //.selectByValue('#sign-in-dialog-meetings', '1')
+                        .setValue('input[name="password"]', '123').pause(500)
+                        .click('.btn').pause(1000)
                         .getTitle().then(function(title){
                             title.should.equal('Ninja')
                         })
