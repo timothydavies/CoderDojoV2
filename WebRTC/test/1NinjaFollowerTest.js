@@ -35,7 +35,7 @@ var should = require('should');
 
 describe('test ninja follower', function() {
     
-    //this.timeout = 99999999;
+    this.timeout(99999999);
     before(function(done) {
 		mentorSocket = io('https://127.0.0.1:8000',{forceNew: true});
         browserB.init(done)
