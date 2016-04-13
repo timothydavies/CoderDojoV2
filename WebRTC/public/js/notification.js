@@ -19,7 +19,7 @@ function notifyMe(){
      if (Notification.permission === "granted") {
         var options = {
               body: "You get a help request from Ninja.",
-              icon: "../img/ninja.jpg",
+              icon: "../img/ninja.png",
               dir : "ltr"
           };
         var notification = new Notification("Hi there",options);

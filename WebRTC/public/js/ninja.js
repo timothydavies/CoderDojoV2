@@ -188,6 +188,5 @@ var toBroadcast = document.getElementById('toBroadcast');
 if (toBroadcast) toBroadcast.onclick = toBroadcastClick;
 
 function toBroadcastClick(){  
-    alert('!!!!!!');
     socket.emit('sendUserIdentity',{client:'ninja'});
 }
