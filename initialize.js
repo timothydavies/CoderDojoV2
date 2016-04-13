@@ -14,11 +14,12 @@ for (var j=0; j<roles.length;j++){
 
 var item1 = { "_id" : "1",
              "firstName" : "admin", 
-             "lastName" : "", 
+             "lastName" : "dsd", 
              "roles" : ["Administrator"], 
              "email" : "admin", 
              "password" : "123", 
              "username" : "admin" };
+             
 var item2 = { "_id" : "2",
              "firstName" : "jj", 
              "lastName" : "l", 
