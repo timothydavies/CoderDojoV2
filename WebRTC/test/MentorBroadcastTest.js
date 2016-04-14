@@ -3,7 +3,10 @@ var io = require('socket.io-client');
 
 var WebdriverIO = require('webdriverio'),
     matrix = WebdriverIO.multiremote({
-        browserA: { desiredCapabilities: { browserName: 'chrome' } },
+        browserA: { desiredCapabilities: { browserName: 'chrome', 
+        chromeOptions: {
+            args: ['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']
+        }} },
         browserB: { desiredCapabilities: { browserName: 'firefox' } }
     }),
     browserA = matrix.select('browserA'),
@@ -46,11 +49,25 @@ describe('test mentor broadcasting', function(){
     
     it('mentor should start a broadcast',function(){
         return browserA.setValue('#conference-name','mentor')
-                        .click('.btn').pause(1500)
-                        .getTagName("//div[@id='participants']/video").then(function(tagName) {
-                        tagName.should.eventually.equal('video'); 
-                        });
+                        .click('.btn').pause(5000)
+                        .getAttribute('<video>','autoplay').should.eventually.equal('true');
     });
+    
+    it('ninja should jump to the broadcast page',function(){
+        return browserB.click('a=Presentations').pause(1000)
+                        .click('#toBroadcast').pause(1000)
+                        .getTabIds().then(function (handles) {
+                        return this.switchTab(handles[handles.length - 1]);
+                        })
+                        .pause(10000)
+                        .getTitle().should.eventually.equal('Broadcasting Page');
+    });
+    
+    it('ninja should be able to join',function(){
+        return  browserB.click('.join').pause(5000)
+                       .getAttribute('<video>','controls').should.eventually.equal('true');
+    });
+                        
     
     /*it('should sign out', function() {
         return browserA.click('#signOut');
@@ -72,13 +89,22 @@ describe('test ninja eplayer',function(){
             .getTitle().should.eventually.equal('Ninja Toolbar')
     });*/
 
-    it('mentor should jump to eplayer page', function() {
-        return browserB.click('a=Presentations').pause(1000)
-            .click('#toEplayer').pause(1000)
-            .getTabIds().then(function(handles) {
-                return this.switchTab(handles[handles.length - 1]);
-            })
-            .getTitle().should.eventually.equal('Eplayer Page');
+    it('ninja should jump to eplayer page', function() {
+        return browserB.getTabIds().then(function(handles) {
+                         return this.switchTab(handles[handles.length - 2]);
+                       })
+                       .click('a=Presentations').pause(1000)
+                       .click('#toEplayer').pause(1000)
+                       .getTabIds().then(function(handles) {
+                         return this.switchTab(handles[handles.length - 1]);
+                       })
+                       .getTitle().should.eventually.equal('Eplayer Page');
+    });
+    
+    it('ninja should be able to play video',function(){
+        return browserB.moveToObject('#player').pause(1000)
+                       .leftClick().pause(5000)
+                       .leftClick();
     });   
         
 });
@@ -101,5 +127,12 @@ describe('test mentor video upload',function(){
                         .getTitle().should.eventually.equal('YouTube API Uploads via CORS');
     });
     
-    it('mentor should ')
+    it('mentor should be able to sign in by google account',function(){
+        return browserA.moveToObject('.pre-sign-in',1,1)
+                        .leftClick().pause(3000)
+                        .getTabIds().then(function (handles) {
+                        return this.switchTab(handles[handles.length - 1]);
+                        })
+                        .getTitle().should.eventually.equal('Sign in - Google Accounts');
+    });
 });

@@ -10,6 +10,7 @@ html
     link(rel='stylesheet', href='css/bootstrap.min.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
     style.
+    
       audio, video {
                 -moz-transition: all 1s ease;
                 -ms-transition: all 1s ease;
@@ -56,13 +57,19 @@ html
                 margin-left: 0em;
                 width: 123px;
             }
-            
+            #pageHeader{
+                background-color: #337ab7;
+                color: white;
+                padding-top:1%;
+                padding-bottom:1%;
+                padding-left:2%;
+            }
   script.
     document.createElement('article')
   body
     article
       div(class='container')
-        div(class='page-header')
+        div(id='pageHeader',class='page-header')
           h1 CoderDojo Broadcasting
         div(class='form-group visible')
           label(for='conference-name') Broadcast Name:

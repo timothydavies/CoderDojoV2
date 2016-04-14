@@ -35,7 +35,6 @@ var config = {
         var alreadyExist = document.getElementById(room.broadcaster);
         if (alreadyExist) return;
         
-        hideInputandButton();
         
         if (typeof roomsList === 'undefined') roomsList = document.body;
 
@@ -82,7 +81,7 @@ function createButtonClickHandler() {
         });
     });
     hideUnnecessaryStuff();
-    startConferencing.style.display='none';
+    hideInputandButton();
 }
 
 function captureUserMedia(callback) {

@@ -43,8 +43,8 @@ Java Applet Plug-in:$
 20:application/x-java-applet;version=1.5:Java Applet::$
 Flash Player.plugin:$
 /Library/Internet Plug-Ins/Flash Player.plugin:$
-21.0.0.197:$
-1458810039000:0:0:0:$
+21.0.0.213:$
+1460268884000:0:0:0:$
 Shockwave Flash 21.0 r0:$
 Shockwave Flash:$
 2
@@ -60,9 +60,9 @@ Thunder Download Plugin:$
 0:application/thunder_download_plugin:Thunder Download Plugin::$
 
 [INVALID]
-/Library/Internet Plug-Ins/Quartz Composer.webplugin:$
-1410301211000:$
 /Library/Internet Plug-Ins/flashplayer.xpt:$
-1458349624000:$
+1459832039000:$
 /Library/Internet Plug-Ins/Disabled Plug-Ins:$
 1459357212000:$
+/Library/Internet Plug-Ins/Quartz Composer.webplugin:$
+1410301211000:$
