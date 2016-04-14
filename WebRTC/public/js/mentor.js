@@ -64,7 +64,10 @@ function renderBody(queue) {
 				$(secondPhase).show();
 			}
 			div.appendChild(b);
+            notifyMe();
 		});
+        
+        
 	}
 }
 
@@ -163,6 +166,7 @@ $.ajax({
 $(firstPhase).show();
 $(secondPhase).hide();
 $('#collapseTwo').hide();
+checkNotification();
 //$('#collapseTwo').collapse('hide');
 //socket.emit('iceRequest', {mentor : getParameterByName('user')});
 /*
