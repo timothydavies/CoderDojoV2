@@ -62,7 +62,7 @@ describe('test ninja follower', function() {
              
     });
      
-    it('ninja should request and be answered ny mentor', function(done) {
+    it('ninja should request and be answered by mentor', function(done) {
          function addQueue(data){
              mentorSocket.emit('iceRequest', {mentor:'Test Mentor'});
              queue = data.queue;
