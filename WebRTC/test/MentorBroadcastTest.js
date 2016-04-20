@@ -3,14 +3,31 @@ var io = require('socket.io-client');
 
 var WebdriverIO = require('webdriverio'),
     matrix = WebdriverIO.multiremote({
-        browserA: { desiredCapabilities: { browserName: 'chrome', 
+        host: 'ondemand.saucelabs.com',
+         logLevel: 'silent',
+         port:80,
+         user: 'CoderDojoDev',
+         key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
+         
+        browserA: { desiredCapabilities: { 
+            'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+             browserName: 'chrome',
+             name: process.env.TRAVIS_JOB_NUMBER,
+             'public': true,
         chromeOptions: {
             args: ['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']
         }} },
-        browserB: { desiredCapabilities: { browserName: 'firefox' } }
+        browserB: { desiredCapabilities: { 
+            'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+             name: process.env.TRAVIS_JOB_NUMBER,
+             'public': true,
+             browserName: 'firefox' } }
     }),
     browserA = matrix.select('browserA'),
     browserB = matrix.select('browserB');
+    
+  
+    
     
 var should = require('should');
 
