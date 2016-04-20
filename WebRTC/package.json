@@ -6,7 +6,7 @@
     "start": "forever start bin/www.js",
     "stop" : "forever stop bin/www.js", 
     "pretest" :"sleep 2",  
-	"test": "./node_modules/mocha/bin/mocha --timeout 99999"
+	"test": "./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
