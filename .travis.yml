@@ -14,7 +14,6 @@ install: true
 script:
   - "mongorestore dump/"
   - "cd WebRTC/"
-  - sleep 5
   - 'npm install'
   - 'npm update'
   - "npm install forever -g"
