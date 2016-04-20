@@ -173,7 +173,6 @@ div.feedback-options{
     display:none;
 }
 div#icon-color-div{
-    float:left;
     display:inline-block;
 }
 #icon-color-div small{
@@ -181,7 +180,6 @@ div#icon-color-div{
     margin-right:0.6em;
 }
 div#ButtonZone{
-    float:right;
     display:inline-block;
 }
 div.clear{

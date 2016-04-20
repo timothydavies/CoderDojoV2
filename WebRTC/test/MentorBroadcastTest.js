@@ -3,7 +3,7 @@ var io = require('socket.io-client');
 
 var WebdriverIO = require('webdriverio'),
     matrix = WebdriverIO.multiremote({
-        host: 'ondemand.saucelabs.com',
+         host: 'ondemand.saucelabs.com',
          logLevel: 'silent',
          port:80,
          user: 'CoderDojoDev',
@@ -42,7 +42,7 @@ describe('test mentor broadcasting', function(){
     });
     
     it('should login as mentor',function(){
-       return browserA.setValue('input[name="email"]', 'jack')
+       return browserA.setValue('input[name="email"]', 'jj')
                         .setValue('input[name="password"]', '123')
                         .click('.btn').pause(1000)
                         .getTitle().should.eventually.equal('Mentor Toolbar');
@@ -122,7 +122,10 @@ describe('test ninja eplayer',function(){
         return browserB.moveToObject('#player').pause(1000)
                        .leftClick().pause(5000)
                        .leftClick();
-    });   
+    }); 
+    it('should end the session', function() {
+        return browserB.pause(1000).end();
+    });  
         
 });
 
@@ -144,12 +147,8 @@ describe('test mentor video upload',function(){
                         .getTitle().should.eventually.equal('YouTube API Uploads via CORS');
     });
     
-    it('mentor should be able to sign in by google account',function(){
-        return browserA.moveToObject('.pre-sign-in',1,1)
-                        .leftClick().pause(3000)
-                        .getTabIds().then(function (handles) {
-                        return this.switchTab(handles[handles.length - 1]);
-                        })
-                        .getTitle().should.eventually.equal('Sign in - Google Accounts');
+
+    it('should end the session', function() {
+        return browserA.pause(1000).end();
     });
 });

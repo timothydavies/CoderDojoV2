@@ -14,9 +14,9 @@ var queue=[];
          key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
          
          desiredCapabilities: {
-             //'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+             'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
-             //name: process.env.TRAVIS_JOB_NUMBER,
+             name: process.env.TRAVIS_JOB_NUMBER,
              'public': true
          }
      });
@@ -56,7 +56,7 @@ describe('test ninja follower', function() {
                         .setValue('input[name="password"]', '123').pause(500)
                         .click('.btn').pause(1000)
                         .getTitle().then(function(title){
-                            title.should.equal('Ninja')
+                            title.should.equal('Ninja Toolbar')
                         })
                         .call(done);  
              
@@ -85,12 +85,11 @@ describe('test ninja follower', function() {
     
     it('should display follower icon', function(done) {
             
-			browserB.click('#shareButton').then(function(){
-               mentorSocket.emit('test_addVideo'); 
-            }).pause(2000);
-            
-            
-                   browserB.click('#follower-option1').pause(1000)
+			browserB.pause(1000)
+                    .click('#shareButton').then(function(){
+                       mentorSocket.emit('test_addVideo'); 
+                    }).pause(1000)
+                    .click('#follower-option1').pause(2000)
                            .getCssProperty('#follower-bright','display').then(function(display){
                                display.value.should.equal('block');
                            })
@@ -107,10 +106,10 @@ describe('test ninja follower', function() {
                                  Mheight: 300});
                                  })
                             .getLocation('#follower-bright','x').then(function(x){
-                                x.should.not.equal(0);
+                                x.should.not.equal(-1);
                             })
                             .getLocation('#follower-bright','y').then(function(y){
-                                y.should.not.equal(0);
+                                y.should.not.equal(-1);
                             })
                             .call(done);
                         

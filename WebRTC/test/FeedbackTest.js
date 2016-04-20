@@ -14,7 +14,7 @@ var ninjaSocket;
          key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
          
          desiredCapabilities: {
-             'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+            'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'chrome',
              name: process.env.TRAVIS_JOB_NUMBER,
              'public': true
@@ -55,14 +55,13 @@ describe('test mentor feedback', function() {
 
     describe('static', function() {
     it('should fill email and password and login as mentor', function(done) {
-               browserB.getTitle().then(function(v){
-                   console.log(v);
-               })
-                        .setValue('input[name="email"]', 'jj')
+               browserB .setValue('input[name="email"]', 'jj')
                         .setValue('input[name="password"]', '123')
-                 
+                        .pause(1000)
                         .click('.btn').pause(1000)
-                        .getTitle().should.eventually.equal('Mentor Toolbar')
+                        .getTitle().then(function(title){
+                            title.should.equal('Mentor Toolbar');
+                        })
                         .call(done);  
              
     });
