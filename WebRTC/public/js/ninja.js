@@ -121,7 +121,12 @@ window.onbeforeunload = function(){
 
 var oldWidth=$(window).width();
 var oldHeight=$(window).height();
-
+$(localCamBox).hide();
+$(firstPhase).show();
+$(secondPhase).hide();
+$(thirdPhase).hide();
+$(nameField).text(getParameterByName('user'));
+$('#collapseTwo').hide();
 $('#chatWindow').on('click','img.fancybox',function(){
     var newWidth=window.screen.width*0.5;
     var newHeight=window.screen.height;
@@ -171,12 +176,7 @@ $.ajax({
 	url: "/users/signed_in"
 });
 
-$(localCamBox).hide();
-$(firstPhase).show();
-$(secondPhase).hide();
-$(thirdPhase).hide();
-$(nameField).text(getParameterByName('user'));
-$('#collapseTwo').hide();
+
 //$('#collapseTwo').collapse("hide");
 //socket.emit('iceRequest', {ninja : getParameterByName('user')});
 

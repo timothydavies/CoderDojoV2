@@ -6,7 +6,8 @@ var queue=[];
 
  var WebdriverIO = require('webdriverio'),
      browserB = WebdriverIO.remote({ 
-         
+         user: 'CoderDojoDev',
+         key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
          host: 'ondemand.saucelabs.com',
          logLevel: 'silent',
          port:80,
