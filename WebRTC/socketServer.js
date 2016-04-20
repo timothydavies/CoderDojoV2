@@ -189,7 +189,8 @@ io.on('connection', function (socket, error) {
     
     socket.on('RTPointing', function(data) {
 		socket.broadcast.to(me.pairing.id).emit('RTPointing',data);
-        
+		socket.broadcast.to(me.pairing.id).emit('111');
+        console.log(data);
 	});
 
 	socket.on('test_addVideo',function(){

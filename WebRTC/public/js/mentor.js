@@ -19,7 +19,10 @@ var mentorAvatar = document.getElementById("mentorAvatar");
 var socket = io();
 var webrtc;
 
-
+$(firstPhase).show();
+$(secondPhase).hide();
+$('#collapseTwo').hide();
+checkNotification();
 
 
 signOut.onclick = function() {
@@ -163,10 +166,7 @@ $.ajax({
 	url: "/users/signed_in"
 });
 
-$(firstPhase).show();
-$(secondPhase).hide();
-$('#collapseTwo').hide();
-checkNotification();
+
 //$('#collapseTwo').collapse('hide');
 //socket.emit('iceRequest', {mentor : getParameterByName('user')});
 /*

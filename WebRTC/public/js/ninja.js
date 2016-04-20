@@ -23,6 +23,10 @@ var socket = io();
 var webrtc;
 var tempRoom;
 
+var oldWidth=$(window).width();
+var oldHeight=$(window).height();
+
+
 /*
 	Function to handle the receiving of ice server info.
 	This the data packet should be exactly what is returned by xirsys concerning ICE connection details. Hence, all the data will be in the data.d field.
@@ -119,14 +123,7 @@ window.onbeforeunload = function(){
 	}
 }
 
-var oldWidth=$(window).width();
-var oldHeight=$(window).height();
-$(localCamBox).hide();
-$(firstPhase).show();
-$(secondPhase).hide();
-$(thirdPhase).hide();
-$(nameField).text(getParameterByName('user'));
-$('#collapseTwo').hide();
+
 $('#chatWindow').on('click','img.fancybox',function(){
     var newWidth=window.screen.width*0.5;
     var newHeight=window.screen.height;
@@ -160,6 +157,7 @@ shareButton.onclick = shareButtonClick;
 secondPhaseButton.onclick = secondPhaseClick;
 socket.on('otherDisconnect', handleMentorDisconnect);
 finishButton.onclick = finishChatClick;
+socket.on('RTPointing', moveFollower);
 
 socket.on('test_addVideo', addVideo);
 
@@ -190,3 +188,8 @@ if (toBroadcast) toBroadcast.onclick = toBroadcastClick;
 function toBroadcastClick(){  
     socket.emit('sendUserIdentity',{client:'ninja'});
 }
+$(firstPhase).show();
+
+$(nameField).text(getParameterByName('user'));
+
+

@@ -80,9 +80,9 @@ html
                   .row(style='margin-bottom:10px')
                     .col-xs-12.pull-left
                       span.pull-left.glyphicon.glyphicon-comment(style='color:grey;font-size:2.5em;padding-right:10px')
-                      small#firstPhaseText There are 2 ninjas in queue waiting to chat with mentor
+                      small#firstPhaseText 
                   #helpQueue
-                    small(style='padding-top:30px') To chat with a ninja click on chat button
+                  //  small(style='padding-top:30px') To chat with a ninja click on chat button
                     .checkbox
                       label
                         input(type='checkbox')
@@ -122,25 +122,26 @@ html
                     br
                     br
 
-                   
-
-                    #screenBox.video-box.panel-primary
-                        #headingFour.panel-heading(role='tab')
-                            h4.panel-title CoderDojo                    
-                    br.afterscreen
-                    div#Mentor-feedback-options.feedback-options.panel-heading
-                        div.point-icon-div
-                            img#handler-bright.point-icon.handler(src='/img/h-bright.png')
-                            img#handler-dark.point-icon.handler(src='/img/h-dark.png')
-                        div#ButtonZone
-                            button#takescreenShot.btn.btn-default.btn-block.input-sm.pull-right(type='button' onclick='screenshot()' value='Take screenshot') Take a screenshot
-                        
-                        div#icon-color-div
-                            input#handler-option1.icon-btn(type='radio', name='icon', value='bright')
-                            small bright
-                            input#handler-option2.icon-btn(type='radio', name='icon', value='dark')
-                            small dark
-                        div.clear
+                   #sharedScreen.panel-primary
+                      #headingFour.panel-heading(role='tab')
+                          h4.panel-title
+                            div(role='button') Ninja screen
+                      #screenBox.video-box.panel-primary
+                                              
+                      br.afterscreen
+                      div#Mentor-feedback-options.feedback-options.panel-heading
+                          div.point-icon-div
+                              img#handler-bright.point-icon.handler(src='/img/h-bright.png')
+                              img#handler-dark.point-icon.handler(src='/img/h-dark.png')
+                          div#ButtonZone
+                              button#takescreenShot.btn.btn-default.btn-block.input-sm.pull-right(type='button' onclick='screenshot()' value='Take screenshot') Take a screenshot
+                          
+                          div#icon-color-div
+                              input#handler-option1.icon-btn(type='radio', name='icon', value='bright')
+                              small bright
+                              input#handler-option2.icon-btn(type='radio', name='icon', value='dark')
+                              small dark
+                          div.clear
 
                     br
                     
@@ -174,7 +175,7 @@ html
     script(src='js/Screenshot.js')
     script(src='js/sendScreenshot.js')
     script(src='js/trackMouse.js')
-    script(src='js/changeMouse.js')
+
     script(src='js/Drawing.js')
     script(src='js/feedback.js')
     script(src='js/justfortest.js')
