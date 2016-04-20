@@ -14,9 +14,9 @@ var queue=[];
          key:  'd079bf09-33be-4565-aea4-f07ffd191a7d',
          
          desiredCapabilities: {
-             'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+             //'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
              browserName: 'firefox',
-             name: process.env.TRAVIS_JOB_NUMBER,
+             //name: process.env.TRAVIS_JOB_NUMBER,
              'public': true
          }
      });
