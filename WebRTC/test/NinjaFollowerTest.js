@@ -49,10 +49,7 @@ describe('test ninja follower', function() {
 	});
 
     it('should fill email and password and login as ninja', function(done) {
-                browserB.getTitle().then(function(v){
-                          console.log(v);
-                         })
-                        //.selectByValue('#sign-in-dialog-meetings', '1')
+                browserB
                         .setValue('input[name="password"]', '123').pause(500)
                         .click('.btn').pause(1000)
                         .getTitle().then(function(title){
