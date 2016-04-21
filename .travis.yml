@@ -18,7 +18,7 @@ script:
   - mkdir /tmp/data
   - ${PWD}/mongodb-linux-x86_64-3.0.4/bin/mongod --dbpath /tmp/data --bind_ip 127.0.0.1 --auth &> /dev/null &
   - until nc -z localhost 27017; do echo Waiting for MongoDB; sleep 1; done
-  - "mongo initialize.js"
+  - "${PWD}/mongodb-linux-x86_64-3.0.4/bin/mongorestore dump/"
   - "cd WebRTC/"
   - 'npm install'
   - 'npm update'
