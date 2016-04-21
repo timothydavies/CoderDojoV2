@@ -44,7 +44,7 @@ var meeting1 = {
      "_id" : "146546",
      "name" : "uwa" ,
      "location" : "146546",
-     "password" : "1",
+     "password" : "123",
 };
 
 db.user.insert(item1);

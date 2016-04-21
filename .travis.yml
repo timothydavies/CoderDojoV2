@@ -17,7 +17,7 @@ addons:
   
 install: true
 script:
-  - "mongorestore dump/"
+  - "mongo initilize.js"
   - "cd WebRTC/"
   - 'npm install'
   - 'npm update'
