@@ -8,6 +8,11 @@ addons:
     username: "CoderDojoDev"
     access_key: "d079bf09-33be-4565-aea4-f07ffd191a7d"
     no_ssl_bump_domains: 127.0.0.1
+  apt:
+    sources:
+    - mongodb-3.0-precise
+    packages:
+    - mongodb-org-server
 
   
 install: true
