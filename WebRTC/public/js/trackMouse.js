@@ -27,21 +27,22 @@ $('.handler').mousedown(function() {
       var MentorWidth = $('#ninjaScreen').width();
       var MentorHeight = $('#ninjaScreen').height();
 	     // get mouse location (relative to the screenBox)
-      var ArrowCorToScreenBoxLeft = event.pageX - 20 - SharedScreenOffset.left;
-      var ArrowCorToScreenBoxTop = event.pageY - SharedScreenOffset.top
-      
-      var x=ArrowCorToScreenBoxLeft+"px";
-	  var y=ArrowCorToScreenBoxTop+"px";
+      var ArrowCorToScreenBoxLeft = event.pageX - SharedScreenOffset.left;
+      var ArrowCorToScreenBoxTop = event.pageY - SharedScreenOffset.top;
+
+      var x=ArrowCorToScreenBoxLeft - $('.handler').width()/2 + "px";
+	  var y=ArrowCorToScreenBoxTop + $('.handler').height()/2 + "px";
         // move handler to mouse location
  	  $('.handler').css({
            "left":x,
-           "top":y
+           "top":y,
+           "margin":0
        });
 	  
       
       
         // send out socket with the data of handler location and screenBox size 
-	  socket.emit('RTPointing',{ MX: ArrowCorToScreenBoxLeft+20,
+	  socket.emit('RTPointing',{ MX: ArrowCorToScreenBoxLeft,
                                  MY: ArrowCorToScreenBoxTop,
                                  Mwidth: MentorWidth,
                                  Mheight: MentorHeight});      
@@ -59,28 +60,44 @@ ninja receives socket and changes follower location according to the data
 ******************************************************************************************
 */
 function moveFollower(data) {
-    console.log("ninja move:");
 	var Mx = data.MX;
 	var My = data.MY;
     var Mwidth = data.Mwidth;
+    var Mheight = data.Mheight;
     
     var NinjaScreen = $('#localScreen').offset();
     var Nwidth = $('#localScreen').width();
+    var Nheight = $('#localScreen').height();
+    
     
       // modify the relative location (to localScreen) according to size ratio
-    var Nx = Mx * (Nwidth/Mwidth);
-    var Ny = My * (Nwidth/Mwidth);
-    var diff = 20;
-    var Nx_ab = Nx - diff + NinjaScreen.left + "px";
-    var Ny_ab = Ny - diff*1.2 + NinjaScreen.top + "px";
-    console.log(Nx_ab+" "+Ny_ab);
+    var Nx = Mx * parseFloat(Nwidth/Mwidth);
+    var Ny = My * parseFloat(Nheight/Mheight);
+
+    var Nx_ab = Nx + NinjaScreen.left - $('.follower').width()/2 + "px";
+    var Ny_ab = Ny + NinjaScreen.top - $('.follower').height()/2 + "px";
     $('.follower').css({
         "left":Nx_ab,
-        "top":Ny_ab
+        "top":Ny_ab,
+        "margin":0
     });
 }
 
-
+function updatePosition(disX, disY,ratio){
+    
+    var NinjaScreen = $('#localScreen').offset();
+    var Nx = disX * ratio;
+    var Ny = disY * ratio;
+    console.log('x:'+Nx+'y: '+Ny);
+    var Nx_ab = Nx + NinjaScreen.left + "px";
+    var Ny_ab = Ny + NinjaScreen.top + "px";
+    
+    $('.follower').css({
+        "left":Nx_ab,
+        "top":Ny_ab,
+        "margin":0
+    });
+}
 /*
 ******************************************************************************************
 display corresponding icon by selected radio button value

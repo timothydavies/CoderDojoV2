@@ -23,9 +23,11 @@ var socket = io();
 var webrtc;
 var tempRoom;
 
-var oldWidth=$(window).width();
-var oldHeight=$(window).height();
-
+var normalWidth=300;
+var normalHeight=620;
+var largeWidth = normalWidth * 2;
+var largeHeight = normalHeight;
+var enlarged = 0;
 
 /*
 	Function to handle the receiving of ice server info.
@@ -135,12 +137,26 @@ $('body').on('click','#fancybox-close',function(){
 });
 
 $('#enlargeButton').on('click',function(){
-    var newWidth=window.screen.width*0.5;
-    var newHeight=window.screen.height;
-    window.resizeTo(newWidth,newHeight);
+    
+	if (enlarged == 0){
+		var distanceX = $('.follower').offset().left - $('#localScreen').offset().left;
+		var distanceY = $('.follower').offset().top - $('#localScreen').offset().top;
+    	window.resizeTo(largeWidth,largeHeight);
+		updatePosition(distanceX,distanceY,2);
+		enlarged = 1;
+	}
+	
 });
 $('#shrinkButton').on('click',function(){
-    window.resizeTo(oldWidth,oldHeight);
+    
+	if (enlarged == 1){
+		var distanceX = $('.follower').offset().left - $('#localScreen').offset().left;
+		var distanceY = $('.follower').offset().top - $('#localScreen').offset().top;
+		window.resizeTo(normalWidth,normalHeight);
+		updatePosition(distanceX,distanceY,0.5);
+		enlarged = 0;
+	}
+    
 });
 
 $('#ninjaBroadcast').on('click',function(){

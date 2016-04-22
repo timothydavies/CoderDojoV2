@@ -28,7 +28,7 @@ input[type='file']	{border-radius: 0}
 
 /*NEW CODE ADDED*/
 
-@media screen and (min-width: 1000px) { 
+@media screen and (min-width: 700px) { 
 	#chats{
         position:absolute;
         width:75%;
@@ -54,7 +54,9 @@ input[type='file']	{border-radius: 0}
         width:300%; 
         right:110%;
         overflow:visible;
+        
     }
+   
     #localScreenBox{
         position:relative;
     }
@@ -80,9 +82,16 @@ input[type='file']	{border-radius: 0}
 
 @media (max-width: 999px) { 
 	#chats{position:absolute;top:50px;right:10px;}
-	#screenBox2 {position:absolute;top:0px; width:190%;right:105%;}
-	#sharedScreen {position:absolute;top:10%; width:190%;height:auto;right:105%;}
-
+	#sharedScreen {position:absolute;top:0; width:190%;height:auto;right:105%;}
+     @media screen and (max-width: 765px) { 
+        #sharedScreen {
+            width:100%;
+        }
+        .col-md-3 {
+            max-width:30%;
+        }
+         
+    }
 }
 
     .row{
@@ -178,10 +187,9 @@ div.text-center .glyphicon{
 #collapseTwo{
         display: none;
     }
-
-#localCamBox{
-    display:none;
-}
+#chatSecondPhase #localCamBox{
+     display:none;
+ }
 
 .point-icon{
     width:40px;
