@@ -24,7 +24,7 @@ var webrtc;
 var tempRoom;
 
 var normalWidth=300;
-var normalHeight=620;
+var normalHeight=$(window).height();
 var largeWidth = normalWidth * 2;
 var largeHeight = normalHeight;
 var enlarged = 0;
@@ -133,7 +133,7 @@ $('#chatWindow').on('click','img.fancybox',function(){
 });
 
 $('body').on('click','#fancybox-close',function(){
-    window.resizeTo(oldWidth,oldHeight);
+    window.resizeTo(normalWidth,onormalHeight);
 });
 
 $('#enlargeButton').on('click',function(){

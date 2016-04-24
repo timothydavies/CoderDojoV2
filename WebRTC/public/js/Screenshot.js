@@ -64,7 +64,7 @@ var screenshot=function(){
         var video = document.getElementById("ninjaScreen");
           // create canvas to hold image
         var canvas = document.createElement('canvas');
-        var w=$(document).width()*0.25;
+        var w=$("#sharedScreen").width();
         var h=w*(video.videoHeight/video.videoWidth);
         //var w=$('#screenBox').width();
         //var h=$('#screenBox').height();

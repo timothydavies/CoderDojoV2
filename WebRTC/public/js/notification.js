@@ -23,6 +23,6 @@ function notifyMe(){
               dir : "ltr"
           };
         var notification = new Notification("Hi there",options);
-        setTimeout(notification.close.bind(notification), 5000);
+        //setTimeout(notification.close.bind(notification), 5000);
       }
 }
