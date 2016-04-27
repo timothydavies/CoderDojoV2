@@ -10,8 +10,11 @@ This file is for dynamic feedback including:
 var handle= document.getElementById("handler");
 
 var socket = io();
-
-
+var IconSize = $('.handler').width();
+var Mwidth;
+var Mheight;
+var Nwidth;
+var Nheight;
 /*
 *********************************************
 track mouse event and change handler location
@@ -30,8 +33,8 @@ $('.handler').mousedown(function() {
       var ArrowCorToScreenBoxLeft = event.pageX - SharedScreenOffset.left;
       var ArrowCorToScreenBoxTop = event.pageY - SharedScreenOffset.top;
 
-      var x=ArrowCorToScreenBoxLeft - $('.handler').width()/2 + "px";
-	  var y=ArrowCorToScreenBoxTop + $('.handler').height()/2 + "px";
+      var x = ArrowCorToScreenBoxLeft  + "px";
+	  var y = ArrowCorToScreenBoxTop  + "px";
         // move handler to mouse location
  	  $('.handler').css({
            "left":x,
@@ -62,24 +65,28 @@ ninja receives socket and changes follower location according to the data
 function moveFollower(data) {
 	var Mx = data.MX;
 	var My = data.MY;
-    var Mwidth = data.Mwidth;
-    var Mheight = data.Mheight;
+    Mwidth = data.Mwidth;
+    Mheight = data.Mheight;
     
     var NinjaScreen = $('#localScreen').offset();
-    var Nwidth = $('#localScreen').width();
-    var Nheight = $('#localScreen').height();
+    Nwidth = $('#localScreen').width();
+    Nheight = $('#localScreen').height();
     
-    
+    var scale = parseFloat(Nwidth/Mwidth);
       // modify the relative location (to localScreen) according to size ratio
     var Nx = Mx * parseFloat(Nwidth/Mwidth);
     var Ny = My * parseFloat(Nheight/Mheight);
-
-    var Nx_ab = Nx + NinjaScreen.left - $('.follower').width()/2 + "px";
-    var Ny_ab = Ny + NinjaScreen.top - $('.follower').height()/2 + "px";
+    if ( scale!= 1){
+        SizeDiff = IconSize * (1 - scale);
+    }
+    
+    
+    var Nx_ab = Nx + NinjaScreen.left - SizeDiff + "px";
+    var Ny_ab = Ny + NinjaScreen.top  + "px";
     $('.follower').css({
         "left":Nx_ab,
         "top":Ny_ab,
-        "margin":0
+        "margin":0,
     });
 }
 
@@ -88,14 +95,20 @@ function updatePosition(disX, disY,ratio){
     var NinjaScreen = $('#localScreen').offset();
     var Nx = disX * ratio;
     var Ny = disY * ratio;
-    console.log('x:'+Nx+'y: '+Ny);
-    var Nx_ab = Nx + NinjaScreen.left + "px";
+    var scale = parseFloat(Nwidth/Mwidth);
+    SizeDiff = 0;
+    if (scale !=1 ){
+       SizeDiff = IconSize * (1 - scale); 
+    }
+    
+    
+    var Nx_ab = Nx + NinjaScreen.left - SizeDiff + "px";
     var Ny_ab = Ny + NinjaScreen.top + "px";
     
     $('.follower').css({
         "left":Nx_ab,
         "top":Ny_ab,
-        "margin":0
+        "margin":0,
     });
 }
 /*

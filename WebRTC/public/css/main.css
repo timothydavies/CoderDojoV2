@@ -36,6 +36,11 @@ input[type='file']	{border-radius: 0}
         right:10px;
         z-index: 1;
     }
+    
+    #screenBox{
+        position:relative;
+    }
+    
 
     #chat_content{
             max-width: 45%;
@@ -64,9 +69,7 @@ input[type='file']	{border-radius: 0}
     #collapseTwo .panel-body{
         height:auto;
     }
-    
-
-
+   
         
     #screenBox div{
         overflow:visible;
@@ -192,12 +195,10 @@ div.text-center .glyphicon{
  }
 
 .point-icon{
-    width:40px;
     display:none;
     position:absolute;    
     z-index: 100;
-    margin-right:1em;
-    margin-top: 1em;
+    margin-top:1em;
 }
 
 

@@ -11,11 +11,6 @@ if (process.env.XIRSYS) {
 } else {
 	throw 'No XIRSYS api key supplied'
 }
-/*
-var identity = 'benuwa';
-var application = 'dojo';
-var domain = 'coderdojo-uwa.com.au';
-*/
 var identity = 'uwadojo';
 var application = 'dojo';
 var domain = 'coderdojo.com.au';

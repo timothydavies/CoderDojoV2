@@ -138,23 +138,23 @@ $('body').on('click','#fancybox-close',function(){
 
 $('#enlargeButton').on('click',function(){
     
-	if (enlarged == 0){
+	if ($(window).width() < 400){
 		var distanceX = $('.follower').offset().left - $('#localScreen').offset().left;
 		var distanceY = $('.follower').offset().top - $('#localScreen').offset().top;
     	window.resizeTo(largeWidth,largeHeight);
 		updatePosition(distanceX,distanceY,2);
-		enlarged = 1;
+		
 	}
 	
 });
 $('#shrinkButton').on('click',function(){
-    
-	if (enlarged == 1){
+    console.log("enlarged: "+$(window).height());
+	if ($(window).width() > 400){
 		var distanceX = $('.follower').offset().left - $('#localScreen').offset().left;
 		var distanceY = $('.follower').offset().top - $('#localScreen').offset().top;
 		window.resizeTo(normalWidth,normalHeight);
 		updatePosition(distanceX,distanceY,0.5);
-		enlarged = 0;
+		
 	}
     
 });
