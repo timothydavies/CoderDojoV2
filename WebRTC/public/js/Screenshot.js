@@ -64,13 +64,18 @@ var screenshot=function(){
         var video = document.getElementById("ninjaScreen");
           // create canvas to hold image
         var canvas = document.createElement('canvas');
-        var w=$("#sharedScreen").width();
-        var h=w*(video.videoHeight/video.videoWidth);
-        //var w=$('#screenBox').width();
-        //var h=$('#screenBox').height();
+        canvas.id="myCanvas"; 
+        var w;
+        if (PIXEL_RATIO()==1){
+           w = 0.47 * screen.availWidth; 
+        }
+        else{
+           w = 0.24 * screen.availWidth;
+        }
+        var h = w*(video.videoHeight/video.videoWidth);
+       
           //Create canvas with the device resolution.
         createHiDPICanvas(canvas, w, h);
-        canvas.id="myCanvas"; 
         ctx = canvas.getContext("2d");
         ctx.mozImageSmoothingEnabled = false;
         ctx.msImageSmoothingEnabled = false;
@@ -80,6 +85,7 @@ var screenshot=function(){
           //draw screenshot into canvas
         ctx.drawImage(video ,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width/ratio,canvas.height/ratio);
         createCanvasZone(canvas,ctx,video);
+        console.log(' canvas width: '+ canvas.width+" height: "+ canvas.height+" " + screen.width);
         console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);	
 		console.log('done');
         canvas.textContent=canvas.toDataURL("img/png");
