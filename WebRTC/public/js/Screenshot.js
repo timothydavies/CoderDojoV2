@@ -24,7 +24,7 @@ function addCanvasZone(){
            console.log("Add CanvasZone");
         }   
         $('#screenBox').append(CanvasZone);
-        
+     
     }
     
  /*
