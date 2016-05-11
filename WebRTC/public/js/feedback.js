@@ -37,16 +37,28 @@ when the session is finished, hide feedback zone and reset pointing icons positi
 **********************************************
 */
 function hideFeedbackZone(){
-    $('div.feedback-options').insertAfter('.afterscreen');
-    $('div.feedback-options').css('display','none');
-    $('.point-icon').css('display','none');
-    var NinjaScreen = $('#localScreen').offset();
-    var y_distance = $('#localScreen').height();
-    var reset_x = NinjaScreen.left+"px";
-    var reset_y = y_distance+NinjaScreen.top+"px";
-    $('.follower').css({
-        'top':reset_x,
-        'left':reset_y,
-        }); 
+    if ($('div.feedback-options').css('display')!= "none"){
+        $('div.feedback-options').insertAfter('.afterscreen');
+        $('div.feedback-options').css('display','none');
+        $('.point-icon').css('display','none');
+        reset_x = $('.point-icon-div').off().left + "px";
+	    reset_y = 1.1*$('.point-icon-div').off().top +"px";
+        $('.follower').css({
+            "top":reset_y,
+            "left":reset_x,
+            });
+        $('.point-icon').css('margin-top','1em');
+    }
+     
 } 
 
+function showMentorFeedbackZone(){
+    $('div#Mentor-feedback-options').insertAfter('#CanvasZone');
+    $('div#Mentor-feedback-options').css('display','block');
+    reset_x = $('.point-icon-div').off().left;
+	reset_y = $('.point-icon-div').off().top + 20;
+    $('.handler').css({
+        "top":reset_y + "px",
+        "left":reset_x + "px",
+        });          
+}

@@ -229,9 +229,12 @@ div.clear{
 .resizebtn{
     color:black;
     font-size:11px;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
 }
 #headingFour{
     height:100%;
     width:100%;
     margin-bottom:1em;
 }
+

@@ -132,18 +132,6 @@ document.onunload = function(){
 }
 
 
-
-function showMentorFeedbackZone(){
-    $('div#Mentor-feedback-options').insertAfter('#CanvasZone');
-    $('div#Mentor-feedback-options').css('display','block');
-    $('.handler').css({
-        'top':'90%',
-        'left':'0',
-        }); 
-    
-          
-}
-
 socket.on('queueUpdate', handleQueueUpdate);
 socket.on('changeRoom', handleRoomChange_M);
 socket.on('iceServers', handleIceServers_M);

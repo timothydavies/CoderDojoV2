@@ -23,7 +23,7 @@ var socket = io();
 var webrtc;
 var tempRoom;
 
-var normalWidth=300;
+var normalWidth=320;
 var normalHeight=$(window).height();
 var largeWidth = normalWidth * 2;
 var largeHeight = normalHeight;
@@ -60,6 +60,7 @@ function handleRoomChange_N (data) {
 }
 
 function shareButtonClick() {
+	hideFeedbackZone();
 	$(shareButton).text('Change Shared Window')
     if ($(shareButton).text()=='Change Shared Window'){
         webrtc.stopScreenShare();
@@ -78,8 +79,7 @@ function shareButtonClick() {
 function showNinjaFeedbackZone(){
     $('div#Ninja-feedback-options').insertAfter('#localScreen');
     $('div#Ninja-feedback-options').css('display','block');
-    
-      
+  
 }
 
 function secondPhaseClick() {
