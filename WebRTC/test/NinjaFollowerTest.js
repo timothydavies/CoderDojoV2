@@ -87,7 +87,7 @@ describe('test ninja follower', function() {
                        mentorSocket.emit('test_addVideo'); 
                     }).pause(1000)
                     .click('#follower-option1').pause(2000)
-                           .getCssProperty('#follower-bright','display').then(function(display){
+                           .getCssProperty('#follower-dark','display').then(function(display){
                                display.value.should.equal('block');
                            })
                            .call(done);
@@ -102,10 +102,10 @@ describe('test ninja follower', function() {
                                  Mwidth: 400,
                                  Mheight: 300});
                                  })
-                            .getLocation('#follower-bright','x').then(function(x){
+                            .getLocation('#follower-dark','x').then(function(x){
                                 x.should.not.equal(-1);
                             })
-                            .getLocation('#follower-bright','y').then(function(y){
+                            .getLocation('#follower-dark','y').then(function(y){
                                 y.should.not.equal(-1);
                             })
                             .call(done);
