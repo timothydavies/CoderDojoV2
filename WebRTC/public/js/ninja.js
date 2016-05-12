@@ -127,13 +127,12 @@ window.onbeforeunload = function(){
 
 
 $('#chatWindow').on('click','img.fancybox',function(){
-    var newWidth=window.screen.width*0.5;
-    var newHeight=window.screen.height;
-    window.resizeTo(newWidth,newHeight);
+   
+    window.resizeTo(largeWidth,largeHeight);
 });
 
 $('body').on('click','#fancybox-close',function(){
-    window.resizeTo(normalWidth,onormalHeight);
+    window.resizeTo(normalWidth,normalHeight);
 });
 
 $('#enlargeButton').on('click',function(){
