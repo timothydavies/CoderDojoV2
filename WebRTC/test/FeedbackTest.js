@@ -156,7 +156,7 @@ describe('test mentor handler', function() {
            ninjaSocket.emit('test_addVideo'); 
            browserB.pause(1000)
                            .click('#handler-option1').pause(300)
-                           .getCssProperty('#handler-bright','display').then(function(display){
+                           .getCssProperty('#handler-dark','display').then(function(display){
                                display.value.should.equal('block');
                            })
                            .call(done);
@@ -173,7 +173,7 @@ describe('test mentor handler', function() {
                 data.MY.should.not.equal(0);
            
 			};    
-         browserB.moveToObject('#handler-bright')
+         browserB.moveToObject('#handler-dark')
                      .buttonDown().then(function(){
                          ninjaSocket.once('RTPointing', test);
                      })
