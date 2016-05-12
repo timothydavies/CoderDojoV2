@@ -111,14 +111,3 @@ function updatePosition(disX, disY,ratio){
         "margin":0,
     });
 }
-/*
-******************************************************************************************
-display corresponding icon by selected radio button value
-******************************************************************************************
-*/
-$('.icon-btn').click(function(){
-    $('.point-icon').css("display","none");
-    var choice = $(this).attr('value');
-    $('#follower-'+choice).css("display","block");
-    $('#handler-'+choice).css("display","block");
-});

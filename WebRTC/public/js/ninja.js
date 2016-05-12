@@ -139,8 +139,8 @@ $('body').on('click','#fancybox-close',function(){
 $('#enlargeButton').on('click',function(){
     
 	if ($(window).width() < 400){
-		var distanceX = $('.follower').offset().left - $('#localScreen').offset().left;
-		var distanceY = $('.follower').offset().top - $('#localScreen').offset().top;
+		var distanceX = $('.follower').first().offset().left - $('#localScreen').offset().left;
+		var distanceY = $('.follower').first().offset().top - $('#localScreen').offset().top;
     	window.resizeTo(largeWidth,largeHeight);
 		updatePosition(distanceX,distanceY,2);
 		
@@ -150,8 +150,8 @@ $('#enlargeButton').on('click',function(){
 $('#shrinkButton').on('click',function(){
     console.log("enlarged: "+$(window).height());
 	if ($(window).width() > 400){
-		var distanceX = $('.follower').offset().left - $('#localScreen').offset().left;
-		var distanceY = $('.follower').offset().top - $('#localScreen').offset().top;
+		var distanceX = $('.follower').first().offset().left - $('#localScreen').offset().left;
+		var distanceY = $('.follower').first().offset().top - $('#localScreen').offset().top;
 		window.resizeTo(normalWidth,normalHeight);
 		updatePosition(distanceX,distanceY,0.5);
 		
