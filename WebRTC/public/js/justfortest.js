@@ -6,7 +6,7 @@ function addVideo(){
     var video = document.createElement('video');
         video.src = 'testResource/1.mp4';
         video.autoplay = true;
-
+// TODO Is this an insecure way of determining mentor/ninja?
     if (windowTitle=='Mentor Toolbar'){
         var newContainer = document.createElement('div');
         newContainer.id = 'container_';

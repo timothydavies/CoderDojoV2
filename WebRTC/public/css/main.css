@@ -17,197 +17,155 @@ label 				{padding: 5px}
 .padding-10			{padding:10px;}
 span.glyphicon-menu-down,
 span.glyphicon-home, { font-size: 2.7em;padding:4px;}
-.btn 				{border-radius: 0}
+.btn 				{border-radius: 0;}
 input[type='text'],
 input[type='date'],
 input[type='email'],
 input[type='password'],
 input[type='file']	{border-radius: 0}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+/* TODO move to a 'bootstrap overwrite' css file */
+.container, .row{
+    margin:0px;
+    padding:0px;
+}
 
 #chats{z-index:-1} /* In firefox the chats panel will overlap with the signout button, blocking it; hence the z-index must be set. */
 
-/*NEW CODE ADDED*/
-
-@media screen and (min-width: 700px) { 
-	#chats{
-        position:absolute;
-        width:75%;
-        top:50px;
-        right:10px;
-        z-index: 1;
-    }
-    
-    #screenBox{
-        position:relative;
-    }
-    
-
-    #chat_content{
-            max-width: 45%;
-            margin-right: 0;
-            margin-left:0;
-            float: right;
-    }
-    .col-md-3{
-        max-width:20%;
-        float:left;
-    }
-	#sharedScreen {
-        position:absolute; 
-        min-height:3em;
-        top:-0.5%; 
-        width:300%; 
-        right:110%;
-        overflow:visible;
-        
-    }
-   
-    #localScreenBox{
-        position:relative;
-    }
-        
-    #collapseTwo .panel-body{
-        height:auto;
-    }
-   
-        
-    #screenBox div{
-        overflow:visible;
-    }
-    #ButtonZone{
-        display:block;
-        z-index: 1;
-    }
-    
-    #chatWindow{
-        margin-top:70px;
-    }
-
-@media (max-width: 999px) { 
-	#chats{position:absolute;top:50px;right:10px;}
-	#sharedScreen {position:absolute;top:0; width:190%;height:auto;right:105%;}
-     @media screen and (max-width: 765px) { 
-        #sharedScreen {
-            width:100%;
-        }
-        .col-md-3 {
-            max-width:30%;
-        }
-         
-    }
+#chats{
+    z-index: 1;
+}
+#screenBox, #localScreenBox{
+    position:relative;
+}
+#chat_content{
+        margin-right:0;
+        margin-left:0;
+}
+#collapseTwo .panel-body{
+    height:auto;
+}
+#screenBox div{
+    overflow:visible;
+}
+#ButtonZone, .videoControls{
+    display:inline-block;
+    z-index: 1;
+}
+#chatWindow{
+    margin-top:70px;
+}
+.accordion, .row{
+    max-width:100%;
+}
+#myCanvas{
+    display:block;
+    max-width: 100%;
+    max-height: 100%;
+}
+/*Created in Screenshot.js*/
+#CanvasZone {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#canvasBtnZone{
+    display: block;
+    width: 100%;
+    background-color: #844;
+} 
+.canvas_btn{
+    background-color: #337ab7;
+    color: white;
+    margin: 0.5em;
+}
+#draw-area{
+    width:100vw;
+    height:100vh;
+    background-color: transparent;
+}
+#sharedScreen {
+    overflow: visible;
 }
 
-    .row{
-        max-width:100%;
-    }
-    .accordion{
-        max-width:100%;
-    }
-    .accordion .row{
-        max-width:100%;
-    }
-    
-    #myCanvas{
-        display:block;  
-    }
-    #canvasBtnZone{
-        position: absolute;
-        top: 0;
-        left: 0%;
-        z-index: 2;
-        display: block;
-        border: solid #844 8px;
-        background-color: #844;
-       
-    }
-    
-    .canvas_btn{
-                background-color: #337ab7;
-                color: white;
-                margin: 0.5em;
-        }
-    #draw-area{
-        width:100%;
-        height:100%;
-        background-color: transparent;
-    }
-
-}
-
-@media screen and (min-width: 1111px){
-        div.text-center .glyphicon{
-        font-size: 10em ;
-        margin-top:15%;
-    }
-   }
-
-@media screen and (min-width:769px) and (max-width: 1110px){
-        div.text-center .glyphicon{
-        font-size: 7em ;
-        margin-top:25%;
-    }
-   }
-
+/* Set the size of videos to fit within their container while scaling with window height */
 .video-box {
     width:100%;
-	border:solid 1px lightgrey;
 }
-
 video {
-	width: 100%;
+    max-width:100%;
+    border:solid 1px lightgrey;
 }
-
-
-@media screen and (max-width: 768px){
-    div.text-center .glyphicon{
-        font-size:15em;
+/* Mentor's videos */
+#localCamBox video, #localCamBox .video-box {
+    max-height: 20vh;
+}
+#screenBox video, #screenBox .video-box, #canvasZone {
+    max-height: 80vh;
+}
+/* If @screen-sm-min or larger, allow cambox to fill full width */
+@media screen and (min-width: 768px) {
+    #localCamBox video, #localCamBox .video-box {
+        max-height: 100vh;
     }
- }
- 
+}
+/* Ninja's videos */
+/* TODO idea is to allow a ninja to see his own shared screen 
+in full size if the window is large enough, but to otherwise 
+cap it such that the ninja can see all elements */
+#remoteCamBox video, #remoteCamBox .video-box {
+    max-height: 50vh;
+}
+#localScreenBox video, #localScreenBox .video-box {
+    max-height: 90vh;
+}
+/* ideally, "if window is under half the screen" */
+@media screen and (max-width: 900px) {
+    #remoteCamBox video, #remoteCamBox .video-box {
+        max-height: 30vh;
+    }
+    #localScreenBox video, #localScreenBox .video-box {
+        max-height: 60vh;
+    }
+} 
+
+
 div.text-center .glyphicon{
-        color:lightgrey;
-    }
+    color:lightgrey;
+}
     
+/* TODO redundant? */
 #clearCanvas, #closeCanvas{
     display:inline-block;
 }
 
-#chatSecondPhase{
-    display:none;
-}
-#chatThirdPhase{
-    display:none;
-}
-
-#firstPhase{
-    display:none;
-}
-
-#secondPhase{
-    display:none;
-}
-
-#collapseTwo{
-        display: none;
-    }
-#chatSecondPhase #localCamBox{
+#chatSecondPhase, #chatThirdPhase, #firstPhase, .secondPhase, #collapseTwo, #chatSecondPhase, .point-icon, div.feedback-options{
      display:none;
- }
+}
+
+#iconPosReference {
+    position:relative;
+    height:auto;
+}
 
 .point-icon{
-    display:none;
-    position:absolute;    
+    position:absolute;
+    top:100%;
+    left:-1em;
     z-index: 100;
-    margin-top:1em;
-}
-
-
-
-div.feedback-options{
-    display:none;
 }
 div#icon-color-div{
     display:inline-block;
+    /* TODO may be worth putting this button above the arrow 
+    and making disabling/reenabling the arrow reset its position*/
+    /*z-index: 101;*/
 }
 #icon-color-div small{
     margin-left:0.6em;
@@ -237,4 +195,39 @@ div.clear{
     width:100%;
     margin-bottom:1em;
 }
-
+.overlay {
+    z-index: 2;
+}
+#chatOverlay{
+    position:fixed;
+    height:0vh;
+    width:60vw;
+    bottom:1vh;
+    left:20vw;
+    overflow: hidden;
+    background-color: rgba(200,200,200,0.5);
+    transition:0.5s;
+}
+#chatWindow{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:150px; 
+    width:100%;
+    margin-top:0px; 
+    border:solid 1px lightgrey;
+    overflow-y: scroll;
+}
+#chatForm{
+    position:absolute;
+    bottom:0vh;
+    left:0vw;
+}
+#message{
+    width:auto;
+}
+#ovrBtn{
+    position:fixed;
+    bottom:1vh;
+    right:20vw;
+}

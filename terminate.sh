@@ -3,8 +3,8 @@
 clear
 echo "Terminate Process"
 
-./shurdownComServer.sh
-./shurdownAdminServer.sh
+./shutdownComServer.sh
+./shutdownAdminServer.sh
 #./shurdownMongoDB.sh
 
 echo "Terminate the whole system."

@@ -1,7 +1,6 @@
 
-var opts = {localCamBox:null, remoteCamBox:null, screenBox:null};
+var opts = {localCamBox:null, screenBox:null};
 opts.localCamBox = document.getElementById("localCamBox");
-opts.remoteCamBox;
 opts.screenBox = document.getElementById("screenBox");
 
 var helpQueue = document.getElementById("helpQueue");
@@ -9,8 +8,6 @@ var nameField = document.getElementById("nameField");
 
 var firstPhase = document.getElementById("firstPhase");
 var firstPhaseText = document.getElementById("firstPhaseText");
-
-var secondPhase = document.getElementById("secondPhase");
 
 var fullScreenButton = document.getElementById("screenFull");
 
@@ -20,10 +17,9 @@ var socket = io();
 var webrtc;
 
 $(firstPhase).show();
-$(secondPhase).hide();
+$('.secondPhase').hide();
 $('#collapseTwo').hide();
 checkNotification();
-
 
 signOut.onclick = function() {
 	jQuery.post('/sign_out', {}, function() {
@@ -31,6 +27,7 @@ signOut.onclick = function() {
 	});
 }
 
+// TODO apply to ninja as well, on webcam and screenshare. Ideally, the toolbar will still be useable, allowing cursor, text chat, and screenshots
 fullScreenButton.onclick = function() {
 	var myVideo = opts.screenBox.getElementsByTagName('video');
 	if (myVideo) {
@@ -54,6 +51,7 @@ fullScreenButton.onclick = function() {
 */
 function renderBody(queue) {
 	var div = helpQueue;
+	// TODO jquery.empty() faster?
 	div.innerHTML = '';
 	if (queue) {
 		$(firstPhaseText).text("There are " + queue.length + " ninjas waiting for help");
@@ -64,13 +62,11 @@ function renderBody(queue) {
 			b.onclick = function() {
 				socket.emit('answerRequest', {ninja: entry});
 				$(firstPhase).hide();
-				$(secondPhase).show();
+				$('.secondPhase').show();
 			}
 			div.appendChild(b);
             notifyMe();
 		});
-        
-        
 	}
 }
 
@@ -89,9 +85,11 @@ function handleRoomChange_M(data) {
 	console.log('Changing to room: ' + data.room);
 	setRoom(data.room);
 	$('#ninjaName').text(data.ninja);
-	$(opts.screenBox).empty();
+	// TODO remove redunancy, emptied multiple times to prevent bugs!
 	$(opts.localCamBox).empty();
+	$(opts.screenBox).empty();
 	$(chatWindow).empty();
+	
 	webrtc.startLocalVideo();
 }
 
@@ -110,9 +108,17 @@ function handleIceServers_M(data) {
 	This function should handle the event of the ninja disconnecting from the system during a session.
 */
 function handleNinjaDisconnect(data) {
+	webrtc.leaveRoom();
 	webrtc.stopLocalVideo();
+
+	// TODO remove redunancy, emptied multiple times to prevent bugs!
+	$(opts.localCamBox).empty();
+	$(opts.screenBox).empty();
+	$(chatWindow).empty();
+
 	alert("The ninja you were communicating with left");
-	$(secondPhase).hide();
+	hideFeedbackZone();
+	$('.secondPhase').hide();
 	$(firstPhase).show();
 }
 
@@ -144,6 +150,7 @@ socket.on('test_highlight', highlight);
 $.ajax({
 	dataType: "json",
 	error: function(jqXHR, textStatus, errorThrow) {
+		//TODO terrible error message
 		alert('AHHHH');
 	},
 	success: function(data, textStatus, jqXHR) {

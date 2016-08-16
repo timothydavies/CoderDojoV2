@@ -8,76 +8,53 @@ html
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='css/bootstrap.min.css')
-    style.
-      body {
-      padding-top: 50px;
-      padding-bottom: 20px;
-      }
+    
     link(rel='stylesheet', href='css/main.css')
 
     link(rel='stylesheet', href='css/feedback.css')
 
-
-    link(rel='stylesheet', media="screen", href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
-
-
-    link(rel='stylesheet', media="screen", href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
+    link(rel="stylesheet" type="text/css" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
 
     script(src='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
   body
-    .container-fluid
-      // Example row of columns
-      .row
-        
-        .col-xs-12.col-md-3.col-lg-3.col-sm-4.panel.panel-primary
-          #headingOne.panel-heading(role='tab')
-            h4.panel-title
-              div(role='button') CoderDojo
-          #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
-            .panel-body
-              #signOut.btn.btn-default.btn-block.input-sm.pull-right Sign Out
-              span.pull-right
-                img#mentorAvatar(onerror='handleBadAvatar()', src='/users/signed_in/avatar', height='42', width='48')
-              .pull-right.padding-rt
-                #nameField.text-right Mentor
-                #user_type.text-right
-                  small Mentor
-      #accordion.panel-group(role='tablist', aria-multiselectable='true')
-        .row
-          .col-xs-12.col-md-3.col-lg-3.col-sm-4.panel.panel-primary
-            #headingTwo.panel-heading(role='tab')
+    .container-fluid.row
+      .col-xs-12.col-sm-3.col-md-3.row
+        .col-xs-6.col-sm-12
+          .panel.panel-primary
+            #headingOne.panel-heading(role='tab')
               h4.panel-title
-              div.dropdown
-                a.collapsed.dropdown-toggle(role='button', aria-expanded='false', aria-controls='collapseTwo',, data-toggle='dropdown') Presentations
-                  ul.dropdown-menu
-                    li 
-                      a#toBroadcast(href='../Broadcast',target='_blank') Starting Live Broadcasts
-                    li
-                      a#toVideoUpload(href='../Upload',target='_blank') Uploading Presentations
-            #collapseTwo.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingTwo')
+                div(role='button') CoderDojo
+            #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
               .panel-body
-                div
-                  .pull-left
-                    span.ico.glyphicon.glyphicon-step-backward.pull-left
-                    span.ico.glyphicon.glyphicon-step-forward.pull-left
-                  .pull-right
-                    span.ico.glyphicon.glyphicon-fullscreen
-                    span.ico.glyphicon.glyphicon-volume-up
-                    span.ico.glyphicon.glyphicon-cog
-                br
-                div(style='height:200px;border:solid 1px lightgrey')
-                  .text-center
-                    span.glyphicon.glyphicon-facetime-video
-        #chats.row
-          #chat_content.col-xs-12.col-md-offset-9.col-md-3.col-lg-offset-9.col-lg-3.col-sm-offset-8.col-sm-4.panel.panel-primary
+                #signOut.btn.btn-default.btn-block.input-sm.pull-right Sign Out
+                span.pull-right
+                  img#mentorAvatar(onerror='handleBadAvatar()', src='/users/signed_in/avatar', height='42', width='48')
+                .pull-right.padding-rt
+                  #nameField.text-right Mentor
+                  #user_type.text-right
+                    small Mentor
+          #accordion.panel-group(role='tablist', aria-multiselectable='true')
+            .panel.panel-primary
+              #headingTwo.panel-heading(role='tab')
+                h4.panel-title
+                div.dropdown
+                  a.collapsed.dropdown-toggle(role='button', aria-expanded='false', aria-controls='collapseTwo',, data-toggle='dropdown') Presentations
+                    ul.dropdown-menu
+                      li 
+                        a#toBroadcast(href='../Broadcast',target='_blank') Starting Live Broadcasts
+                      li
+                        a#toVideoUpload(href='../Upload',target='_blank') Uploading Presentations
+        // TODO rename chats
+        #chats.col-xs-6.col-sm-12
+          #chat_content.panel.panel-primary
             #headingThree.panel-heading(role='tab')
               h4.panel-title(style='width:350px')
                 a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree') Chats
             #collapseThree.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingThree')
               #chatPanel.panel-body
-                // First option to chose Ninjas
+                // First phase: choose ninja from queue
                 #firstPhase
-                  .row(style='margin-bottom:10px')
+                  .row
                     .col-xs-12.pull-left
                       span.pull-left.glyphicon.glyphicon-comment(style='color:grey;font-size:2.5em;padding-right:10px')
                       small#firstPhaseText 
@@ -94,74 +71,62 @@ html
                         small
                           img(src='', height='42', width='42')
                     a.btn.btn-default.btn-block.input-sm Chat
-                br
-                // Second option : chat Window
-                #secondPhase
+                // Second phase : chat Window
+                .secondPhase
                   div
                     | My Face:
                     #localCamBox.video-box
-                    meter#myVolume.volume(height='20px', width='100%', min='-45', max='-20', high='-25', low='-40') My Volume bar
-                  br
+                    .pull-left.padding-lt
+                      | My Volume: 
+                      meter#myVolume.volume(height='20px', width='100%', min='-45', max='-20', high='-25', low='-40') My Volume bar
                   br
                   #box
-                   
                     #screenBox2
                       span.pull-left
                         img(src='/img/ninja.png', height='31', width='45')
                       .pull-left.padding-lt
                         #ninjaName.text-left Paul
                         meter#ninjaVolume(height='20px', width='100%', min='-45', max='-20', high='-25', low='-40')
-                        .text-left
-                          small Ninja's Screen
-                      br
-                      .pull-right
-                        button#screenFull.btn.btn-default(type='button')
-                          span.ico.glyphicon.glyphicon-fullscreen
-                        span.ico.glyphicon.glyphicon-volume-up
-                        span.ico.glyphicon.glyphicon-cog
-                    br
-                    br
+      .col-xs-12.col-sm-9.col-md-9
+        // Second phase: screenshare
+        #sharedScreen.panel-primary.secondPhase
+          #headingFour.panel-heading(role='tab')
+            h4.panel-title
+              div(role='button') Ninja screen
+          #iconPosReference
+            #screenBox.video-box.panel-primary
+            img#handler-dark.point-icon.handler(src='/img/h-dark.png')
 
-                   #sharedScreen.panel-primary
-                      #headingFour.panel-heading(role='tab')
-                          h4.panel-title
-                            div(role='button') Ninja screen
-                      #screenBox.video-box.panel-primary
-                                              
-                      br.afterscreen
-                      div#Mentor-feedback-options.feedback-options.panel-heading
-                          div.point-icon-div
-                              img#handler-dark.point-icon.handler(src='/img/h-dark.png')
-                              
-                          div#ButtonZone
-                              button#takescreenShot.btn.btn-default.btn-block.input-sm.pull-right(type='button' onclick='screenshot()' value='Take screenshot') Take a screenshot
-                          
-                          div#icon-color-div
-                              input#handler-option1.icon-btn(type='radio', name='icon', value='dark')
-                              small Enable Arrow
-                          div.clear
-
-                    br
-                    
-   
-          
-                   
-                    
-
-                  #chatWindow(style='height:200px;border:solid 1px lightgrey; overflow-y:scroll')
-                  form#chatForm(action='')
-                    br
-                    .col-xs-9
-                      input#message.form-control(type='text')
-                    button#submit.col-xs-3.btn.btn-default(type='button')
-                      span.ico.glyphicon.glyphicon-ok
-                  br
-    
+          div#Mentor-feedback-options.feedback-options.panel-heading  
+            div#ButtonZone
+                button#takescreenShot.btn.btn-default.btn-block.input-sm.pull-right(type='button' onclick='screenshot()' value='Take screenshot') Take a screenshot
+            //- TODO rename
+            div#icon-color-div
+                input#handler-option1.icon-btn(type='checkbox', name='icon')
+                small Enable Arrow
+            .videoControls
+              button#screenFull.btn.btn-default(type='button')
+                span.ico.glyphicon.glyphicon-fullscreen
+              span.ico.glyphicon.glyphicon-volume-up
+              span.ico.glyphicon.glyphicon-cog
+            div.clear
+          // Chat overlay
+          div.overlay
+            div#chatOverlay
+              #chatWindow
+              form#chatForm(action='')
+                input#message
+                button#submit.btn.btn-default(type='button')
+                  span.ico.glyphicon.glyphicon-ok
+                button#logBtn.btn.btn-default.boolBtn(type='button')
+                  span#logIcon.ico.glyphicon.glyphicon-chevron-div
+            button#ovrBtn.btn.btn-default.boolBtn(type='button')
+              span.ico.glyphicon.glyphicon-comment
+        
     // /container
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src='js/vendor/bootstrap.min.js')
     script(src='//simplewebrtc.com/latest.js')
-
     
     script(src="//code.jquery.com/jquery-1.11.0.min.js")
     script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
@@ -176,14 +141,9 @@ html
 
     script(src='js/Drawing.js')
     script(src='js/feedback.js')
+    //- TODO remove or rename justfortest
     script(src='js/justfortest.js')
 
     script(src='js/notification.js')
     script(src='js/mentor.js')
     script(src='js/chat.js')
-    
-
-
-    
-  
- 

@@ -7,45 +7,41 @@ html
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='css/bootstrap.min.css')
-    style.
-      body {
-      padding-top: 50px;
-      padding-bottom: 20px;
-      }
+
     link(rel='stylesheet', href='css/main.css')
 
     link(rel='stylesheet', href='css/feedback.css')
     link(rel="stylesheet" type="text/css" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
-
-
-    link(rel='stylesheet', media="screen", href="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css")
 
     script(src='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
 
   body
     //if lt IE 8
       p.browserupgrade
-        | You are using an 
-        strong outdated
+        | You are using a 
+        strongly outdated
         |  browser. Please 
         a(href='http://browsehappy.com/') upgrade your browser
         |  to improve your experience.
-    .container
-      // Example row of columns
+    .container-fluid
+      // User panel
       .panel.panel-primary
         #headingOne.panel-heading(role='tab')
           h4.panel-title
             div(role='button') CoderDojo
         #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
           .panel-body
+            //- TODO icon unused
             span.ico.glyphicon.glyphicon-menu-down.pull-right
             span.pull-right
+              //- TODO change /img/ninja.png to one either assigned by the server or an uploaded image
               img#imgAvatar(src='/img/ninja.png', height='31', width='45')
             .pull-right.padding-rt
-              #ninjaName.text-right Jarvis
+              #ninjaName.text-right Anonymous
               #user_type.text-right
                 small Ninja
       #accordion.panel-group(role='tablist', aria-multiselectable='true')
+        // Presentation panel
         .panel.panel-primary
           #headingTwo.panel-heading(role='tab')
             h4.panel-title
@@ -56,6 +52,7 @@ html
                     a(id='toBroadcast',href='../Broadcast',target='_blank') Live Broadcasts
                   li
                     a(id='toEplayer',href='../Eplayer',target='_blank') Youtube Uploaded Presentations              
+          //- TODO What's this doing here?
           #collapseTwo.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingTwo')
             .panel-body
               div
@@ -70,6 +67,7 @@ html
               div(style='height:200px;border:solid 1px lightgrey')
                 .text-center
                   span.glyphicon.glyphicon-facetime-video(style='font-size:15em;color:lightgrey')
+        // Chats panel
         .panel.panel-primary
           #headingThree.panel-heading(role='tab')
             h4.panel-title
@@ -95,48 +93,58 @@ html
               // Third option : chat Window
               #chatThirdPhase
                 div.panel-primary
-                  #shareButton.btn.btn-default.btn-block.input-sm Share Window
-                  
-                  #localScreenBox.video-box.panel-primary
-                  br.afterscreen
-                  div#Ninja-feedback-options.feedback-options.panel-heading
-                    div.point-icon-div
-                        img#follower-dark.point-icon.follower(src='/img/f-dark.png')
-      
-                    div#icon-color-div
-                        input#follower-option1.icon-btn(type='radio', name='icon', value='dark')
-                        small Enable Arrow
-
-                    div#ButtonZone
-                        button.resizebtn#enlargeButton Expand
-                        button.resizebtn#shrinkButton Original
-                    div.clear
-                  br
-                  
-                  
                   span.pull-left
                     img(src='/img/mentor.png', height='42', width='48')
                   .pull-left.padding-lt
                     #mentorName.text-left Paul
                     .text-left
                       small Mentor
-                br
-                br
-                div
-                  .pull-right
-                    span.ico.glyphicon.glyphicon-fullscreen
-                    span.ico.glyphicon.glyphicon-volume-up
-                    span.ico.glyphicon.glyphicon-cog
                   br
-                  #remoteCamBox.video-box.embed-responsive.embed-responsive-4by3
-                br
-                #chatWindow(style='height:200px;border:solid 1px lightgrey; overflow-y: scroll')
-                form#chatForm(action='')
-                  input#message
-                  button#submit.btn.btn-default(type='button')
-                    span.ico.glyphicon.glyphicon-ok
-                br
-                #finishButton.btn.btn-default.btn-block.input-sm Finished!
+                  div
+                    .videoControls
+                      span.ico.glyphicon.glyphicon-fullscreen
+                      span.ico.glyphicon.glyphicon-volume-up
+                      span.ico.glyphicon.glyphicon-cog
+                    br
+                    #remoteCamBox.video-box
+                  br
+                  #shareButton.btn.btn-default.btn-block.input-sm Share Window
+                  #iconPosReference
+                    #localScreenBox.video-box.panel-primary
+                    //- TODO rename from follower-dark to follower
+                    img#follower-dark.point-icon.follower(src='/img/f-dark.png')
+
+                  div#Ninja-feedback-options.feedback-options.panel-heading
+                    
+                    //- TODO give mentor control over whether or not arrow is shown on ninja's screen.
+                    div#icon-color-div
+                        input#follower-option1.icon-btn(type='checkbox', name='icon')
+                        small Enable Arrow
+
+                    div#ButtonZone
+                        button.resizebtn#enlargeButton Expand
+                        button.resizebtn#shrinkButton Original
+                    .videoControls
+                      span.ico.glyphicon.glyphicon-fullscreen
+                      span.ico.glyphicon.glyphicon-volume-up
+                      span.ico.glyphicon.glyphicon-cog
+                    div.clear
+                  br
+                  #finishButton.btn.btn-default.btn-block.input-sm Finished!
+
+                // Chat overlay
+                .overlay
+                  div#chatOverlay
+                    #chatWindow
+                    form#chatForm(action='')
+                      input#message
+                      button#submit.btn.btn-default(type='button')
+                        span.ico.glyphicon.glyphicon-ok
+                      button#logBtn.btn.btn-default.boolBtn(type='button')
+                        span#logIcon.ico.glyphicon.glyphicon-chevron-div
+                  button#ovrBtn.btn.btn-default.boolBtn(type='button')
+                    span.ico.glyphicon.glyphicon-comment
+
     
     // /container
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
@@ -145,15 +153,13 @@ html
     script(src='/socket.io/socket.io.js')
     script(src='js/miscHelpers.js')
 
-    
     script(src='//code.jquery.com/jquery-1.11.0.min.js')
     script(src='//code.jquery.com/jquery-migrate-1.2.1.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js')
     script(src='js/feedback.js')
     
-
     script(src='js/dojo_rtc.js')
-    
+
     script(src='js/Screenshot.js')
     script(src='js/sendScreenshot.js')
     script(src='js/trackMouse.js')

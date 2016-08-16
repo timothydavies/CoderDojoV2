@@ -26,51 +26,43 @@ this is mainly completed by fancybox built-in functions
         if (gallery)
             $('a.fancybox').attr('rel', 'fancyboxgallery');
         $('a.fancybox').fancybox({
-            titlePosition: titlePosition,
+            titlePosition: titlePosition,   
             type: 'image'
         });
  }
  
 /*
 *********************************************
-when the session is finished, hide feedback zone and reset pointing icons position
+when the session is finished, hide feedback zone and reset pointing icons position and the checkbox
 **********************************************
 */
 function hideFeedbackZone(){
-    if ($('div.feedback-options').css('display')!= "none"){
-        $('div.feedback-options').insertAfter('.afterscreen');
-        $('div.feedback-options').css('display','none');
-        $('.point-icon').css('display','none');
-        reset_x = $('.point-icon-div').off().left + "px";
-	    reset_y = 1.1*$('.point-icon-div').off().top +"px";
-        $('.follower').css({
-            "top":reset_y,
-            "left":reset_x,
-            });
-        $('.point-icon').css('margin-top','1em');
-    }
-     
-} 
+    $('.feedback-options').css('display','none');
 
-function showMentorFeedbackZone(){
-    $('div#Mentor-feedback-options').insertAfter('#CanvasZone');
-    $('div#Mentor-feedback-options').css('display','block');
-    reset_x = $('.point-icon-div').off().left;
-	reset_y = $('.point-icon-div').off().top + 20;
-    $('.handler').css({
-        "top":reset_y + "px",
-        "left":reset_x + "px",
-        });          
+    $('.point-icon').css({
+        "display":"none",
+        "top":"100%",
+        "left":"-1em",
+    });
+    $('.icon-btn').prop('checked',false);
+}
+
+function showFeedbackZone(){
+    $('.feedback-options').css('display','block');
+    // TODO redundant?
+    $('.point-icon').css({
+        "display":"none",
+        "top":"100%",
+        "left":"-1em",
+    });
+    $('.icon-btn').prop('checked',false);
 }
 
 /*
 ******************************************************************************************
-display corresponding icon by selected radio button value
+hide or show the follower image depending on the checkbox state
 ******************************************************************************************
 */
-$('.icon-btn').click(function(){
-    $('.point-icon').css("display","none");
-    var choice = $(this).attr('value');
-    $('#follower-'+choice).css("display","block");
-    $('#handler-'+choice).css("display","block");
+$('.icon-btn').change(function(){
+    $('.point-icon').toggle(this.checked)
 });

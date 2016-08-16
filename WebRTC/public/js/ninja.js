@@ -26,13 +26,14 @@ var tempRoom;
 var normalWidth=320;
 var normalHeight=$(window).height();
 var largeWidth = normalWidth * 2;
-var largeHeight = normalHeight;
+var largeHeight = screen.height;
 var enlarged = 0;
 
 /*
 	Function to handle the receiving of ice server info.
 	This the data packet should be exactly what is returned by xirsys concerning ICE connection details. Hence, all the data will be in the data.d field.
 */
+
 function handleIceServers_N(data) {
 	console.log(data);
 	console.log(data.d);
@@ -40,6 +41,7 @@ function handleIceServers_N(data) {
 }
 
 function firstPhaseClick() {
+	// TODO this is where to add any extra queue information on the ninja, unless that goes on the mentor side when building the queue
 	socket.emit('requestHelp', {ninja: getParameterByName('user')});
 	$(firstPhaseButton).hide();
 	$(firstPhaseText).text('You are waiting in queue to be helped');
@@ -49,70 +51,77 @@ function firstPhaseClick() {
 	The data should include fields defining the name of the room and the name of ninja who will be joining 
 */
 function handleRoomChange_N (data) {
+	// TODO redundant?
+	webrtc.leaveRoom();	
 	console.log('Changing to room: ' + data.room);
 	tempRoom = data.room;
 	$(mentorField).text(data.mentor);
 	$(firstPhase).hide();
-	$(secondPhase).show();
+	// TODO remove redunancy, emptied multiple times to prevent bugs! Didn't even work.
 	$(opts.localCamBox).empty();
+	$(opts.remoteCamBox).empty();
+	$(opts.screenBox).empty();
 	$(chatWindow).empty();
+
+	$(secondPhase).show();
+
 	webrtc.startLocalVideo();
 }
 
 function shareButtonClick() {
 	hideFeedbackZone();
-	$(shareButton).text('Change Shared Window')
-    if ($(shareButton).text()=='Change Shared Window'){
+	if ($(shareButton).text()=='Change Shared Window'){
         webrtc.stopScreenShare();
     }
-	
+	$(shareButton).text('Change Shared Window')
+    
     console.log("click button");
+    // TODO is this what happens if the browser isn't given permission to share? Could give an error message here and retry
 	webrtc.shareScreen(function (err) {
 		if (err) {
 			console.log('Share Screen Error: ',err);
-			$(shareButton).text('Share Window')
+			$(shareButton).text('Share Window');
+		} else {
+    		showFeedbackZone();
 		}
 	});
-    showNinjaFeedbackZone();
-}
-
-function showNinjaFeedbackZone(){
-    $('div#Ninja-feedback-options').insertAfter('#localScreen');
-    $('div#Ninja-feedback-options').css('display','block');
-  
 }
 
 function secondPhaseClick() {
 	$(firstPhase).hide();
 	$(secondPhase).hide();
-	$(shareButton).text('Share Window')
+	$(shareButton).text('Share Window');
 	$(thirdPhase).show();
-	document.getElementById("localCamBox").childNodes[0].muted = true;
 	room = tempRoom;
 	webrtc.testReadiness();
 }
 
-function handleMentorDisconnect (data) {
+function resetToFirstPhase() {
 	webrtc.leaveRoom();
+	// TODO remove redunancy, emptied multiple times to prevent bugs!
+	$(opts.localCamBox).empty();
+	$(opts.remoteCamBox).empty();
+	$(opts.screenBox).empty();
+	$(chatWindow).empty();
+
 	webrtc.stopLocalVideo();
 	webrtc.stopScreenShare();
-	$(firstPhase).show();
+	
+	hideFeedbackZone();
 	$(secondPhase).hide();
 	$(thirdPhase).hide();
+	$(firstPhase).show();
 	$(firstPhaseButton).show();
 	$(firstPhaseText).text("To chat with the mentor, click on 'Chat' button");
+}
+
+function handleMentorDisconnect (data) {
+	resetToFirstPhase();
 	alert("Oops! Some rogue ninja seems to have messed with something and disconnected your mentor.");
 }
 
 function finishChatClick() {
-	$(firstPhase).show();
-	$(secondPhase).hide();
-	$(thirdPhase).hide();
-	$(firstPhaseButton).show();
-	$(firstPhaseText).text("To chat with the mentor, click on 'Chat' button");
-	webrtc.leaveRoom();
-	webrtc.stopLocalVideo();
-	webrtc.stopScreenShare();
+	resetToFirstPhase();
 	socket.emit('leaving', {});
 }
 
@@ -125,9 +134,8 @@ window.onbeforeunload = function(){
 	}
 }
 
-
+// TODO chatwindow
 $('#chatWindow').on('click','img.fancybox',function(){
-   
     window.resizeTo(largeWidth,largeHeight);
 });
 
@@ -135,17 +143,16 @@ $('body').on('click','#fancybox-close',function(){
     window.resizeTo(normalWidth,normalHeight);
 });
 
+// TODO rework these functions
 $('#enlargeButton').on('click',function(){
-    
 	if ($(window).width() < 400){
 		var distanceX = $('.follower').first().offset().left - $('#localScreen').offset().left;
 		var distanceY = $('.follower').first().offset().top - $('#localScreen').offset().top;
     	window.resizeTo(largeWidth,largeHeight);
 		updatePosition(distanceX,distanceY,2);
-		
 	}
-	
 });
+
 $('#shrinkButton').on('click',function(){
     console.log("enlarged: "+$(window).height());
 	if ($(window).width() > 400){
@@ -153,9 +160,7 @@ $('#shrinkButton').on('click',function(){
 		var distanceY = $('.follower').first().offset().top - $('#localScreen').offset().top;
 		window.resizeTo(normalWidth,normalHeight);
 		updatePosition(distanceX,distanceY,0.5);
-		
 	}
-    
 });
 
 $('#ninjaBroadcast').on('click',function(){
@@ -173,12 +178,12 @@ secondPhaseButton.onclick = secondPhaseClick;
 socket.on('otherDisconnect', handleMentorDisconnect);
 finishButton.onclick = finishChatClick;
 socket.on('RTPointing', moveFollower);
-
 socket.on('test_addVideo', addVideo);
 
 $.ajax({
 	dataType: "json",
 	error: function(jqXHR, textStatus, errorThrow) {
+		// TODO
 		alert('AHHHH');
 	},
 	success: function(data, textStatus, jqXHR) {

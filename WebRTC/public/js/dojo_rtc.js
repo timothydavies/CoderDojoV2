@@ -22,7 +22,7 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 		};
 		var localVideoOptions = {
 			muted: true,
-			mirror: true,
+			mirror: false,
 			autoplay: true
 		}
 	} else {
@@ -32,7 +32,7 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 		};
 		var localVideoOptions = {
 			muted: false,
-			mirror: true,
+			mirror: false,
 			autoplay: true
 		}
 	}
@@ -69,59 +69,60 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 		if (container) {
             
             if (inType != 'video') {
-                var newContainer = document.getElementById('container_' + webrtc.getDomId(peer));
-                if (newContainer == null){
-			        newContainer = document.createElement('div');
-			        newContainer.id = 'container_' + webrtc.getDomId(peer);
-			//$(newContainer).addClass("video-box embed-responsive embed-responsive-4by3");
-			        $(newContainer).addClass("video-box");
-			        $(video).addClass("embed-responsive-item");
-                    lastPeer=webrtc.getDomId(peer);
-                    newContainer.appendChild(video);
-                    }
-			        container.appendChild(newContainer);      
-            
-                    console.log('Add video');
-                    video.id="ninjaScreen";
-                    addCanvasZone();
-                    showMentorFeedbackZone();
+                // TODO what does embed-responsive-item do?
+			    $(video).addClass("embed-responsive-item");
+                lastPeer=webrtc.getDomId(peer);
+                //newContainer.appendChild(video);
+          //    }
+		        //container.appendChild(newContainer);  
+			    // TODO temporary workaround to avoid seeing duplicate video streams
+		        $(container).empty();
+            	container.appendChild(video);
+                console.log('Add video');
+                video.id="ninjaScreen";
+                addCanvasZone();
+                // TODO redundancy?
+    			showFeedbackZone();
             }
             else{
-                var newContainer_remote = document.createElement('div');
-			    newContainer_remote.id = 'container_remote_' + webrtc.getDomId(peer);
-			    $(newContainer_remote).addClass("embed-responsive embed-responsive-4by3");
+            	// TODO what was the purpose of this container? Presumably to format the video?
+                //var newContainer_remote = document.createElement('div');
+			    // newContainer_remote.id = 'container_remote_' + webrtc.getDomId(peer);
 			    $(video).addClass("embed-responsive-item");
-			    newContainer_remote.appendChild(video);
-			    container.appendChild(newContainer_remote);
+			    video.id="mentorCam";
+			    // newContainer_remote.appendChild(video);
+			    // container.appendChild(newContainer_remote);
+			    // TODO temporary workaround to avoid seeing duplicate video streams
+		        $(container).empty();
+			    container.appendChild(video);
+
                 if ($.browser.mozilla) {
                     video.mozSrcObject = video.stream;
                 }
             }
-
-
 		}
 	});
 	
 	webrtc.on('videoRemoved',function (video, peer) {
 		var container;
+		console.log('videoRemoved');
+		console.log(video);
 		if (peer) {
 			var inType = peer.type;
-			var el = document.getElementById('container_' + webrtc.getDomId(peer));
-            var el_remote = document.getElementById('container_remote_' + webrtc.getDomId(peer));
-            var v = document.getElementById('ninjaScreen');
 			if (inType == 'video') {
 				container = opts.remoteCamBox;
-			} else {                
+			} else {
                 $('#editScreenshot').remove();
                 var es=$('#editScreenshot');
                 es = null;
 				container = opts.screenBox;
-                el.removeChild(v);
 			}
-			if (container && el) {
-				container.removeChild(el);
+			if (container) {
+                $(container).empty();
                 hideFeedbackZone();
 			}
+			console.log('container : ');
+			console.log(container);
 		} else { // Thanks &yet for this silly case for local screen removal
 			container = opts.screenBox;
 			var screen = document.getElementById('localScreen');

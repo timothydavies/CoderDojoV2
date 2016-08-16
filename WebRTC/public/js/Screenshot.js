@@ -114,10 +114,8 @@ function createCanvasZone(canvas,ctx,video){
         close_btn.className = "canvas_btn";
         close_btn.id = 'closeCanvas';
         close_btn.value='Close';
-        close_btn.onclick=function(){BtnZone.remove();};
-    
+        close_btn.onclick=function(){$('#CanvasZone').empty();};
 
-    
     var send_btn = document.createElement('input');
         send_btn.type = "button";
         send_btn.id = 'sendscreenShot';
@@ -129,10 +127,10 @@ function createCanvasZone(canvas,ctx,video){
     $('#CanvasZone').append(BtnZone);
     $('#canvasBtnZone').append(clear_btn);
     $('#canvasBtnZone').append(close_btn);
-    $('#canvasBtnZone').append(send_btn);    
-    $('#canvasBtnZone').append(canvas);  
+    $('#canvasBtnZone').append(send_btn);
+    $('#CanvasZone').append(canvas);
     
     InitThis(ratio,canvas,video);
 }	  
 
-
+// TODO fix mouse tracking
