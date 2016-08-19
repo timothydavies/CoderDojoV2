@@ -34,7 +34,7 @@ function InitThis(window_ratio,canvas,video) {
         mousePressed = true;
         Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
     });
-      
+      // TODO can this be moved into the mousedown function above to remove the bool?
       // draw line based on pressed mouse movement
     $(myCanvas).mousemove(function (e) {
         if (mousePressed) {
@@ -82,5 +82,6 @@ clear drawing on canvas
 */	
 function clearArea(ctx) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    // TODO Updates screenshot, maybe better to remember old screengrab
     ctx.drawImage(CurrentVideo ,0,0,CurrentVideo.videoWidth,CurrentVideo.videoHeight,0,0,CurrentCanvas.width/ratio,CurrentCanvas.height/ratio);
 }

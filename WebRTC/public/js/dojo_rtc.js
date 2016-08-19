@@ -121,8 +121,6 @@ function webrtcInit(peerConnectionConfig, opts, video) {
                 $(container).empty();
                 hideFeedbackZone();
 			}
-			console.log('container : ');
-			console.log(container);
 		} else { // Thanks &yet for this silly case for local screen removal
 			container = opts.screenBox;
 			var screen = document.getElementById('localScreen');

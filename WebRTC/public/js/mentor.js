@@ -63,6 +63,8 @@ function renderBody(queue) {
 				socket.emit('answerRequest', {ninja: entry});
 				$(firstPhase).hide();
 				$('.secondPhase').show();
+				// TODO redundant?
+          		$('#takescreenShot').attr('disabled',false);
 			}
 			div.appendChild(b);
             notifyMe();

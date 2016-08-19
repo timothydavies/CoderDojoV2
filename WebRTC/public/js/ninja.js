@@ -183,8 +183,7 @@ socket.on('test_addVideo', addVideo);
 $.ajax({
 	dataType: "json",
 	error: function(jqXHR, textStatus, errorThrow) {
-		// TODO
-		alert('AHHHH');
+		alert(textStatus);
 	},
 	success: function(data, textStatus, jqXHR) {
 		$(nameField).text(data.pseudonym);

@@ -26,7 +26,7 @@ function addCanvasZone(){
         $('#screenBox').append(CanvasZone);
      
     }
-    
+
  /*
 *********************************************
 adjust canvas resolution to provide high quality
@@ -61,36 +61,43 @@ take screenshot when button is clicked
 */           
 var screenshot=function(){
 
-        var video = document.getElementById("ninjaScreen");
-          // create canvas to hold image
-        var canvas = document.createElement('canvas');
-        canvas.id="myCanvas"; 
-        var w;
-        if (PIXEL_RATIO()==1){
-           w = 0.47 * screen.availWidth; 
-        }
-        else{
-           w = 0.24 * screen.availWidth;
-        }
-        var h = w*(video.videoHeight/video.videoWidth);
-       
-          //Create canvas with the device resolution.
-        createHiDPICanvas(canvas, w, h);
-        ctx = canvas.getContext("2d");
-        ctx.mozImageSmoothingEnabled = false;
-        ctx.msImageSmoothingEnabled = false;
-        ctx.imageSmoothingEnabled = false;
-        
-        
-          //draw screenshot into canvas
-        ctx.drawImage(video ,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width/ratio,canvas.height/ratio);
-        createCanvasZone(canvas,ctx,video);
-        console.log(' canvas width: '+ canvas.width+" height: "+ canvas.height+" " + screen.width);
-        console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);	
-		console.log('done');
-        canvas.textContent=canvas.toDataURL("img/png");
-        //console.log(canvas.textContent);
-      }
+  var video = document.getElementById("ninjaScreen");
+    // create canvas to hold image
+  var canvas = document.createElement('canvas');
+  canvas.id="myCanvas"; 
+  // TODO safe to remove?
+  // var w;
+  // if (PIXEL_RATIO()==1){
+  //    // w = 0.47 * screen.availWidth; 
+  //    w = 0.24 * screen.availWidth;
+  // }
+  // else{
+  //    w = 0.24 * screen.availWidth;
+  // }
+  // var h = w*(video.videoHeight/video.videoWidth);
+
+  // Set the screenshot to be the same dimensions as the video (as displayed)
+  var w = video.clientWidth;
+  var h = video.clientHeight;
+ 
+    //Create canvas with the device resolution.
+  createHiDPICanvas(canvas, w, h);
+  ctx = canvas.getContext("2d");
+  ctx.mozImageSmoothingEnabled = false;
+  ctx.msImageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = false;
+  
+  
+    //draw screenshot into canvas
+  ctx.drawImage(video ,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width/ratio,canvas.height/ratio);
+  createCanvasZone(canvas,ctx,video);
+  console.log(' canvas width: '+ canvas.width+" height: "+ canvas.height+" " + screen.width);
+  console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);	
+  console.log('done');
+  canvas.textContent=canvas.toDataURL("img/png");
+  //console.log(canvas.textContent);
+  $('#takescreenShot').attr('disabled',true);
+}
 
 /*
 *********************************************
@@ -114,14 +121,21 @@ function createCanvasZone(canvas,ctx,video){
         close_btn.className = "canvas_btn";
         close_btn.id = 'closeCanvas';
         close_btn.value='Close';
-        close_btn.onclick=function(){$('#CanvasZone').empty();};
+        close_btn.onclick=function() {
+          $('#CanvasZone').empty();
+          $('#takescreenShot').attr('disabled',false);
+        };
 
     var send_btn = document.createElement('input');
         send_btn.type = "button";
         send_btn.id = 'sendscreenShot';
         send_btn.className = "canvas_btn";
         send_btn.value='Send screenshot';
-        send_btn.onclick=function(){sendScreenshot()};
+        send_btn.onclick=function(){
+          sendScreenshot()
+          $('#CanvasZone').empty();
+          $('#takescreenShot').attr('disabled',false);
+        };
         
    
     $('#CanvasZone').append(BtnZone);
