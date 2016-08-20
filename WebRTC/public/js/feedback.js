@@ -12,7 +12,8 @@ bind fancybox features to sent screenshot in chat window (zoom-in feature)
 this is mainly completed by fancybox built-in functions
 **********************************************
 */
- function add_ZoomIn(){
+// TODO this function's bools are hardcoded?
+function add_ZoomIn(){
         var addToAll = false;
         var gallery = false;
         var titlePosition = 'inside';

@@ -33,11 +33,9 @@ body {
     padding:0px;
 }
 
-#chats{z-index:-1} /* In firefox the chats panel will overlap with the signout button, blocking it; hence the z-index must be set. */
-
-#chats{
+/*#chats{
     z-index: 1;
-}
+}*/
 #screenBox, #localScreenBox{
     position:relative;
 }
@@ -93,11 +91,14 @@ body {
 
 /* Set the size of videos to fit within their container while scaling with window height */
 .video-box {
+    position:relative;
     width:100%;
+    overflow-x:hidden;
 }
 video {
     max-width:100%;
     border:solid 1px lightgrey;
+    position:relative;
 }
 /* Mentor's videos */
 #localCamBox video, #localCamBox .video-box {
@@ -123,15 +124,14 @@ cap it such that the ninja can see all elements */
     max-height: 90vh;
 }
 /* ideally, "if window is under half the screen" */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 899px) {
     #remoteCamBox video, #remoteCamBox .video-box {
         max-height: 30vh;
     }
     #localScreenBox video, #localScreenBox .video-box {
         max-height: 60vh;
     }
-} 
-
+}
 
 div.text-center .glyphicon{
     color:lightgrey;
@@ -192,7 +192,7 @@ div.clear{
     margin-bottom:1em;
 }
 .overlay {
-    z-index: 2;
+    z-index: 1;
 }
 #chatOverlay{
     position:fixed;

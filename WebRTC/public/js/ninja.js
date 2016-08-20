@@ -23,11 +23,8 @@ var socket = io();
 var webrtc;
 var tempRoom;
 
-var normalWidth=320;
-var normalHeight=$(window).height();
-var largeWidth = normalWidth * 2;
-var largeHeight = screen.height;
-var enlarged = 0;
+var lastWidth= $(window).width();
+var lastHeight= $(window).height();
 
 /*
 	Function to handle the receiving of ice server info.
@@ -134,33 +131,70 @@ window.onbeforeunload = function(){
 	}
 }
 
-// TODO chatwindow
-$('#chatWindow').on('click','img.fancybox',function(){
-    window.resizeTo(largeWidth,largeHeight);
-});
-
-$('body').on('click','#fancybox-close',function(){
-    window.resizeTo(normalWidth,normalHeight);
-});
-
 // TODO rework these functions
+function resizeWindow(width, height) {
+	// Find current position of follower
+	var arrowOldX = $('.follower').first().offset().left - $('#localScreen').offset().left;
+	var arrowOldY = $('.follower').first().offset().top - $('#localScreen').offset().top;
+	var rx = arrowOldX * 1.0 / $('#localScreen').width();
+	var ry = arrowOldY * 1.0 / $('#localScreen').height();
+
+	window.resizeTo(width, height);
+	window.scrollTo(0,document.body.scrollHeight);
+	updatePosition(rx,ry);
+}
+
+// TODO replace 900 and 320 with a proportion of the screen width
 $('#enlargeButton').on('click',function(){
-	if ($(window).width() < 400){
-		var distanceX = $('.follower').first().offset().left - $('#localScreen').offset().left;
-		var distanceY = $('.follower').first().offset().top - $('#localScreen').offset().top;
-    	window.resizeTo(largeWidth,largeHeight);
-		updatePosition(distanceX,distanceY,2);
-	}
+	var w = Math.max(900,$(window).outerWidth());
+	var h = screen.availHeight;
+
+	var localScreen = document.getElementById("localScreen");
+	var localScreenBox = document.getElementById("localScreenBox");
+	var iconPosRef = document.getElementById("iconPosReference");
+	
+	localScreen.style.maxWidth = "200%";
+	// document.getElementById("localScreen").style.width = "200%";
+	// document.getElementById("localScreen").style.left = "-100%";
+	var dist = localScreen.clientWidth / 2;
+
+	localScreen.style.left = - dist + "px";
+	iconPosRef.style.left = - dist + "px";
+	localScreenBox.style.left = dist + "px";
+    
+    resizeWindow(w,h);
 });
 
 $('#shrinkButton').on('click',function(){
-    console.log("enlarged: "+$(window).height());
-	if ($(window).width() > 400){
-		var distanceX = $('.follower').first().offset().left - $('#localScreen').offset().left;
-		var distanceY = $('.follower').first().offset().top - $('#localScreen').offset().top;
-		window.resizeTo(normalWidth,normalHeight);
-		updatePosition(distanceX,distanceY,0.5);
-	}
+	var w = Math.min(320, $(window).outerWidth());
+	var h = $(window).outerHeight();
+
+	var localScreen = document.getElementById("localScreen");
+	var localscreenbox = document.getElementById("localScreenBox");
+	var iconPosRef = document.getElementById("iconPosReference");
+	
+	localScreen.style.maxWidth = "100%";
+	document.getElementById("localScreen").style.width = "auto";
+
+	localScreen.style.left = "0";
+	iconPosRef.style.left = "0";
+	localScreenBox.style.left = "0";
+
+    resizeWindow(w,h);
+});
+
+// Expand screenshot
+$('#chatWindow').on('click','img.fancybox',function(){
+	lastWidth = $(window).width();
+	lastHeight = $(window).height();
+	var largeWidth = Math.max(lastWidth,900);
+	var largeWidth = screen.availHeight;
+    resizeWindow(largeWidth,largeHeight);
+});
+
+// Close screenshot
+$('body').on('click','#fancybox-close',function(){
+    resizeWindow(lastWidth,lastHeight);
 });
 
 $('#ninjaBroadcast').on('click',function(){

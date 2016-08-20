@@ -56,6 +56,7 @@ document.onmouseup = function() {
 ninja receives socket and changes follower location according to the data
 ******************************************************************************************
 */
+// TODO change to just use ratio of handler's distance along the mentor's video
 function moveFollower(data) {
 	var Mx = data.MX;
 	var My = data.MY;
@@ -80,10 +81,9 @@ function moveFollower(data) {
   });
 }
 
-function updatePosition(disX, disY,ratio){
-  var Nx = disX * ratio;
-  var Ny = disY * ratio;
-  var scale = parseFloat(Nwidth/Mwidth);
+function updatePosition(ratioX, ratioY){
+  var Nx = $('#localScreen').width() * ratioX;
+  var Ny = $('#localScreen').height() * ratioY;
   
   var Nx_ab = Nx + "px";
   var Ny_ab = Ny + "px";

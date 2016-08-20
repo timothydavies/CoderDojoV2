@@ -145,6 +145,4 @@ function createCanvasZone(canvas,ctx,video){
     $('#CanvasZone').append(canvas);
     
     InitThis(ratio,canvas,video);
-}	  
-
-// TODO fix mouse tracking
+}
