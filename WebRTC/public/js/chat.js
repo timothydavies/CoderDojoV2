@@ -62,6 +62,8 @@ function removeMessage() {
 }
 
 function addRecentMessage(message) {
+	clearTimeout(msgTimeout);
+	// Add only if recentchat is to be displayed
 	if (!$(chatWindow).is(':visible') || $(chatOverlay).height() == 0) {
 		// If overflowing, remove last message
 		if(recentChat.scrollHeight > $(recentChat).height()) removeMessage();
@@ -76,13 +78,27 @@ function addRecentMessage(message) {
 }
 
 function renderMessage(imgURI,text) {
-	var image = "<img style='width:25px' src='" + imgURI + "'>";
-	// TODO Neater/more powerful alternative, give the paragraph a unique ID and access its properties with jquery or javascript
-	var clipboard = "<i class='glyphicon glyphicon-copy' style='width:25px;cursor:pointer;' onclick='copyToClipboard(\""+text+"\")'></i>";
-	var display = "<p>"+image+" "+clipboard+" "+text + "</p>";
-	$(chatWindow).append(display);
-	addRecentMessage(display);
-	$(message).val('');
+	var avatar = new Image;
+	avatar.src = imgURI;
+	$(avatar).css("width","25px")
+	// TODO avoid duplicating text
+	var clipboard = $(document.createElement('span'));
+	$(clipboard).addClass("glyphicon glyphicon-copy");
+	$(clipboard).css({
+		"width": "25px",
+		"cursor": "pointer"
+	});
+	$(clipboard).click(function() {
+		copyToClipboard(text)
+	});
+
+	var input = document.createElement("p");
+	$(input).append(avatar);
+	$(input).append(clipboard);
+	$(input).append(text);
+
+	$(chatWindow).append(input);
+	addRecentMessage($(input).clone(true));
 	chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
@@ -101,6 +117,7 @@ submit.onclick = function() {
 		socket.emit('pm', {message: msg, name: getParameterByName('user'), url: getImageURL()});
 		msg = msg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 		renderMessage(getImageURL(),msg);
+		$(message).val('');
 	}
 	return false;
 }
@@ -116,14 +133,22 @@ socket.on('pm', function(data) {
 
 
 socket.on('screenshot', function(data) {
-	// prevent html injection
-	dataUrl = data.url.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-	dataImage = data.image.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-	var img = "<img style='width:25px;' src='"+dataUrl+"'>";
-	var screenshot = "<img class= 'fancybox' style='width:25%;' src='"+dataImage+"'>";
-	var input = "<p>"+img + screenshot + "</p>";
+	var avatar = new Image;
+	avatar.src = data.url;
+	$(avatar).css("width","25px")
+
+	var screenshot = new Image;
+	screenshot.src = data.image;
+	// TODO replace fancybox with a clickable (but not dragable) image, expanding within the chat window when clicked.
+	$(screenshot).addClass("fancybox");
+	$(screenshot).css("width", "25%");
+
+	var input = document.createElement("p");
+	$(input).append(avatar);
+	$(input).append(screenshot);
+
 	$(chatWindow).append(input);
-	addRecentMessage(input);
+	addRecentMessage($(input).clone(true));
 	chatWindow.scrollTop = chatWindow.scrollHeight;
     add_ZoomIn();
 });
@@ -131,23 +156,37 @@ socket.on('screenshot', function(data) {
 function sendScreenshot(){
     var canvas= document.getElementById("myCanvas");
     if (!canvas){
-	 console.log(' Canvas Null!');
-    }
-	var image = canvas.toDataURL("img/png");
-    
-      // inform server to broadcast message
+		console.log(' Canvas Null!');
+		return;
+	}
+	// TODO screenshot quality bug test, seems to work
+	// TODO use low quality as thumbnail, high quality as expanded image?
+	// var image = canvas.toDataURL("img/png");
+    var image = canvas.toDataURL("image/jpeg", 0.5);
+
+    // inform server to broadcast message
 	socket.emit('screenshot', {image: image, name: getParameterByName('user'),url:"/img/mentor.png"});
 	
-      // append image to chat window
-	var img = "<img style='width:25px;' src='/img/mentor.png'>";
-	var snapshot= "<img style='width:30%;' class='fancybox' src='"+image+"'>";		
-	var input = "<p>"+img+""+snapshot +"</p>";
+    // append image to chat window
+    var avatar = new Image;
+    avatar.src = '/img/mentor.png';
+    $(avatar).css("width", "25px");
+	var screenshot = new Image;
+	screenshot.src = image;
+	$(screenshot).css("width", "30%");
+	// TODO replace fancybox with a clickable (but not dragable) image, expanding within the chat window when clicked.
+	$(screenshot).addClass("fancybox");
+
+	var input = document.createElement("p");
+	$(input).append(avatar);
+	$(input).append(screenshot);
+	
 	$(chatWindow).append(input);
-	addRecentMessage(input);
-	$(message).val('');
+	addRecentMessage($(input).clone(true));
 	chatWindow.scrollTop = chatWindow.scrollHeight;
+    
     add_ZoomIn();
-    var canvasZone= document.getElementById("canvasBtnZone");
+    var canvasZone = document.getElementById("canvasBtnZone");
 	canvasZone.remove();
 }
 

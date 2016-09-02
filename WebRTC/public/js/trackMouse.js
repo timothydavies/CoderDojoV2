@@ -20,29 +20,29 @@ track mouse event and change handler location
 */
 $('.handler').mousedown(function() {
   document.onmousemove = function(event) {
-  // get the absolute location (according to document) of screenBox on mentor side
-  var SharedScreenOffset= $('#iconPosReference').offset();
-  // get screenBox size
-  var MentorWidth = $('#ninjaScreen').width();
-  var MentorHeight = $('#ninjaScreen').height();
-  // get mouse location (relative to the screenBox)
-  var ArrowCorToScreenBoxLeft = event.pageX - SharedScreenOffset.left;
-  var ArrowCorToScreenBoxTop = event.pageY - SharedScreenOffset.top;
+    // get the absolute location (according to document) of screenBox on mentor side
+    var SharedScreenOffset= $('#iconPosReference').offset();
+    // get screenBox size
+    var MentorWidth = $('#ninjaScreen').width();
+    var MentorHeight = $('#ninjaScreen').height();
+    // get mouse location (relative to the screenBox)
+    var ArrowCorToScreenBoxLeft = event.pageX - SharedScreenOffset.left;
+    var ArrowCorToScreenBoxTop = event.pageY - SharedScreenOffset.top;
 
-  var x = ArrowCorToScreenBoxLeft + "px";
-  var y = ArrowCorToScreenBoxTop + "px";
-    // move handler to mouse location
-    // TODO use handle instead of jquery again?
-  $('.handler').css({
-       "left":x,
-       "top":y,
-  });
- 
-    // send out socket with the data of handler location and screenBox size 
-	socket.emit('RTPointing',{ MX: ArrowCorToScreenBoxLeft,
-                                 MY: ArrowCorToScreenBoxTop,
-                                 Mwidth: MentorWidth,
-                                 Mheight: MentorHeight});      
+    var x = ArrowCorToScreenBoxLeft + "px";
+    var y = ArrowCorToScreenBoxTop + "px";
+      // move handler to mouse location
+      // TODO use handle instead of jquery again?
+    $('.handler').css({
+         "left":x,
+         "top":y,
+    });
+   
+      // send out socket with the data of handler location and screenBox size 
+  	socket.emit('RTPointing',{ MX: ArrowCorToScreenBoxLeft,
+                                   MY: ArrowCorToScreenBoxTop,
+                                   Mwidth: MentorWidth,
+                                   Mheight: MentorHeight});      
   }
 });
 document.onmouseup = function() {

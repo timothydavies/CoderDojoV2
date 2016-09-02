@@ -174,13 +174,16 @@ io.on('connection', function (socket, error) {
 		socket.broadcast.to(me.pairing.id).emit('pm',data);
 	});
 
-    
     // This event is to take screenshot************************************************************ 
     socket.on('screenshot', function(data) {
 		socket.broadcast.to(me.pairing.id).emit('screenshot',data);
         //console.log('##################test send screenshot ',data);
 	});
 
+    // This event is fired when the mentor clicks the button to toggle the arrow
+    socket.on('toggleArrow', function(data) {
+		socket.broadcast.to(me.pairing.id).emit('toggleArrow',data);
+	});
     
     socket.on('RTPointing', function(data) {
 		socket.broadcast.to(me.pairing.id).emit('RTPointing',data);

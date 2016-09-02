@@ -6,9 +6,24 @@ This file is for static feedback including:
   add function buttons on canvas
 ******************************************************************************************
 */
-
+// TODO have one canvas store the image and go unchanged, one canvas store the path and get cleared, combine canvases for sending to resolve slow TakeScreenshot time
 var ratio;
 var ctx;
+
+/*
+*********************************************
+When clearing canvas, overwrite it with the original
+**********************************************
+*/   
+function copyCanvas(source, dest) {
+  // Get destination canvas context
+  var context = dest.getContext('2d');
+  // Copy dimensions
+  dest.width = source.width;
+  dest.height = source.height;
+  // Copy content
+  context.drawImage(source, 0, 0);
+}
 
 /*
 *********************************************
@@ -60,11 +75,14 @@ take screenshot when button is clicked
 **********************************************
 */           
 var screenshot=function(){
-
   var video = document.getElementById("ninjaScreen");
-    // create canvas to hold image
+  // create canvas to hold image
+  var canvasImg = document.createElement('canvas');
+  canvasImg.id="canvasImg";
+  // create canvas for drawing
   var canvas = document.createElement('canvas');
-  canvas.id="myCanvas"; 
+  canvas.id="myCanvas";
+
   // TODO safe to remove?
   // var w;
   // if (PIXEL_RATIO()==1){
@@ -79,18 +97,21 @@ var screenshot=function(){
   // Set the screenshot to be the same dimensions as the video (as displayed)
   var w = video.clientWidth;
   var h = video.clientHeight;
- 
-    //Create canvas with the device resolution.
+
+  //Create canvas with the device resolution.
   createHiDPICanvas(canvas, w, h);
   ctx = canvas.getContext("2d");
   ctx.mozImageSmoothingEnabled = false;
   ctx.msImageSmoothingEnabled = false;
   ctx.imageSmoothingEnabled = false;
-  
-  
-    //draw screenshot into canvas
-  ctx.drawImage(video ,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width/ratio,canvas.height/ratio);
-  createCanvasZone(canvas,ctx,video);
+
+  // TODO use width, height, and position of the VISIBLE video (if zoom feature is implemented)
+  //draw screenshot into canvas
+  ctx.drawImage(video,0,0,video.videoWidth,video.videoHeight,0,0,canvas.width/ratio,canvas.height/ratio);
+
+  copyCanvas(canvas, canvasImg);
+
+  createCanvasZone(canvas,ctx,canvasImg);
   console.log(' canvas width: '+ canvas.width+" height: "+ canvas.height+" " + screen.width);
   console.log(' video width: '+ video.videoWidth+" height: "+ video.videoHeight);	
   console.log('done');
@@ -104,17 +125,18 @@ var screenshot=function(){
 add buttons (send, clear and close) to canvas
 **********************************************
 */
-function createCanvasZone(canvas,ctx,video){
-    
+function createCanvasZone(canvas,ctx,canvasImg){
     var BtnZone = document.createElement('div');
     BtnZone.id="canvasBtnZone";
-    
+
     var clear_btn = document.createElement('input');
         clear_btn.type = "button";
         clear_btn.id = 'clearCanvas';
         clear_btn.className = "canvas_btn";
         clear_btn.value='Clear';
-        clear_btn.onclick=function(){clearArea(ctx)};
+        clear_btn.onclick=function(){
+          copyCanvas(canvasImg, canvas);
+        };
         
     var close_btn = document.createElement('input');
         close_btn.type = "button";
@@ -144,5 +166,5 @@ function createCanvasZone(canvas,ctx,video){
     $('#canvasBtnZone').append(send_btn);
     $('#CanvasZone').append(canvas);
     
-    InitThis(ratio,canvas,video);
+    InitThis(ratio,canvas);
 }

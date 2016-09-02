@@ -11,9 +11,6 @@ This file is for highlight on captured screenshot including:
 var mousePressed = false;
 var lastX, lastY;
 var ctx;
-var CurrentVideo;
-var CurrentCanvas;
-var ctx;
 var ratio;
 
 /*
@@ -21,12 +18,10 @@ var ratio;
 track mouse event to trigger drawing function
 **********************************************
 */
-function InitThis(window_ratio,canvas,video) {
+function InitThis(window_ratio,canvas) {
   
     ctx=canvas.getContext("2d");
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-    CurrentVideo=video;
-    CurrentCanvas=canvas;
     ratio=window_ratio;
     
       // start drawing when mouse is pressed down
@@ -34,7 +29,6 @@ function InitThis(window_ratio,canvas,video) {
         mousePressed = true;
         Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
     });
-      // TODO can this be moved into the mousedown function above to remove the bool?
       // draw line based on pressed mouse movement
     $(myCanvas).mousemove(function (e) {
         if (mousePressed) {
@@ -45,7 +39,7 @@ function InitThis(window_ratio,canvas,video) {
     $(myCanvas).mouseup(function (e) {
         mousePressed = false;
     });
-	    $(myCanvas).mouseleave(function (e) {
+    $(myCanvas).mouseleave(function (e) {
         mousePressed = false;
     });
 }
@@ -72,16 +66,4 @@ function Draw(x1, y1, isDown) {
         ctx.stroke();
     }
     lastX = x; lastY = y;
-}
-
-
-/*
-*********************************************
-clear drawing on canvas
-**********************************************
-*/	
-function clearArea(ctx) {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    // TODO Updates screenshot, maybe better to remember old screengrab
-    ctx.drawImage(CurrentVideo ,0,0,CurrentVideo.videoWidth,CurrentVideo.videoHeight,0,0,CurrentCanvas.width/ratio,CurrentCanvas.height/ratio);
 }

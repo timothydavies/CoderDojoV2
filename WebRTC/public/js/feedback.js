@@ -59,11 +59,3 @@ function showFeedbackZone(){
     $('.icon-btn').prop('checked',false);
 }
 
-/*
-******************************************************************************************
-hide or show the follower image depending on the checkbox state
-******************************************************************************************
-*/
-$('.icon-btn').change(function(){
-    $('.point-icon').toggle(this.checked)
-});

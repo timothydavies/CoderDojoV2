@@ -139,15 +139,12 @@ document.onunload = function(){
 	}
 }
 
-
 socket.on('queueUpdate', handleQueueUpdate);
 socket.on('changeRoom', handleRoomChange_M);
 socket.on('iceServers', handleIceServers_M);
 socket.on('otherDisconnect', handleNinjaDisconnect);
 socket.on('test_addVideo', addVideo);
 socket.on('test_highlight', highlight);
-
-
 
 $.ajax({
 	dataType: "json",
@@ -171,3 +168,14 @@ mentorAvatar.onclick = function(){
     addVideo();
 }
 */
+
+/*
+******************************************************************************************
+hide or show the follower image depending on the checkbox state
+Send the ninja the new state
+******************************************************************************************
+*/
+$('.icon-btn').change(function(){
+    $('.point-icon').toggle(this.checked);
+	socket.emit('toggleArrow', {showArrow: this.checked});
+});

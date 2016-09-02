@@ -204,7 +204,17 @@ $('#ninjaBroadcast').on('click',function(){
 			return w?false:true;
 });
 
-socket.on('iceServers',handleIceServers_N);
+/*
+	Function to hide or show arrow to reflect the mentor's setting
+	TODO make disabled checkbox look different
+*/
+function toggleArrow(data) {
+    $('.point-icon').toggle(data.showArrow);
+    $('.icon-btn').prop("checked",data.showArrow);
+    console.log("Mentor toggled arrow " + data);
+}
+
+socket.on('iceServers', handleIceServers_N);
 firstPhaseButton.onclick = firstPhaseClick;
 socket.on('changeRoom', handleRoomChange_N);
 shareButton.onclick = shareButtonClick;
@@ -213,6 +223,7 @@ socket.on('otherDisconnect', handleMentorDisconnect);
 finishButton.onclick = finishChatClick;
 socket.on('RTPointing', moveFollower);
 socket.on('test_addVideo', addVideo);
+socket.on('toggleArrow', toggleArrow);
 
 $.ajax({
 	dataType: "json",
