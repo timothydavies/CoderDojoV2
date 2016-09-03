@@ -18,38 +18,38 @@ var Nheight;
 track mouse event and change handler location
 **********************************************
 */
-$('.handler').mousedown(function() {
-  document.onmousemove = function(event) {
-    // get the absolute location (according to document) of screenBox on mentor side
-    var SharedScreenOffset= $('#iconPosReference').offset();
-    // get screenBox size
-    var MentorWidth = $('#ninjaScreen').width();
-    var MentorHeight = $('#ninjaScreen').height();
-    // get mouse location (relative to the screenBox)
-    var ArrowCorToScreenBoxLeft = event.pageX - SharedScreenOffset.left;
-    var ArrowCorToScreenBoxTop = event.pageY - SharedScreenOffset.top;
+$('#iconPosReference').mouseenter(function() {
+  if ($('.icon-btn').prop("checked")) {
+    document.onmousemove = function(event) {
+      // get the absolute location (according to document) of screenBox on mentor side
+      var SharedScreenOffset= $('#iconPosReference').offset();
+      // get screenBox size
+      var MentorWidth = $('#ninjaScreen').width();
+      var MentorHeight = $('#ninjaScreen').height();
+      // get mouse location (relative to the screenBox)
+      var ArrowCorToScreenBoxLeft = event.pageX - SharedScreenOffset.left;
+      var ArrowCorToScreenBoxTop = event.pageY - SharedScreenOffset.top;
 
-    var x = ArrowCorToScreenBoxLeft + "px";
-    var y = ArrowCorToScreenBoxTop + "px";
+      var x = ArrowCorToScreenBoxLeft + "px";
+      var y = ArrowCorToScreenBoxTop + "px";
       // move handler to mouse location
-      // TODO use handle instead of jquery again?
-    $('.handler').css({
-         "left":x,
-         "top":y,
-    });
-   
-      // send out socket with the data of handler location and screenBox size 
-  	socket.emit('RTPointing',{ MX: ArrowCorToScreenBoxLeft,
-                                   MY: ArrowCorToScreenBoxTop,
-                                   Mwidth: MentorWidth,
-                                   Mheight: MentorHeight});      
+      var handler =  document.getElementById('handler');
+      handler.style.left = x;
+      handler.style.top = y;
+     
+        // send out socket with the data of handler location and screenBox size 
+      socket.emit('RTPointing',{ MX: ArrowCorToScreenBoxLeft,
+                                     MY: ArrowCorToScreenBoxTop,
+                                     Mwidth: MentorWidth,
+                                     Mheight: MentorHeight});      
+    }
   }
 });
-document.onmouseup = function() {
-      document.onmousemove = function(event){};
-      return;
-    //}
-}
+
+$('#iconPosReference').mouseleave(function() {
+  document.onmousemove = function(event){};
+  return;
+});
 
 /*
 ******************************************************************************************
@@ -75,10 +75,9 @@ function moveFollower(data) {
   
   var Nx_ab = Nx + "px";
   var Ny_ab = Ny + "px";
-  $('.follower').css({
-      "left":Nx_ab,
-      "top":Ny_ab,
-  });
+  var follower = document.getElementById('follower');
+  follower.style.left = Nx_ab;
+  follower.style.top = Ny_ab;
 }
 
 function updatePosition(ratioX, ratioY){
@@ -88,8 +87,7 @@ function updatePosition(ratioX, ratioY){
   var Nx_ab = Nx + "px";
   var Ny_ab = Ny + "px";
   
-  $('.follower').css({
-      "left":Nx_ab,
-      "top":Ny_ab,
-  });
+  var follower = document.getElementById('follower');
+  follower.style.left = Nx_ab;
+  follower.style.top = Ny_ab;
 }

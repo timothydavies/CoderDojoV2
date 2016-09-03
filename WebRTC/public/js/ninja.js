@@ -6,6 +6,7 @@ var mentorField = document.getElementById("mentorName");
 var firstPhase = document.getElementById("chatFirstPhase");
 var secondPhase = document.getElementById("chatSecondPhase");
 var thirdPhase = document.getElementById("chatThirdPhase");
+var ninjaTextChat = document.getElementById("ninjaTextChat");
 
 var opts = {};
 opts.localCamBox = document.getElementById("localCamBox");
@@ -61,11 +62,13 @@ function handleRoomChange_N (data) {
 	$(chatWindow).empty();
 
 	$(secondPhase).show();
+	$(ninjaTextChat).show();
 
 	webrtc.startLocalVideo();
 }
 
 function shareButtonClick() {
+	// TODO is hidefeedbackzone here just to reset follower icon position?
 	hideFeedbackZone();
 	if ($(shareButton).text()=='Change Shared Window'){
         webrtc.stopScreenShare();
@@ -94,27 +97,34 @@ function secondPhaseClick() {
 }
 
 function resetToFirstPhase() {
+	webrtc.stopLocalVideo();
+	webrtc.stopScreenShare();
 	webrtc.leaveRoom();
 	// TODO remove redunancy, emptied multiple times to prevent bugs!
 	$(opts.localCamBox).empty();
 	$(opts.remoteCamBox).empty();
 	$(opts.screenBox).empty();
 	$(chatWindow).empty();
-
-	webrtc.stopLocalVideo();
-	webrtc.stopScreenShare();
 	
 	hideFeedbackZone();
 	$(secondPhase).hide();
 	$(thirdPhase).hide();
 	$(firstPhase).show();
 	$(firstPhaseButton).show();
+	$(ninjaTextChat).hide();
 	$(firstPhaseText).text("To chat with the mentor, click on 'Chat' button");
+
+	// FIXME TODO patch for current bug, reload page on hitting finished. Ensure ninja's name is reloaded from the server
+	window.location.reload();
 }
 
 function handleMentorDisconnect (data) {
-	resetToFirstPhase();
+	// FIXME TODO Mentor's webcam is STILL STREAMING
+	webrtc.leaveRoom();
+	webrtc.stopLocalVideo();
+	webrtc.stopScreenShare();
 	alert("Oops! Some rogue ninja seems to have messed with something and disconnected your mentor.");
+	resetToFirstPhase();
 }
 
 function finishChatClick() {
@@ -140,34 +150,43 @@ function resizeWindow(width, height) {
 	var ry = arrowOldY * 1.0 / $('#localScreen').height();
 
 	window.resizeTo(width, height);
-	window.scrollTo(0,document.body.scrollHeight);
+	// window.scrollTo(0,document.body.scrollHeight);
 	updatePosition(rx,ry);
 }
 
-// TODO replace 900 and 320 with a proportion of the screen width
-$('#enlargeButton').on('click',function(){
-	var w = Math.max(900,$(window).outerWidth());
-	var h = screen.availHeight;
-
+// TODO resizeScreenshare(ratio)
+function resizeScreenshare() {
 	var localScreen = document.getElementById("localScreen");
 	var localScreenBox = document.getElementById("localScreenBox");
 	var iconPosRef = document.getElementById("iconPosReference");
-	
+
+    // allow video to double in size, and shift it left 50%, so as to hide half the screen.
 	localScreen.style.maxWidth = "200%";
-	// document.getElementById("localScreen").style.width = "200%";
-	// document.getElementById("localScreen").style.left = "-100%";
 	var dist = localScreen.clientWidth / 2;
 
 	localScreen.style.left = - dist + "px";
 	iconPosRef.style.left = - dist + "px";
 	localScreenBox.style.left = dist + "px";
-    
+
+	$('html, body').animate({scrollTop: $(localScreen).offset().top }, 'slow');
+}
+
+$('#enlargeButton').on('click',function(){
+	// Move window to far left of screen
+    window.moveTo(0,0);
+	// Make window fill half the screen
+	var w = Math.max(screen.width / 2,window.outerWidth);
+	// TODO screen.availHeight seemingly doesn't work for linux.
+	var h = screen.availHeight;
+
     resizeWindow(w,h);
+    // TODO find appropriate wait time to resize window.
+    window.setTimeout(resizeScreenshare,50);
 });
 
 $('#shrinkButton').on('click',function(){
-	var w = Math.min(320, $(window).outerWidth());
-	var h = $(window).outerHeight();
+	var w = Math.min(320, window.outerWidth);
+	var h = window.outerHeight;
 
 	var localScreen = document.getElementById("localScreen");
 	var localscreenbox = document.getElementById("localScreenBox");
@@ -181,6 +200,8 @@ $('#shrinkButton').on('click',function(){
 	localScreenBox.style.left = "0";
 
     resizeWindow(w,h);
+	// Move window to far left of screen
+    window.moveTo(0,0);
 });
 
 // Expand screenshot

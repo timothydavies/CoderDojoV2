@@ -32,10 +32,6 @@ body {
     margin:0px;
     padding:0px;
 }
-
-/*#chats{
-    z-index: 1;
-}*/
 #screenBox, #localScreenBox{
     position:relative;
 }
@@ -46,6 +42,7 @@ body {
 #collapseTwo .panel-body{
     height:auto;
 }
+/* TODO redundant? */
 #screenBox div{
     overflow:visible;
 }
@@ -63,11 +60,11 @@ body {
     display:block;
 }
 /*Created in Screenshot.js*/
-#CanvasZone {
+#CanvasZone{
     position: absolute;
     top: 0;
     left: 0%;
-    z-index: 2;
+    z-index: 102;
     display: block;
 }
 #canvasBtnZone{
@@ -142,7 +139,7 @@ div.text-center .glyphicon{
     display:inline-block;
 }
 
-#chatSecondPhase, #chatThirdPhase, #firstPhase, .secondPhase, #collapseTwo, #chatSecondPhase, .point-icon, div.feedback-options{
+#chatSecondPhase, #chatThirdPhase, #firstPhase, .secondPhase, #collapseTwo, #chatSecondPhase, #ninjaTextChat, .point-icon, div.feedback-options{
      display:none;
 }
 
@@ -155,8 +152,9 @@ div.text-center .glyphicon{
     position:absolute;
     top:100%;
     left:-1em;
-    z-index: 100;
+    z-index:100;
 }
+
 div#icon-color-div{
     display:inline-block;
     /* TODO may be worth putting this button above the arrow 
@@ -186,6 +184,11 @@ div.clear{
     padding-left: 0.2em;
     padding-right: 0.2em;
 }
+/* TODO Broadcast and presentation currently disabled */
+#headingTwo{
+    display: none;
+}
+
 #headingFour{
     height:100%;
     width:100%;
@@ -197,46 +200,56 @@ div.clear{
 #chatOverlay{
     position:fixed;
     height:0vh;
-    width:60vw;
+    width:80vw;
     bottom:1em;
-    left:20vw;
+    left:10vw;
     overflow: hidden;
     background-color: rgba(200,200,200,0.5);
-    transition:0.5s;
+    transition:0.3s;
+    z-index: 2;
 }
 #chatWindow{
     position:absolute;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     height:12em; 
     width:100%;
     margin-top:0px; 
     border:solid 1px lightgrey;
     overflow-y: scroll;
+    white-space: pre;
 }
 #chatForm{
     position:absolute;
     bottom:0vh;
     left:0vw;
+    width:100%;
+    z-index:3;
 }
 #message{
-    width:auto;
+    height:3em;
+    max-height:8em;
+    resize:none;
+    overflow-y: scroll;
+    width:80%;
 }
 #recentChat{
     position:fixed;
-    bottom:4em;
-    left:20vw;
-    width:60vw;
     height:auto;
+    width:80vw;
+    bottom:4em;
+    left:10vw;
     max-height:8em;
     border:solid 1px lightgrey;
     background-color: rgba(200,200,200,0.5);
     overflow-y: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     display:none;
+    white-space: pre;
+    z-index: 1;
 }
 #ovrBtn{
     position:fixed;
     bottom:1em;
-    right:20vw;
+    right:5vw;
 }

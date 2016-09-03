@@ -106,22 +106,31 @@ function handleIceServers_M(data) {
 	//console.log(webrtc);
 }
 
-/*
-	This function should handle the event of the ninja disconnecting from the system during a session.
-*/
-function handleNinjaDisconnect(data) {
-	webrtc.leaveRoom();
+function disconnectChat() {
 	webrtc.stopLocalVideo();
+	webrtc.leaveRoom();
 
 	// TODO remove redunancy, emptied multiple times to prevent bugs!
 	$(opts.localCamBox).empty();
 	$(opts.screenBox).empty();
 	$(chatWindow).empty();
 
-	alert("The ninja you were communicating with left");
 	hideFeedbackZone();
 	$('.secondPhase').hide();
 	$(firstPhase).show();
+	// FIXME TODO patch for current bug, reload page on hitting finished. Ensure ninja's name is reloaded from the server
+	window.location.reload();
+}
+
+/*
+	This function should handle the event of the ninja disconnecting from the system during a session.
+*/
+function handleNinjaDisconnect(data) {
+	// TODO FIXME Ninja's screenshare is STILL STREAMING
+	webrtc.leaveRoom();
+	webrtc.stopLocalVideo();
+	alert("The ninja you were communicating with left");
+	disconnectChat();
 }
 
 function handleBadAvatar(){
@@ -139,12 +148,18 @@ document.onunload = function(){
 	}
 }
 
+function finishChatClick() {
+	disconnectChat();
+	socket.emit('leaving', {});
+}
+
 socket.on('queueUpdate', handleQueueUpdate);
 socket.on('changeRoom', handleRoomChange_M);
 socket.on('iceServers', handleIceServers_M);
 socket.on('otherDisconnect', handleNinjaDisconnect);
 socket.on('test_addVideo', addVideo);
 socket.on('test_highlight', highlight);
+finishButton.onclick = finishChatClick;
 
 $.ajax({
 	dataType: "json",

@@ -32,32 +32,33 @@ var ovrBtn = document.getElementById('ovrBtn'),
 	};
 // Handler for the recentChat box timeout
 var msgTimeout;
+var msgId = 0;
 
 setLogBtn(false);
 setOvrBtn(true);
 
-// from http://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
-// Prompts the user to copy some text
-function copyToClipboard(text) {
-  prompt("Copy to clipboard: Ctrl+C, Enter",text);
-}
-
 // Resume deleting recent messages if the input box loses focus
 $(message).focusout(function(){
 	clearTimeout(msgTimeout);
-	msgTimeout = setTimeout(removeMessage, 4000);
+	msgTimeout = setTimeout(messageTimeout, 8000);
 });
 
 // Removes the oldest message from recent chat
 function removeMessage() {
+	var msgs = recentChat.innerHTML;
+	// Delete oldest message if input box is not focused and history is not empty
+	msgs = msgs.replace(/<p((.|\n)*?)<\/p>/m,'');
+	recentChat.innerHTML = msgs;
+	if (msgs == '') $(recentChat).hide();
+}
+
+function messageTimeout() {
 	clearTimeout(msgTimeout);
 	var msgs = recentChat.innerHTML;
 	// Delete oldest message if input box is not focused and history is not empty
 	if (!($(message).is(':focus') || msgs == '')) {
-		msgs = msgs.replace(/<p>((.|\n)*?)<\/p>/m,'');
-		recentChat.innerHTML = msgs;
-		if (msgs == '') $(recentChat).hide();
-		msgTimeout = setTimeout(removeMessage, 1000);
+		removeMessage();
+		msgTimeout = setTimeout(messageTimeout, 2000);
 	}
 }
 
@@ -67,14 +68,35 @@ function addRecentMessage(message) {
 	if (!$(chatWindow).is(':visible') || $(chatOverlay).height() == 0) {
 		// If overflowing, remove last message
 		if(recentChat.scrollHeight > $(recentChat).height()) removeMessage();
-		clearTimeout(msgTimeout);
 		// Display the new message
 		$(recentChat).show();
 		$(recentChat).append(message);
 		recentChat.scrollTop = recentChat.scrollHeight;
 		// set a timer for message deletion
-		msgTimeout = setTimeout(removeMessage, 4000);
+		msgTimeout = setTimeout(messageTimeout, 8000);
 	}
+}
+
+// adapted from http://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard-using-jquery
+function copyToClipboard(curId) {
+	var text = document.getElementById('msgT' + curId).innerHTML;
+	// Create hidden textarea to copy from
+    var textarea = document.createElement("textarea");
+    textarea.style.position = "fixed";
+    textarea.style.left="-9999px";
+    textarea.style.top="0";
+    document.body.appendChild(textarea);
+    textarea.textContent = text;
+    // Focus the text to copy
+    textarea.select();
+    // Copy selection
+    var succeed;
+    try {
+    	succeed = document.execCommand("copy");
+    } catch(e) {
+    	succeed = false;
+    }
+    document.body.removeChild(textarea);
 }
 
 function renderMessage(imgURI,text) {
@@ -82,24 +104,41 @@ function renderMessage(imgURI,text) {
 	avatar.src = imgURI;
 	$(avatar).css("width","25px")
 	// TODO avoid duplicating text
-	var clipboard = $(document.createElement('span'));
+	var clipboard = document.createElement('span');
 	$(clipboard).addClass("glyphicon glyphicon-copy");
 	$(clipboard).css({
-		"width": "25px",
-		"cursor": "pointer"
+		"font-size": "large",
+		"cursor": "pointer",
+		"padding": "0 0.5em 0 0.5em"
 	});
-	$(clipboard).click(function() {
-		copyToClipboard(text)
+
+	var curId = msgId;
+	clipboard.addEventListener('click', function(event) {
+  		copyToClipboard(curId);
+  		$(message).focus();
 	});
 
 	var input = document.createElement("p");
+	var inputText = document.createElement("span");
+	inputText.innerHTML = text;
+	input.id = "msgP" + curId;
+	inputText.id = "msgT" + curId;
 	$(input).append(avatar);
 	$(input).append(clipboard);
-	$(input).append(text);
-
+	$(input).append(inputText);
 	$(chatWindow).append(input);
-	addRecentMessage($(input).clone(true));
+
+	var tmpInput = $(input).clone(true, true);
+	$(tmpInput).prop("id","tmpMsgP" + curId)
+	$(tmpInput).find("#msgT" + curId).prop("id","tmpMsgP" + curId);
+	// TODO make addRecentMessage and chatwindow each call this function to avoid this kind of messy code duplication
+	$(tmpInput).find(".glyphicon-copy")[0].addEventListener('click', function(event) {
+  		copyToClipboard(curId);
+  		if($(chatOverlay).height() != 0) $(message).focus();
+	});
+	addRecentMessage(tmpInput);
 	chatWindow.scrollTop = chatWindow.scrollHeight;
+	msgId = msgId + 1;
 }
 
 // TODO currently hardcoded avatars
@@ -110,25 +149,21 @@ function getImageURL() {
 		return "/img/ninja.png";
 }
 
-submit.onclick = function() {
+function submitMessage() {
 	var msg = $(message).val();
 	if (msg.length > 0) {
-		// TODO calls getImageURL() twice, once to send, once to render on user's end?
-		socket.emit('pm', {message: msg, name: getParameterByName('user'), url: getImageURL()});
 		msg = msg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+		socket.emit('pm', {message: msg, name: getParameterByName('user'), url: getImageURL()});
 		renderMessage(getImageURL(),msg);
 		$(message).val('');
+		correctOverlayHeight();
 	}
-	return false;
 }
 
-$(chatForm).submit(submit.onclick);
+submit.onclick = submitMessage;
 
 socket.on('pm', function(data) {
-	// prevent html injection
-	dataUrl = data.url.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-	dataMessage = data.message.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-	renderMessage(dataUrl, dataMessage);
+	renderMessage(data.url, data.message);
 });
 
 
@@ -199,7 +234,7 @@ function correctOverlayHeight() {
 			$(recentChat).hide();
 			recentChat.innerHTML='';
 		} else {
-			$(chatOverlay).css("height","3em");
+			$(chatOverlay).css("height","4em");
 			$(chatWindow).hide();
 			if (recentChat.innerHTML != '') $(recentChat).show();
 		}
@@ -211,6 +246,24 @@ function correctOverlayHeight() {
 		$(message).blur();
 	}
 }
+
+// Resize message box to match content
+function resizeMessage() {
+	var h1 = $(message).height();
+	$(message).height(0);
+	$(message).height(message.scrollHeight);
+	var h2 = $(message).height();
+	var ho = $(chatOverlay).height() + h2 - h1;
+	if (h1 != h2 && ho > 50) {
+		$(chatOverlay).height(ho);
+	}
+
+}
+
+$(message).keyup(function() {
+	resizeMessage();
+});
+
 // show or hide the chat log
 $(logBtn).click(function(){
 	if ($(logBtn).attr("value")==="T") {
@@ -230,17 +283,25 @@ $(ovrBtn).click(function(){
 	correctOverlayHeight();
 });
 
+// TODO clean this function
 $(document).keydown(function(e) {
 	if ($(ovrBtn).is(':visible')) {
 		if (e.which == 13) {	// if enter
-			if (!($('input').is(':focus') || $('button').is(':focus'))) {
-				// if no inputs have focus, show the chat
-				setOvrBtn(false);
-				correctOverlayHeight();
+			if (!e.shiftKey && !e.ctrlKey && $(message).is(':focus') && $(message).val().length != 0) {
+				// if just the enter key was pressed, send the message
+				submitMessage();
+				return false;
 			} else if ($(message).is(':focus') && $(message).val().length == 0) {
 				// if message is empty, enter hides the chat
 				setOvrBtn(true);
 				correctOverlayHeight();
+				return false;
+			} else if (!($('input').is(':focus') || $(message).is(':focus') || $('button').is(':focus')) || $('#log').is(':focus')) {
+				// if no inputs have focus, show the chat
+				setOvrBtn(false);
+				correctOverlayHeight();
+				message.select();
+				return false;
 			}
 		} else if (e.which == 27) {
 			// esc hides the chat if message has focus

@@ -126,6 +126,8 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 			var screen = document.getElementById('localScreen');
 			if (container && screen) {
 				container.removeChild(screen);
+				// TODO currently assumes this is the ninja screenshare crashing
+                hideFeedbackZone();
 			}
 		}
 	});
@@ -134,6 +136,10 @@ function webrtcInit(peerConnectionConfig, opts, video) {
 		if (opts.screenBox) {
 			video.id = 'localScreen';
 			opts.screenBox.appendChild(video);
+			// scroll to bottom of page to see video, once video has loaded
+			video.addEventListener('loadeddata', function() {
+				$('html, body').animate({scrollTop: $(video).offset().top }, 'slow');
+			}, false);
 		}
 	});
 	

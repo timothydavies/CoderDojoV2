@@ -57,7 +57,7 @@ app.use('/', routes);
 app.use('/Mentor',mentor);
 app.use('/Ninja',ninja);
 app.use('/Broadcast',broadcast);
-app.use('/Eplayer',eplayer);
+app.use('/Eplayer',eplayer);  
 app.use('/Upload',uploadVideo);
 
 

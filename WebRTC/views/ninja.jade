@@ -112,7 +112,7 @@ html
                   #iconPosReference
                     #localScreenBox.video-box.panel-primary
                     //- TODO rename from follower-dark to follower
-                    img#follower-dark.point-icon.follower(src='/img/f-dark.png')
+                    img#follower.point-icon.follower(src='/img/f-dark.png')
 
                   div#Ninja-feedback-options.feedback-options.panel-heading
                     
@@ -123,7 +123,7 @@ html
 
                     div#ButtonZone
                         button.resizebtn#enlargeButton Expand
-                        button.resizebtn#shrinkButton Original
+                        button.resizebtn#shrinkButton Shrink
                     .videoControls
                       span.ico.glyphicon.glyphicon-fullscreen
                       span.ico.glyphicon.glyphicon-volume-up
@@ -132,19 +132,19 @@ html
                   br
                   #finishButton.btn.btn-default.btn-block.input-sm Finished!
 
-                // Chat overlay
-                .overlay
-                  div#chatOverlay
-                    #chatWindow
-                    form#chatForm(action='')
-                      input#message
-                      button#submit.btn.btn-default(type='button')
-                        span.ico.glyphicon.glyphicon-ok
-                      button#logBtn.btn.btn-default.boolBtn(type='button')
-                        span#logIcon.ico.glyphicon.glyphicon-chevron-div
-                  #recentChat
-                  button#ovrBtn.btn.btn-default.boolBtn(type='button')
-                    span.ico.glyphicon.glyphicon-comment
+              // Chat overlay
+              .overlay#ninjaTextChat
+                div#chatOverlay
+                  #chatWindow
+                  form#chatForm.form-inline(action='')
+                    textarea#message.form-control(rows="1")
+                    button#submit.btn.btn-default(type='button')
+                      span.ico.glyphicon.glyphicon-ok
+                    button#logBtn.btn.btn-default.boolBtn(type='button')
+                      span#logIcon.ico.glyphicon.glyphicon-chevron-div
+                #recentChat
+                button#ovrBtn.btn.btn-default.boolBtn(type='button')
+                  span.ico.glyphicon.glyphicon-comment
 
     
     // /container
